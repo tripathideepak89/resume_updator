@@ -1,0 +1,52 @@
+About Us
+
+At FDJ UNITED, we don't just follow the game, we reinvent it.
+
+FDJ UNITED is one of Europe’s leading betting and gaming operators, with a vast portfolio of iconic brands and a reputation for technological excellence. With more than 5,000 employees and a presence in around fifteen regulated markets, the Group offers a diversified, responsible range of games, both under exclusive rights and open to competition. We set new standards, proving that entertainment and safety can go hand in hand. Here, you’ll work alongside a team of passionate individuals dedicated to delivering the best and safest entertaining experiences for our customers every day.
+
+We’re looking for bold people who are eager to succeed and ready to level-up the game. If you thrive on innovation, embrace challenges, and want to make a real impact at all levels, FDJ UNITED is your playing field.
+
+Join us in shaping the future of gaming. Are you ready to LEVEL-UP THE GAME?
+
+The role
+
+We are seeking a passionate and forward-thinking Senior DevOps Engineer to join our team in a fast-paced, technically challenging environment.  In this role, you'll play a crucial part in building a fully automated platform by overseeing Continuous Integration and Continuous Delivery (CI/CD) tools, implementing and managing automation, and enhancing our Platform-as-a-Service (PaaS) offerings with the Player Account Management Platform. 
+
+Your focus will be on establishing our Golden Path: developing best practices, guidelines, and recommendations around architecture, tooling, testing, compliance, and observability. You'll also streamline development cycles and reduce time-to-market for customer-facing services through automation, all while adopting a zero-downtime approach to maintain the stability and reliability of our operations.  You will also get the chance to design, build and operate agentic pipelines and LLM-driven workflows. Implementing orchestration, reliability, guardrails, observability and cost controls for production agent workflows.  If you're eager to drive innovation and make a significant impact, this is your opportunity to grow. 
+
+Key Responsibilities:
+
+Design, implement, and maintain CI/CD pipelines 
+Design and implement Agentic workflows that chain prompts, RAG and external APIs to complete multi-step tasks 
+Build and maintain integrations with LLM providers (OpenAI, Anthropic etc.) 
+Define and support the creation of services and ensure the alignment among engineering teams 
+Collaborate with cross-functional teams to integrate DevOps practices seamlessly into the development lifecycle 
+Enhance platform scalability, reliability, and security in on-premises and cloud environments 
+Advocate for DevOps best practices, promoting a culture of automation, collaboration, and continuous improvement 
+Ability to identify and analyze incidents, develop and implement solutions 
+Stay up to date with emerging tools, trends, and technologies, and share knowledge within the team 
+Have the patience and ability as a subject matter expert to communicate with a wide variety of stake holders 
+Core DevOps Skills: 
+
+Proven experience as a Senior DevOps Engineer or Developer 
+Experience in a coding language such as Python, TypeScript 
+Experience of designing and building reusable CI/CD using tools such as Jenkins, ArgoCD 
+Experience with GitLab for repository management (experience with GitLab Runners is a plus) 
+Experience with Kubernetes and working in dynamic containerized environments 
+Experience with observability and monitoring tools (e.g., Prometheus, Grafana) 
+Automation experience with workflow tools such as n8n or UiPath 
+Strong interpersonal skills, with the ability to foster partnerships, mentor peers, and drive cross-functional alignment 
+Emerging AI Ops Skills (Desirable): 
+
+Familiarity with LLM providers and prompt engineering 
+Exposure to agentic workflow design and RAG systems 
+Understanding of AI/ML Ops concepts and tooling 
+Our Way Of Working
+
+Our world is hybrid.
+
+A career is not a sprint. It’s a marathon. One of the perks of joining us is that we value you as a person first. Our hybrid world allows you to focus on your goals and responsibilities and lets you self-organise to improve your deliveries and get the work done in your own way.
+
+Application Process
+
+We believe talent knows no boundaries. Our hiring process focuses solely on your skills, experience, and potential to contribute to our team. We welcome applicants from all backgrounds and evaluate each candidate based on merit, regardless of personal characteristics as the age, gender, origin, religion, sexual orientation, neurodiversity or disability.

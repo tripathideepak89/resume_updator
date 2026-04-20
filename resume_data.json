@@ -1,0 +1,147 @@
+{
+  "name": "Deepak Tripathi",
+  "title": "AI-Driven DevOps Architect | Platform Engineering | MLOps | Multi-Cloud",
+  "location": "Sweden",
+  "email": "tripathideepak2489@gmail.com",
+  "phone": "+46 765 311 608",
+  "linkedin": "https://www.linkedin.com/in/deepak-tripathi-2256b558",
+  "summary": "AI-driven Platform & DevOps Architect with 15+ years of experience designing and operating large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, and scalable infrastructure, with growing expertise in AI/ML systems, MLOps, and AI-driven automation.\n\nExperienced in building production-grade platforms for data-intensive and compute-heavy workloads, enabling reliability, scalability, and high-performance systems aligned with modern AI architectures.",
+  "skills": {
+    "AI / ML Systems & MLOps": "Model deployment pipelines, AI system automation, data workflows, monitoring",
+    "Cloud & Distributed Systems": "AWS, Azure, GCP, Kubernetes, OpenShift, Terraform",
+    "Containers & Cluster Management": "Docker, Kubernetes (production), Helm, GitOps",
+    "DevOps & CI/CD": "GitHub Actions, Jenkins, GitLab CI, ArgoCD",
+    "Programming & Scripting": "Python, Bash, Java",
+    "Observability & Reliability": "Prometheus, Grafana, ELK, Loki",
+    "Infrastructure & Networking": "Cloud networking, scalable systems design, distributed architectures"
+  },
+  "experience": [
+    {
+      "period": "Aug 2024 – Present",
+      "role": "DevOps Engineer",
+      "company": "Scania CV AB / Traton AB",
+      "location": "Sodertalje, Sweden",
+      "bullets": [
+        "Architected Kubernetes-based platform for large-scale enterprise applications",
+        "Designed cloud-native CI/CD pipelines enabling 40% faster deployments",
+        "Built AI-ready observability pipelines for proactive monitoring and anomaly detection",
+        "Worked on scalable infrastructure supporting data-intensive workloads"
+      ],
+      "tools": "AWS, GCP, Terraform, Ansible, YAML, Docker, Kubernetes, GitLab, Git, Bash, Python"
+    },
+    {
+      "period": "Jan 2023 – Aug 2024",
+      "role": "DevOps Expert",
+      "company": "Alten (Volvo CE, IKEA)",
+      "location": "Sweden",
+      "bullets": [
+        "Developed the security system for DevOps platform and added the security and monitoring alert infrastructure for Volvo Construction Equipment and IKEA",
+        "Defined DevSecOps policies and guidelines for development platform",
+        "Built CI/CD infrastructure"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
+    },
+    {
+      "period": "Aug 2022 – Dec 2022",
+      "role": "Lead Engineer",
+      "company": "SiriAB (Ecarx Volvo Cars)",
+      "location": "Gothenburg, Sweden",
+      "bullets": [
+        "Worked in a multi-project agile environment as DevOps Expert and platform developer",
+        "Designed CI/CD pipelines and runtime platform for DevOps pipeline",
+        "Worked with Ubuntu OS, Docker, Kubernetes, Shell scripting, and Python"
+      ],
+      "tools": "Ubuntu OS, Azure DevOps, Kubernetes, Docker, GitLab, Git, Bash, Python, Grafana, Loki, Jira"
+    },
+    {
+      "period": "Feb 2022 – Aug 2022",
+      "role": "Lead Engineer",
+      "company": "DealerSocket",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Developed a digital marketing core business application with a team of eight",
+        "Took on Tech Lead and Architect roles",
+        "Designed, developed, tested, and deployed the application"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, Java, Spring Boot, Kafka"
+    },
+    {
+      "period": "Apr 2020 – Feb 2022",
+      "role": "Senior Software Engineer",
+      "company": "Epsilon",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Developed a digital marketing core business application with a team of eight",
+        "Served as developer, Tech Lead, and Architect",
+        "Designed, developed, tested, and deployed the application"
+      ],
+      "tools": "Java, Spring Boot, Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
+    },
+    {
+      "period": "Jun 2018 – Apr 2020",
+      "role": "Senior Analyst",
+      "company": "Bank of America Continuum India Pvt. Ltd.",
+      "location": "Hyderabad, India",
+      "bullets": [
+        "Migrated legacy system to DevOps-based architecture using CI/CD pipeline",
+        "Used Bamboo pipelines, Jenkins scripting, Angular for UI, and Azure cloud for deployment",
+        "Project structured using Agile methodologies"
+      ],
+      "tools": "Git, Bamboo, Jira, JFrog, Azure, Kubernetes, Docker, Java, Spring Boot, Kafka, React"
+    },
+    {
+      "period": "Apr 2016 – Jun 2018",
+      "role": "Build and Release Engineer",
+      "company": "Capgemini (PSA Automotive)",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Worked on migration project in PSA Automotive",
+        "Discussed with stakeholders, designed application architecture, and led core development",
+        "Initiated project migration from Europe to India",
+        "Led a support team of ~50 people distributed across France, Spain, and India"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, COBOL, Oracle"
+    },
+    {
+      "period": "Dec 2013 – Apr 2016",
+      "role": "Senior Software Engineer",
+      "company": "Hexaware",
+      "location": "Mumbai, India",
+      "bullets": [
+        "Created a new Java-based UI application for Belfius Insurance",
+        "Designed application architecture and created database",
+        "Led and initiated project for database optimization"
+      ],
+      "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
+    },
+    {
+      "period": "Sep 2010 – Dec 2013",
+      "role": "System Engineer",
+      "company": "Tata Consultancy Services",
+      "location": "Mumbai, India",
+      "bullets": [
+        "Created a new Java-based UI application for Belfius Insurance",
+        "Designed application architecture and created database",
+        "Initiated project for database optimization"
+      ],
+      "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
+    }
+  ],
+  "education": [
+    {
+      "period": "2023 – 2025",
+      "institution": "Indian Institute of Technology, Patna, India",
+      "degree": "Master of Technology in Cloud Computing, Artificial Intelligence"
+    },
+    {
+      "period": "2006 – 2010",
+      "institution": "Rajiv Gandhi Technical University, Bhopal, India",
+      "degree": "Bachelor of Computer Science and Engineering"
+    }
+  ],
+  "personal": {
+    "nationality": "Indian",
+    "languages": "English, Hindi",
+    "year_of_birth": "1989"
+  }
+}
