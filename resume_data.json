@@ -23,10 +23,12 @@
       "company": "Scania CV AB / Traton AB",
       "location": "Sodertalje, Sweden",
       "bullets": [
+        "Designed Grafana-based CI observability across AWS and GCP, enabling proactive monitoring of build latency, queue wait times, agent utilisation, and network bottlenecks — shifting CI operations from reactive firefighting to data-driven optimisation",
+        "Built an Agentic AI-driven L1 support system to analyse CI alerts and build logs, auto-classify recurring failures, and recommend resolutions — significantly reducing manual triage and improving MTTR across cloud-hosted pipelines",
+        "Led CI performance optimisation across 5 repositories x 5 plans (25 executions), saving ~42.5 minutes per repo per cycle and reclaiming ~212 minutes (~3.5 hours) of CI agent capacity per full end-to-end execution",
+        "Driving large-scale migration from Bamboo to Jenkins across AWS and GCP, covering 2,744 plans, 169K+ branches, 248K+ builds, 1.18M+ jobs, and 69K+ metrics — designing phased migration, parallel-run strategy, and pipeline-as-code architecture",
         "Architected Kubernetes-based platform serving 20+ enterprise applications across AWS and GCP, supporting 200+ developers with 99.9% uptime",
         "Designed cloud-native CI/CD pipelines with GitLab CI, reducing deployment cycle time by 40% and enabling 50+ production deployments per week",
-        "Built observability pipelines using Prometheus and Grafana, reducing mean-time-to-detection (MTTD) from 25 minutes to under 5 minutes",
-        "Provisioned and managed infrastructure with Terraform and Kubernetes, handling 1TB+ data processing workloads across multi-cloud environments",
         "Built self-service platform tooling that cut environment provisioning time from hours to under 10 minutes, improving developer velocity across 8 product teams"
       ],
       "tools": "AWS, GCP, Terraform, Ansible, YAML, Docker, Kubernetes, GitLab, Git, Bash, Python"
