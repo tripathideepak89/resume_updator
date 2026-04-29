@@ -1,6 +1,6 @@
 # Agent Instructions
 
-This repository automates tailored job-application preparation for Deepak Tripathi.
+This repository automates tailored job-application preparation.
 
 ## Default Workflow
 

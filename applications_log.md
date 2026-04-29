@@ -3,7 +3,7 @@
 ## FDJ UNITED
 
 - Role: Senior DevOps Engineer
-- JD file: [input_job_descriptions/sample_jd.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/sample_jd.txt)
+- JD file: [input_job_descriptions/sample_jd.txt](input_job_descriptions/sample_jd.txt)
 - Outcome: Rejected
 - Response: Standard rejection email with no specific feedback
 
@@ -32,10 +32,10 @@
 ## Flightradar24
 
 - Role: Senior Platform and Infrastructure Engineer
-- JD file: [input_job_descriptions/Flightradar24.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/Flightradar24.txt)
+- JD file: [input_job_descriptions/Flightradar24.txt](input_job_descriptions/Flightradar24.txt)
 - Outcome: Rejected
 - Response: Standard rejection email from CTO Mina Boström Nakicenovic, no specific feedback
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Flightradar24.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Flightradar24.md)
+- Audit report: output/ResumeAudit_Flightradar24.md
 
 ### Audit Scores
 
@@ -74,10 +74,10 @@
 ## Tandem Health
 
 - Role: Platform Engineer
-- JD file: [input_job_descriptions/tandemhealth.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/tandemhealth.txt)
+- JD file: [input_job_descriptions/tandemhealth.txt](input_job_descriptions/tandemhealth.txt)
 - Outcome: Rejected
 - Response: Personalized rejection email, no specific feedback. "We have decided to proceed with other candidates."
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Tandem.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Tandem.md)
+- Audit report: output/ResumeAudit_Tandem.md
 
 ### Audit Scores
 
@@ -116,10 +116,10 @@
 ## Assessio
 
 - Role: Senior DevOps Engineer
-- JD file: [input_job_descriptions/assessio.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/assessio.txt)
+- JD file: [input_job_descriptions/assessio.txt](input_job_descriptions/assessio.txt)
 - Outcome: **Proceeding — invited to assessment round**
 - Response: Invited to complete personality, motivation, and problem-solving ability tests via the Assessio Platform.
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Assessio.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Assessio.md)
+- Audit report: output/ResumeAudit_Assessio.md
 - Next step: Complete Assessio assessment (cognitive ability, personality, motivation — ~50 minutes)
 
 ### Audit Scores
@@ -151,10 +151,10 @@
 ## Lovable
 
 - Role: Platform Engineer - Developer Experience
-- JD file: [input_job_descriptions/Loveable.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/Loveable.txt)
+- JD file: [input_job_descriptions/Loveable.txt](input_job_descriptions/Loveable.txt)
 - Outcome: Rejected
 - Response: Standard rejection email from Lovable Hiring Team, no specific feedback
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Lovable.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Lovable.md)
+- Audit report: output/ResumeAudit_Lovable.md
 
 ### Audit Scores
 
@@ -193,10 +193,10 @@
 ## Aimo Park
 
 - Role: Cloud Operations Engineer
-- JD file: [input_job_descriptions/aimo.txt](/Users/dtrid8/development/resume_updator/input_job_descriptions/aimo.txt)
+- JD file: [input_job_descriptions/aimo.txt](input_job_descriptions/aimo.txt)
 - Outcome: Paused — recruitment process on hold, intending to resume later in 2026
 - Response: Personalized email indicating the role is paused, not a rejection of the candidate specifically
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Aimo.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Aimo.md)
+- Audit report: output/ResumeAudit_Aimo.md
 
 ### Audit Scores
 
@@ -219,12 +219,12 @@
 ## Doktor.se
 
 - Role: Senior Platform Engineer
-- JD file: [processed_jds/Doktor_se.txt](/Users/dtrid8/development/resume_updator/processed_jds/Doktor_se.txt)
+- JD file: [processed_jds/Doktor_se.txt](processed_jds/Doktor_se.txt)
 - Outcome: Applied on 2026-04-28 via Teamtailor
 - Application confirmation: "Tack for din ansokan" confirmation page shown after submit
-- Resume: [output/Resume_Deepak_Tripathi_Doktorse.pdf](/Users/dtrid8/development/resume_updator/output/Resume_Deepak_Tripathi_Doktorse.pdf)
-- Cover letter: [output/CoverLetter_Deepak_Tripathi_Doktorse.pdf](/Users/dtrid8/development/resume_updator/output/CoverLetter_Deepak_Tripathi_Doktorse.pdf)
-- Audit report: [output/ResumeAudit_Deepak_Tripathi_Doktorse.md](/Users/dtrid8/development/resume_updator/output/ResumeAudit_Deepak_Tripathi_Doktorse.md)
+- Resume: output/Resume_Doktorse.pdf
+- Cover letter: output/CoverLetter_Doktorse.pdf
+- Audit report: output/ResumeAudit_Doktorse.md
 
 ### Audit Scores
 

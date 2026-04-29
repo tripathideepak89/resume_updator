@@ -1,10 +1,10 @@
 {
-  "name": "Deepak Tripathi",
-  "title": "Platform Engineering & DevOps Architect | AI Systems | Reliability | Multi-Cloud",
-  "location": "Sweden",
-  "email": "tripathideepak2489@gmail.com",
-  "phone": "+46 765 311 608",
-  "linkedin": "https://www.linkedin.com/in/deepak-tripathi-2256b558",
+  "name": "<your_name>",
+  "title": "<your_title>",
+  "location": "<your_location>",
+  "email": "<your_email>",
+  "phone": "<your_phone>",
+  "linkedin": "<your_linkedin_url>",
   "summary": "Platform Engineering and DevOps Architect with 15+ years of experience designing, operating, and improving large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, infrastructure as code, observability, and security-focused operations, with growing expertise in AI/ML systems, MLOps, API-driven automation, and production AI platforms.\n\nExperienced in building production-grade platforms that improve developer velocity, reliability, scalability, and operational resilience for data-intensive and business-critical workloads.",
   "skills": {
     "AI / ML Systems & MLOps": "LLM inference workflows, model deployment pipelines, AI system automation, API integrations, agentic workflow foundations, data workflows, monitoring",
@@ -135,7 +135,7 @@
   "projects": [
     {
       "name": "Resume Updater & Cover Letter Generator",
-      "url": "https://github.com/tripathideepak89/resume_updator",
+      "url": "<your_github_repo_url>",
       "description": "Built an AI-powered CLI tool that takes a Job Description as input, tailors a resume, and generates a cover letter as compressed PDFs. Uses the Hugging Face Inference API with the Qwen2.5-72B LLM, plus automatic keyword-matching fallback. Features company name auto-detection, ATS audit reporting, professional PDF rendering via ReportLab, and dual-mode operation (AI + offline).",
       "tools": "Python, Hugging Face Inference API, Qwen LLM, ReportLab, NLP, PDF Generation"
     }
@@ -153,8 +153,8 @@
     }
   ],
   "personal": {
-    "nationality": "Indian",
-    "languages": "English, Hindi",
-    "year_of_birth": "1989"
+    "nationality": "<your_nationality>",
+    "languages": "<your_languages>",
+    "year_of_birth": "<your_birth_year>"
   }
 }

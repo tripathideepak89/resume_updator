@@ -1,0 +1,32 @@
+About the job
+Software, the fuel for mobility
+
+We bring bold digital visions to life. So we’re on the lookout for more curious and creative engineers who want to create change – one line of high-quality code at a time. Our transformation isn't for everyone, but if you're excited about solving the leading-edge technological challenges facing the auto industry, then let’s talk about your next move.
+
+What You'll Do
+
+We are seeking a Senior Platform Engineer with strong hands-on experience in modern cloud-native software development across the CNCF ecosystem. This role involves building and evolving a complex, production-grade product that acts as a centralized control plane for all infrastructure components.
+
+The ideal candidate will have deep Kubernetes and Go expertise, hands-on experience with production-grade GitOps workflows using Argo CD, and strong operational knowledge of running large-scale, enterprise infrastructure. You will work closely with platform, infrastructure, and developer experience teams to design and operate scalable, secure, and highly observable systems in complex production environments.
+
+Experience in platform engineering or developer experience (DevEx) teams is highly preferred.
+
+What You'll Bring
+
+Strong hands-on experience operating Kubernetes in production, with a deep understanding of Kubernetes APIs, controllers, and extensibility. Extensive experience with Crossplane, including composition design and development as well as building custom Crossplane functions for infrastructure abstraction. Strong Go (Golang) development skills, with hands-on experience building backend services, controllers, APIs, and custom Kubernetes operators. Proven expertise in GitOps practices using production-grade Argo CD, including designing and maintaining GitOps-based deployment and infrastructure workflows. Solid understanding of Backstage, its system model, and experience integrating it with internal platform tooling. Hands-on experience with observability tooling, including strong working knowledge of Grafana Cloud for metrics, logs, and traces. Extensive experience designing and operating workloads on Microsoft Azure, along with strong operational knowledge of maintaining large-scale, enterprise-grade infrastructure, ensuring reliability, scalability, security, and operational excellence in production systems. Proven experience contributing to complex, production-grade products and building platforms that act as control planes for infrastructure components. Additional good-to-have experience includes working with AWS and OpenShift, building internal developer platforms and developer experience (DevEx) tooling, and knowledge of secrets management.
+
+Volvo Cars. For Life.
+
+For nearly a century, Volvo Cars has empowered people to move freely in a personal, sustainable and safe way. Today, we are driving bold advancements in electrification, sustainability and automotive safety. To realise our ambitious vision, we are seeking innovative minds who are ready to tackle the challenges of tomorrow – today.
+
+In our company, we believe extraordinary things are achieved by ordinary people with the drive to make a difference.
+
+Ready to take the next step?
+
+Submit your CV in English and tell us why you’re the ideal candidate for a new role at Volvo Cars. Applications must be received no later than 30th of April 2026. We are prioritising direct applications to ensure a fair and efficient application process.
+
+For questions regarding the recruitment process, please contact Recruiter Abhay Krishna Das at abhay.krishna.das@volvocars.com. For specific questions about the position, please reach out to Hiring Manager Pankaj Kalra at pankaj.kalra@volvocars.com.
+
+As part of the recruitment process, the final candidates might undergo a background check.
+
+We welcome your application!

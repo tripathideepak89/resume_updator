@@ -190,7 +190,7 @@ resume_updator/
 ### Install
 
 ```bash
-git clone https://github.com/tripathideepak89/resume_updator.git
+git clone https://github.com/<your_username>/resume_updator.git
 cd resume_updator
 pip install -r requirements.txt
 ```
@@ -397,9 +397,9 @@ By default, the watcher monitors `input_job_descriptions/` and moves successful 
 Two compressed PDF files and one markdown audit report named after the detected company:
 
 ```
-output/Resume_Deepak_Tripathi_FDJ_UNITED.pdf
-output/CoverLetter_Deepak_Tripathi_FDJ_UNITED.pdf
-output/ResumeAudit_Deepak_Tripathi_FDJ_UNITED.md
+output/Resume_<Name>_<Company>.pdf
+output/CoverLetter_<Name>_<Company>.pdf
+output/ResumeAudit_<Name>_<Company>.md
 ```
 
 ## Files

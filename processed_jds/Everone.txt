@@ -1,0 +1,71 @@
+About the job
+Forget traditional consulting. Everone is looking for Platform Engineers who want to break the mold — building real impact through startups, sharp assignments, and the new AI-driven paradigm of agent-based systems.
+
+About Everone
+
+Everone is a tech consulting company providing software engineering and AI expertise to companies across the Nordic market.
+
+But we’re not here to play by the old rules.
+
+With a disruptive approach, we challenge the traditional and often conservative consulting model — replacing it with something more modern, transparent, and real. A way of working where people actually have influence, where collaboration beats hierarchy, and where freedom isn’t just a buzzword.
+
+Right now, we’re in the middle of a major shift.
+
+A new paradigm driven by AI is changing everything — how systems are built, how businesses operate, and what it even means to be a developer.
+
+We don’t just acknowledge this shift — we embrace it.
+
+At Everone, you’ll have the opportunity to work with some of the most exciting and challenging assignments on the market, while being part of building what comes next. From modern software development to AI-driven and agent-based solutions, we see massive opportunities — for our clients, for the industry, and for every individual who wants to stay ahead.
+
+Our flexible model for compensation and benefits, combined with a strong belief in ownership, transparency, and continuous growth, is a core part of what makes us different.
+
+We’re building a company for what’s next — not what used to be.
+
+Today, we partner with some of the most attractive and innovative tech companies on the Swedish market — organizations that are pushing boundaries, investing heavily in AI, and redefining their industries. That means you won’t just be part of the shift — you’ll be working right at the center of it.
+
+Why Everone?
+
+Because you don’t want to be just another consultant in just another company.
+
+You want to be part of something that’s actually moving — a modern, fast-growing consulting company built for what’s next, not what used to be. A place where you’re not just along for the ride, but part of shaping it.
+
+We’re operating right in the middle of a major shift.
+
+AI is redefining how products are built, how companies operate, and how value is created — and we’re leaning into it, not away from it.
+
+At Everone, you’ll work on some of the most challenging assignments on the market, together with some of the most innovative and forward-leaning tech companies in Sweden. This is where new ideas are tested, new technologies are adopted, and real change is happening.
+
+You won’t just follow the evolution of the industry —
+
+you’ll be part of driving it.
+
+Who are you?
+
+You’re a passionate Platform Engineer who wants to work in a modern, tech-driven environment with flexibility and freedom.
+
+You enjoy collaborating in teams, taking ownership, and approaching problems with an open mind. Creating real value for users and customers is at the core of how you work, and you’re comfortable working close to the business and its stakeholders.
+
+Maybe you’re just starting to explore the consulting world — or maybe you’ve been in it for a while and are ready for something new. Either way, that’s not what matters most to us.
+
+What matters is that you’re a skilled developer with a few years of experience, driven by curiosity and a genuine interest in modern tech companies. You want to build things that make a difference — and help businesses grow.
+
+🔹 Your experience
+
+Several years of experience building and running platforms or infrastructure for development
+Strong understanding of container-based environments and orchestration (e.g. Kubernetes)
+Experience working in cloud environments (AWS, Azure, GCP or similar)
+Built and improved CI/CD pipelines used by multiple teams
+Hands-on experience with Infrastructure as Code and automation at scale
+Solid understanding of observability (logs, metrics, tracing) and production environments
+Experience improving developer experience and reducing friction in development workflows
+Comfortable working cross-functionally with developers, architects, and business stakeholders
+Ability to take ownership of the bigger picture – from idea to working platform
+Understands the connection between technology, delivery speed, and business value
+
+🔥 Bonus (nice to have)
+
+Experience building Internal Developer Platforms (IDP)
+Worked with security, identity, and secrets management in cloud environments
+Interest in standardization, platform-as-a-product, and self-service
+Experience driving change, setting direction, or taking a lead role
+Enjoys sharing knowledge (internally or externally)
