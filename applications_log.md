@@ -236,7 +236,7 @@
 
 ### Notes
 
-- Form answers submitted: authorized to work in Sweden = Yes; okay with 4 days/week from central Stockholm office = Yes.
+- Form answers submitted per configured defaults in `application_agent_config.json`.
 - Future job offers consent was left unchecked.
 - Teamtailor form accepted CV upload only; no separate cover-letter upload field was visible.
 

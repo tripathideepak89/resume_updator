@@ -15,11 +15,11 @@ When the user provides a job posting URL and asks to apply:
 
 ## Default Application Answers
 
-- Authorized to work in Sweden: yes
-- Requires employer sponsorship: no
-- Can work 4 days/week from central Stockholm office: yes
-- Background check consent: ask unless explicitly configured
-- Future job-offer consent: no
+- Authorized to work in `<country>`: `<yes/no>` (configured in `application_agent_config.json`)
+- Requires employer sponsorship: `<yes/no>`
+- Can work from `<city>` office `<N>` days/week: `<yes/no>`
+- Background check consent: `<yes/no/ask>`
+- Future job-offer consent: `<yes/no>`
 - Submit requires explicit final confirmation
 
 ## Submission Rule

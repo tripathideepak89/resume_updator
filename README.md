@@ -358,11 +358,11 @@ python apply_agent.py "<job_url>" --no-submit-prompt
 
 Default form answers live in `application_agent_config.json`. Current defaults:
 
-- Authorized to work in Sweden: yes
-- Requires employer sponsorship: no
-- Can work 4 days/week from central Stockholm office: yes
-- Background-check consent: unset, so Ashby forms pause for your input if they ask this
-- Future job-offer consent: no
+- Authorized to work in `<country>`: `<yes/no>`
+- Requires employer sponsorship: `<yes/no>`
+- Can work from `<city>` office `<N>` days/week: `<yes/no>`
+- Background-check consent: `<yes/no/ask>`
+- Future job-offer consent: `<yes/no>`
 - Submit requires confirmation: yes
 
 Supported browser-fill providers:
