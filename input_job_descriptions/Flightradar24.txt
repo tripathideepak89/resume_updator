@@ -1,0 +1,63 @@
+About the job
+Flightradar24 is one of the most successful growth-stage tech companies in Stockholm. Each month more than 50 million aviation enthusiasts visit Flightradar24 (app/website) and our Commercial services team has many of the biggest names in aviation on its customer list.
+
+We are looking for a skilled Platform and Infrastructure Engineer to join our growing Infrastructure team and help us build, scale, and maintain our cloud infrastructure and services in AWS.
+
+The position requires that you are able to work in Stockholm, Sweden. Relocation is not offered for this role.
+
+What You’ll Do
+
+Your responsibilities include
+
+Design, implement, and manage reliable infrastructure using Infrastructure as Code principles.
+Work closely with developers to streamline CI/CD pipelines and improve deployment speed and stability.
+Ensure high availability, security, and performance across our AWS services.
+Monitor systems, troubleshoot incidents, and continuously improve observability and resilience.
+Own database infrastructure, incl. provisioning , migrations, backups, replication, performance tuning.
+Build and operate an internal developer platform that provides reproducible environments.
+
+
+Required Technical Competence
+
+Hands-on experience with AWS services such as EC2, EKS, RDS, S3, and IAM.
+Experience with Terraform, Ansible, Docker and Kubernetes
+Cloud & Data Platform on AWS, Streaming & Messaging: Kafka, RabbitMQ
+Databases & Storage: SQL/NoSQL systems (e.g., MySQL/MariaDB/Postgres, Redis, DynamoDB, data lake/warehouse patterns)
+DevOps & Platform: Docker, Kubernetes/EKS, Terraform
+Engineering practices: Infrastructure as Code, CI/CD, linting, unit tests, integration tests
+Be comfortable automating workflows using scripting languages such as Bash or Python.
+Knowledge of security best practices and cost optimization in AWS 
+You enjoy collaboration, take ownership of your work, and thrive in an environment with clear vision, short feedback loops, and continuous improvement.
+
+
+Who You Are
+
+Has 5+ years of hands-on experience building and operating production systems
+Is self-driven and comfortable making technical decisions independently
+Can quickly understand and work within an existing codebase and architecture
+Values clean code, testing, automation, and pragmatic engineering practices
+Communicates clearly and professionally in English
+
+
+About Flightradar24
+
+Flightradar24 is the leading flight tracking and aviation data provider, leveraging the world’s largest ADS-B network. Our B2C platform serves millions, while our B2B solutions empower airlines, airports, and aviation stakeholders with essential operational insights.
+
+All this is made possible thanks to our globally distributed network of 50,000+ radio receivers that feed real-time aircraft data into the Flightradar24 platform. Over a billion database entries are added each month and we are processing several years of historical data totalling many terabytes. Our proprietary flight tracking data is industry leading and even investigative government agencies from around the world rely on it for aviation accident investigations.
+
+Benefits of working at Flightradar24 include:
+
+Opportunity to impact a service with millions of end users from all around the world
+Contribute to the value which Flightradar24 creates both for B2C and B2B but also for humanity.
+Modern office in the heart of beautiful downtown Stockholm, Sweden
+Being part of a diverse team 
+Flexible and social work environment with free beverages, fruit, and snacks
+
+
+Flightradar24 started as a hobby project in 2006 when two Swedish aviation geeks decided to build a network of ADS-B receivers in Northern and Central Europe. In 2009 we opened up the network, and made it possible for anyone with an ADS-B receiver to upload data to the network. Many parts of the world were quickly covered, but the quest to provide global ADS-B coverage is still ongoing.
+
+Flightradar24 at a glance
+
+Largest ADS-B network in the world with over 55,000 connected receivers
+5+ million users per day
+100+ million app downloads

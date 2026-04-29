@@ -1,0 +1,69 @@
+About the job
+You know the feeling — you come across a job opening that feels like a perfect fit. You’re driven, you learn fast, and you deliver results — yet on paper, everyone seems to have the same CV. That’s exactly what’s broken in recruitment.
+
+And that’s exactly what we fix.
+
+Welcome to AssessioAssessio is a European leader in science-backed HR technology with a clear vision: Zero Talent Waste. For us this means unleashing the potential of employees and building a workplace where everyone can thrive.
+
+Founded in Sweden in 1954, we’ve grown from a pioneer in psychometric assessments into a full-service HR technology provider. We combine decades of validated science with AI-supported insight to help you make better decisions across the employee lifecycle.
+
+By connecting recruitment, development, performance, and professional recognition, we deliver people data you can trust. Protected by ISO-certified security, our tools provide valuable insights that drive real impact - helping businesses and institutions make fair, confident decisions about their workforces.
+
+Your roleAs a Senior DevOps Engineer, you will play a central role in designing, implementing, and maintaining scalable, secure, and reliable cloud infrastructure and CI/CD processes. Your expertise will drive the automation, observability, and operational excellence that are at the heart of our growth. While your focus will be to work with European cloud providers, Github CI/CD, modern monitoring, and a microservices approach - you’ll also collaborate across the wider Assessio group, with opportunities to broaden your horizons in Kubernetes, AWS, and cutting-edge DevOps tooling.
+
+What You'll Do
+
+Build, test, and maintain cloud infrastructure using Infrastructure as Code (Terraform, CDK, etc.), ensuring scalability, security, and reliability.
+Design, implement, and optimise modern CI/CD pipelines and automated deployment processes.
+Maintain platform reliability and performance by leveraging monitoring and alerting tools and supporting high availability and effective disaster recovery.
+Participate in application deployments and help manage databases and cloud resources.
+Collaborate closely with developers, product, and security teams to align infrastructure with business needs.
+Document infrastructure, automation workflows, and processes to promote transparency and knowledge sharing.
+Heavily leverage modern technologies, including GenAI and LLMs, to modernise and automate DevOps processes.
+
+Who are you?
+
+Bachelor's or master's degree in computer science, Engineering, or a related field.
+Experience working with cloud services (Scaleway, AWS, or similar), including infrastructure setup and automation.
+Hands-on expertise in Infrastructure as Code (Terraform preferred), and CI/CD pipelines.
+Experience with containerisation and a good understanding of cloud data storage technologies.
+Understanding effective monitoring, alerting, and security principles.
+Proficient problem-solving skills, and ability to work both independently and collaboratively.
+Strong communication skills and experience in agile teams.
+Fluent in English.
+
+Why Assessio?We are a fast-growing, international SaaS company with a clear ambition: to become the #1 player in Europe in the field of assessment and development.
+
+We operate from offices in Sweden, Denmark, Norway, Estonia, Germany, and - since recently - France, but above all, we function as one global team.
+
+Collaboration, growth, learning, and having fun together are at the heart of how we work.
+
+We offer you💰 A competitive salary with an individual commission model
+
+⭐️ A fully employer-funded pension plan
+
+🧠 Focus and investment in your personal development
+
+🏠 We offer a great office environment that you’ll enjoy working from, combined with the flexibility to work from home. When working remotely, you receive a home office allowance. Our guideline is three days in the office, depending on location.
+
+🎉 The events committee regularly organises fun activities - think padel, bowling, or barbecues.
+
+✈️ We’re an international company and value staying connected. That means a yearly company trip to Stockholm, Oslo, Copenhagen, Berlin, Paris or Amsterdam! Expect dinners, catching up with your international colleagues, inspiring sessions, and great parties.
+
+♻️ Every day, we work towards our mission: Zero Talent Waste. This is the goal behind everything we do. Contribute to a fair labor market - it adds an extra layer of meaning to your work.
+
+Our hiring process
+
+We practice what we preach. We ask you to complete an assessment consisting of three parts: a cognitive ability assessment, a personality assessment, and a motivation questionnaire.
+
+Everyone goes through this process. Why? To ensure that everyone gets a fair chance and that our decisions are based on data, not gut feeling. The assessment takes approximately 50 minutes, and you’ll receive a quick response from us after completing it.
+
+🔍 Want to learn more about the process? Visit our career page.
+
+🧭 Curious about the assessments? More information is available on our website (Aptitude and Personality)
+
+We look forward to meeting you!
+
+Apply now and help us shape the future of talent.
+Benefits found in job post
+Pension plan

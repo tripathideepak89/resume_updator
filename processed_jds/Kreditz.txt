@@ -1,0 +1,99 @@
+About the job
+Kreditz is transforming how businesses assess credit and risk using real-time data and NextGen Credit Scoring solutions.
+
+As one of Europe’s fastest-growing FinTech scaleups - we’ve earned a place on the Sifted 100: Nordics & Benelux list in both 2024 and 2025 and most recently, we were proud to receive a double win at the Credit Management & Compliance Awards 2025, being named both "Fintech Rocket of the Year" and "Breakthrough of the Year".
+
+With strong growth across the Nordics and Europe, our clients range from leading banks and iGaming giants to fast-moving digital innovators.
+
+About The Position
+
+Kreditz is looking for a DevOps Engineer to join our Tech team. In this role, you will build and evolve our cloud infrastructure, CI/CD pipelines, and platform tooling, ensuring our systems are scalable, reliable, and secure as we grow.
+
+This is a hands-on builder role for someone who enjoys automation, ownership, and turning complexity into clean, scalable infrastructure.
+
+What Can Kreditz Offer
+
+A once-in-a-lifetime growth journey, from startup to Global scaleup
+ A journey where everyone in the team plays a crucial role for our company’s success
+Fun-loving, driven, and passionate colleagues who support each other’s success
+A culture that celebrates progress, humility, and teamwork
+ We win together
+24/7 access to gym, sauna and sports facilities at our office, plus additional wellness allowance
+Competitive base salary
+
+RESPONSIBILITES
+
+Some Of The Main Responsibilities You Will Cover
+
+Design, build, and maintain cloud infrastructure using Infrastructure as Code (Terraform).
+Develop and optimize CI/CD pipelines for automated testing and deployment.
+Build and deploy services on AWS using ECS, Fargate, and Service Connect.
+Implement and maintain monitoring, alerting, and observability solutions.
+Collaborate with developers to improve deployment workflows and platform reliability.
+Work with serverless technologies (Lambda) for event processing and automation.
+Perform code reviews and contribute hands-on to infrastructure projects.
+Leverage AI agents and tools to enhance development workflows and productivity.
+Document infrastructure architecture, processes, and runbooks.
+
+Success means engineers ship confidently, systems scale without drama, and incidents are rare, visible, and quickly resolved.
+
+WE ARE LOOKING FOR
+
+We Believe That You Have
+
+A Bachelor's degree in Computer Science, IT, or related field (or equivalent experience).
+5+ years of experience in DevOps, platform engineering, or backend development.
+Strong skills in Infrastructure as Code (Terraform).
+Experience with AWS services, particularly ECS, Fargate, and Service Connect.
+Experience with CI/CD tools and pipeline automation.
+Familiarity with containerization (Docker/Podman).
+Familiarity with message queuing (SQS, SNS).
+Experience with databases like PostgreSQL, MySQL, Redis, DynamoDB.
+Strong skills in monitoring and observability tools (CloudWatch, OpenTelemetry, X-Ray).
+Proficiency with Git and version control workflows.
+Scripting skills in Python, Bash, or Go.
+Excellent English communication skills (Swedish is a plus).
+Enthusiasm for using AI agents and tools in daily development work.
+Experience in FinTech is a plus.
+
+WHY JOIN NOW?
+
+At Kreditz, you'll have the opportunity to work in a cutting-edge, fast-growing FinTech company that's redefining the credit scoring industry. With the backing of major investors and a clear vision for the future, your work will make a real impact on financial inclusion worldwide. Join us and be a part of something truly transformative!
+
+APPOINTMENT OF ROLE
+
+Q1/Q2 2026
+
+SCOPE
+
+Full-time, permanent employment (tillsvidareanställning)
+
+SALARY
+
+Competitive salary
+
+REPORTING
+
+You will be reporting to the company’s VP Engineering
+
+WORKPLACE
+
+Danderyd, Stockholm
+
+RECRUITMENT PROCESS
+
+Ongoing selection, we review candidates continuously.
+
+Last day for applications 31st March 2026
+
+CRIMINAL RECORDS EXTRACT
+
+As part of our recruitment process we will ask you to present a clean criminal records extract
+
+CONTACT
+
+Lorenzo Puccio, VP Strategic Operations, Lorenzo@kreditz.com
+
+For more information about the role feel free to reach out to our Co-founder/CTO, arlen@kreditz.com
+
+Intelligent credit- & risk decisions made easy with open banking & AI-technology

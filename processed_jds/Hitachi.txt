@@ -1,0 +1,67 @@
+The opportunity
+
+Join the GI MACH team to help build a next-generation data platform that unifies data from diverse sources, creating a single source of truth for code development, design, and manufacturing.
+
+We’re developing a robust CI/CD pipeline for Design & Manufacturing to revolutionize a critical platform for control and protection in an HVDC project.
+
+As a DevOps Ninja, you’ll play a pivotal role in automating and scaling the infrastructure that powers this platform, with extra focus on our internal applications and tools.
+
+How you’ll make an impact
+
+- Design, develop, and implement mission-critical tools and applications to support a scalable, high-performance, high-volume production environment with global users.
+
+- Build and maintain CI/CD pipelines for C++ and C# development environments, leveraging tools like Azure, and MS Build scripts.
+
+- Automate infrastructure and software processes using tools like Ansible, Chef, or Puppet.
+
+- Manage containerized environments using Docker and Docker Compose, including creating and testing Windows Docker images.
+
+- Implement full-stack monitoring and alerting systems using tools like Sensu, Splunk, or Nagios.
+
+- Plan and execute software and infrastructure upgrades based on data-driven capacity planning.
+
+- Manage configuration, variants, and version control using Git, SSW, and release management tools like Jira.
+
+- Streamline development experiences for teams by designing scalable CI/CD processes and optimizing workflows with containerization and virtualization.
+
+- Collaborate with teams to support business needs and provide domain expertise for internal systems.
+
+Your background
+
+- Bachelor’s Degree or higher in Engineering, Computer Science, or a related field.
+
+- Expert skills in Linux, networking, storage, and virtualization.
+
+- Proficiency in scripting languages such as Python, Ruby, or Shell.
+
+- Strong understanding of CI/CD processes and experience designing pipelines using Jenkins, Azure, or similar tools.
+
+- Experience with containerization technologies (Docker, Docker Compose).
+
+- Familiarity with build systems (Makefiles, CMake) and release management tools (e.g.: Git).
+
+- Ability to manage software and infrastructure upgrades with a focus on scalability and performance.
+
+- Experience setting up and supporting development environments for C++ and C#.
+
+- Strong English communication skills.
+
+Nice to Have:
+
+- Experience with Kubernetes for container orchestration.
+
+- Familiarity with Windows Docker containers.
+
+- Experience with Proxmox virtualization.
+
+- Experience with monitoring tools like Sensu, Splunk, or Nagios.
+
+Why Join Us?
+
+Be part of a transformative project that automates and scales a critical platform for design and manufacturing. Your expertise will help drive innovation and efficiency in a global, high-impact environment.
+
+More about us
+
+Are you ready for a new exciting challenge? Does the above description sound like you? Welcome to apply! Please note that we are hiring for multiple positions.
+
+More information: Recruiting Manager Ezhilarasi Deiveegan, ezhilarasi.deiveegan@hitachienergy.com, will answer your questions about the position. Union representatives – Sveriges Ingenjörer:  Mikael Hjort, +46 107-38 25 73;  Ledarna: Frank Hollstedt, +46 107-38 70 43;  Unionen: Fredrik Holmgren, +46 107-38 21 85. All other questions can be directed to Talent Partner Tomasz Szawica [C], tomasz.szawica@hitachienergy.com.

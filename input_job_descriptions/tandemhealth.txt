@@ -1,0 +1,60 @@
+Build something monumental for Healthcare!
+At Tandem Health we’re reimagining healthcare by putting clinicians first. Our platform - designed by clinicians, for clinicians - is built on deep insight into real-world pain points, with intuitive medical notes and workflows that truly support patient care.
+We’re a fast-scaling health-tech company backed by top investors and expanding globally. We move fast, stay curious, and believe building something that matters starts with an extraordinary team. If you're passionate about impact and innovation, we'd love to meet you!
+About the Role
+You love making systems work - not just in theory, but in production.
+You care about quality, performance, and reliability and you know that great infrastructure isn’t just about uptime, it’s about enabling everyone else to build faster, safer, and with more confidence.
+At Tandem, you’ll build and evolve the platform that underpins the future of European healthcare. The systems you build will ensure our citizens most sensitive data remains secure while powering the AI transformation of healthcare. Your work will be the foundation for supporting our continued rapid scale-out across the continent!
+You’ll be part of a small, highly skilled team that designs, builds, and maintains the infrastructure & core systems our products run on, from Kubernetes clusters and CI/CD pipelines to PHI handling and security. You’ll care deeply about how code moves from commit to production, and you’ll take pride in knowing that the systems you build are robust, observable, and elegant.
+If you’re the kind of engineer who feels a quiet satisfaction when everything just works, who values precision, security, and clarity - this is your kind of role.
+
+What You Will Do
+Design, build, and maintain the cloud infrastructure that powers Tandem’s products.
+Build scalable systems on top of Kubernetes, enabling rapid and reliable product development.
+Develop and optimize CI/CD pipelines, ensuring smooth, automated, and secure deployments.
+Implement and manage robust encryption and key management systems to meet healthcare-grade security requirements.
+Ensure observability, monitoring, and alerting are baked into every layer of the stack.
+Continuously improve performance, reliability, and scalability - and validate it through testing and automation.
+Ensure our infra supports high speed of iteration despite a regulated industry.
+
+What You Bring
+Deep understanding of cloud infrastructure (Azure preferred, AWS/GCP also welcome).
+Strong experience with Kubernetes, CI/CD, and modern cloud tooling.
+Hands-on programming experience - you don’t just configure systems, you build them.
+Solid grasp of networking, security, and encryption concepts.
+A passion for building systems that empower developers and make complex things simple.
+High standards for quality, documentation, and correctness.
+A mindset that combines craftsmanship with pragmatism - you get things done right.
+Experience with Terraform, Helm, or infrastructure-as-code.
+Bonus Points
+Experience working in regulated industries (healthtech, finance, etc.). Especially with Medical Device Regulation.
+Background in software engineering before specializing in infrastructure.
+Contributions to open-source or platform-related communities.
+A history of building systems that scale - and stay up.
+
+Location
+We believe the best ideas happen when we’re together. This role is based in our vibrant HQ in the Epicenter building in the heart of Stockholm where you will work primarily from our office to collaborate, connect, and build our culture.
+
+How to Apply
+We adopt a continuous selection process, so please make sure to apply with your CV in English.
+Our interview process consists of 4 stages:
+Screening interview with Talent Acquisition
+Technical interviews with some of our Engineers
+Interview with our CTO & Co-Founder
+Home case and presentation at our office - Join us in the Stockholm office for a lunch, a presentation and som pair programming to experience our our culture firsthand, collaborate with our team, and see how you work in action.
+
+Benefits
+Competitive salary & company stock options
+25 days/year of paid vacation
+Pension
+5,000 SEK wellness allowance (friskvårdsbidrag)
+Social and team-building activities (off-sites, after works, winter/summer parties)
+An opportunity to make a real positive impact in the world of healthcare
+Work with some of the best minds in AI, healthcare, and engineering.
+Culture at Tandem
+At Tandem, we move fast, think big, and take ownership. We're a high-performing, diverse team with a shared drive to change the future of healthcare - and we’re just getting started.
+Our culture is built on action, ambition, and learning. You'll be trusted to take the lead, challenge yourself, and make an impact from day one. We believe real growth happens when you're stretched, supported, and surrounded by smart, passionate teammates who want to win together.
+Even though we’re spread across countries, we come together often in Sweden for team meetings, social events, and offsites - blending global reach with real human connection.
+We hire for talent, potential, and attitude - valuing different backgrounds and fresh perspectives. Great ideas come from everywhere, and we’re building a team that reflects the world we want to change.
+
+Tandem handles sensitive patient data and will conduct a background check before hiring any candidate.

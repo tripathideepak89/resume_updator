@@ -1,0 +1,130 @@
+Company: Doktor.se
+Role: Senior Platform Engineer
+Source: https://jobs.doktor.se/jobs/7478835-senior-platform-engineer
+
+Senior Platform Engineer - Doktor.se
+Webbplatsen använder cookies för att säkerställa att du får den bästa upplevelsen.
+Doktor.se och våra samarbetspartner använder cookies och liknande tekniker (gemensamt "cookies") som behövs för att visa webbplatsen och för att säkerställa att du får den bästa upplevelsen.
+Om du samtycker till det kommer vi också att använda cookies för analys- och marknadsföringssyften.
+Besök vår Cookie Policy för att läsa mer om de cookies vi använder.
+Du kan när som helst återkalla eller ändra ditt samtycke genom att klicka på ”Hantera cookies”, som du hittar längst ner på varje sida.
+Acceptera alla cookies Neka alla icke-nödvändiga cookies Inställningar för cookies
+Välj vilka cookies du vill godkänna
+På den här sidan sätter vi alltid cookies som är nödvändiga, d.v.s. som behöver användas för att sidan ska fungera ordentligt.
+Om du samtycker till det kommer vi också att sätta andra typer av cookies. Du kan lämna eller ta tillbaka ditt samtycke till olika typer av cookies med hjälp av reglarna nedan. Du kan ändra eller ta tillbaka ditt samtycke när du vill, genom att klicka på länken "Hantera Cookies", som alltid finns tillgänglig på botten av sidan.
+För att lära dig mer om vad de olika typerna av cookies gör och hur dina uppgifter används när de sätts, se vår cookiepolicy .
+Strikt nödvändiga
+Dessa cookies är nödvändiga för att sidan ska fungera ordentligt, och sätts alltid när du besöker sidan.
+Leverantörer Teamtailor
+Statistik
+Dessa cookies samlar in information som hjälper oss att förstå hur sidan används.
+Leverantörer Teamtailor
+Marknadsföring
+Dessa cookies används för att anpassa den marknadsföring du får se. I vissa fall utför de också ytterligare funktioner på sidan.
+Leverantörer Youtube, Vimeo
+Godkänn dessa cookies Neka alla icke-nödvändiga cookies
+Hoppa till huvudinnehållet
+Karriärmeny
+Start
+Alla lediga jobb
+Arbeta inom vård
+Work in Tech & Product
+Arbeta inom Corporate functions
+Vaccinationsbussarna
+Vår kultur
+Medarbetare Logga in som medarbetare Kandidat Logga in i Connect Startsida doktor.se
+Dela sidan
+Facebook X LinkedIn Mail
+Tech · Stockholm · Hybridarbete
+Senior Platform Engineer
+Own the platform for Sweden's largest digital healthcare provider. AWS, Kubernetes, AI workloads in production. Small eng team, real influence, no red tape.
+Sök jobbet
+Why Doktor.se
+Doktor.se is Sweden's largest digital healthcare provider. We combine physical clinics with a digital platform serving millions of consultations per year across Sweden, Germany, and Norway. Our 25-person engineering team has startup autonomy inside a profitable, international organization with 1,000+ employees and over 1B SEK in revenue.
+We run OpenAI and Anthropic models in production across patient and clinician workflows — and that footprint is growing fast.
+What you'll do
+Our infrastructure works, but it was built to solve yesterday's problems. We need someone who can help us get to where we want to be — not maintain what we have, but reshape it. If you want a place where everything is already figured out, this isn't it. If you want to build something better, here's what you'd own:
+Build a deployment platform where teams ship their own services without asking you for permission.
+Design infrastructure that is secure by default — so teams don't have to think about encryption, network isolation, or data residency. It just works.
+Create deployment pipelines where security scanning, policy checks, and compliance happen automatically — invisible when everything is fine, loud when something needs attention.
+Support and scale infrastructure for AI workloads — we run models in production across our platform, and that footprint is growing.
+Set up observability that gives teams real insight into their own services — useful dashboards, alerts that mean something, not noise that everyone ignores.
+Work closely with developers to understand what slows them down, and then fix it. Not by doing it for them, but by making it easy for them to do it themselves.
+Maintain and evolve our cloud account structure, networking, and identity management across multiple regions and products.
+Some weeks you'll write infrastructure code. Some weeks you'll pair with a developer to debug a slow service. Some weeks you'll design how a new product gets its own isolated infrastructure. The common thread: you make the teams around you better.
+Make developers faster, not more dependent on you.
+What we're looking for
+You've built and operated Kubernetes in production. Not just deployed a Helm chart once — you've debugged networking issues at 2am, designed RBAC policies, and thought about how multiple teams share a cluster without stepping on each other.
+You know AWS well. Accounts, networking, IAM, KMS. You have opinions about what should live in Kubernetes and what genuinely needs to be an AWS managed service — and you lean toward keeping things in Kubernetes where possible.
+You've worked with GitOps and infrastructure as code. Flux, ArgoCD, Terraform — specific tools matter less than the principle: infrastructure changes go through pull requests, are reviewed, and are auditable.
+You understand developers because you are one. You can read their code, understand their pipelines, and have meaningful conversations about architecture.
+You think about security as something you design into systems, not something you review at the end.
+You have opinions — and you can change them when someone makes a better argument.
+University degree in computer science, engineering, or equivalent experience.
+Tech stack
+Cloud - AWS (multi-account, multi-region)
+Orchestration - Kubernetes / EKS
+IaC - Terraform
+CI/CD - GitHub Actions
+Languages - Python, TypeScript
+AI - OpenAI, Anthropic (in production and tooling)
+Observability - Datadog / Grafana (you'll shape this)
+What we offer
+Real influence. You'll shape how our platform works, not just operate what someone else designed.
+Healthcare context. Patient data, regulatory compliance, and real consequences for getting it wrong. What you build actually matters.
+Small team, direct impact. 25 engineers — your work is visible, not lost in a machine.
+Autonomy. No micromanagement, no endless approval chains.
+AI in production. We're running LLMs in patient and clinician workflows today — the infrastructure needs to grow with that.
+Collective agreement, 30 days vacation, wellness allowance, personal development budget.
+Practical details
+Start: As soon as we find the right person. We'll accommodate your notice period.
+Employment: Permanent, full-time. Six month probation period.
+Location: On-site, Monday–Thursday at Sveavägen 63, Stockholm. Fridays are flexible.
+Language: English is our working language in tech. Swedish is a bonus.
+Work permit: You must already have the right to work in Sweden.
+Contact: Andrew Crookston, VP of Engineering
+We handle recruitment internally — no agencies, no consultants, no external recruiters.
+Avdelning Tech Platser Stockholm Distansarbete Hybridarbete
+Kontakt Andrew Crookston VP of Engineering
+–
+Tech
+Kollegor
+Viktor Sjöberg
+Head of Product - Commercial
+Karin Bergström
+Head of Product
+Lediga jobb
+Senior iOS Developer Tech · Stockholm · Hybridarbete
+.NET/C# Backend & DevOps Utvecklare Tech · Göteborg · Hybridarbete
+Fler jobb
+Vår samlingsplats
+Under 2021 flyttade vi in till vårt nya kontor på Sveavägen 63. Vi sitter på femte våningen med en lugn vy över det annars hektiska Stockholm. Här samlas vi för kreativitet, gemenskap och samhörighet, där vi alla tillsammans är med och bidrar till vår trygga och entreprenörsdrivna kultur.
+Om Doktor.se
+På Doktor.Se vill vi göra saker annorlunda. Vi vill utmana och förändra en hel bransch. Allt började med en idé om att det måste gå att skapa en vårdlösning som är bättre anpassad till vår tid och våra behov. Att det måste gå att få moderna digitala verktyg och traditionell fysisk vård att samverka med utgångspunkt i patientens behov. Och att göra det så att det inte bara blir tillgängligt för våra patienter utan också bidrar till att utveckla det sätt som vård erbjuds på idag. För oss alla. Det här är faktiskt vad vi gör idag. Men vi är långt ifrån klara och är ute på en spännande förändringsresa. Där kan du få vara med och bidra.
+Grundades 2016
+Medarbetare 1000+
+Sök jobbet
+Tech · Stockholm · Hybridarbete
+Senior Platform Engineer
+Own the platform for Sweden's largest digital healthcare provider. AWS, Kubernetes, AI workloads in production. Small eng team, real influence, no red tape.
+Läser in ansökningsformuläret
+Karriärsida
+Start
+Alla lediga jobb
+Arbeta inom vård
+Work in Tech & Product
+Arbeta inom Corporate functions
+Vaccinationsbussarna
+Vår kultur
+Data och integritet
+Hantera cookies
+doktor.se
+Inloggning för medarbetare
+Logga in till Connect ·
+Byt språk Svenska
+Engelska (Storbritannien) Norska (bokmål)
+Jobbar du redan på Doktor.se?
+Var med och rekrytera din framtida kollega.
+@doktor.se
+Logga in
+Rekryteringsverktyg från Teamtailor

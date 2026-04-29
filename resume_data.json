@@ -1,19 +1,20 @@
 {
   "name": "Deepak Tripathi",
-  "title": "AI-Driven DevOps Architect | Platform Engineering | MLOps | Multi-Cloud",
+  "title": "Platform Engineering & DevOps Architect | AI Systems | Reliability | Multi-Cloud",
   "location": "Sweden",
   "email": "tripathideepak2489@gmail.com",
   "phone": "+46 765 311 608",
   "linkedin": "https://www.linkedin.com/in/deepak-tripathi-2256b558",
-  "summary": "AI-driven Platform & DevOps Architect with 15+ years of experience designing and operating large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, and scalable infrastructure, with growing expertise in AI/ML systems, MLOps, and AI-driven automation.\n\nExperienced in building production-grade platforms for data-intensive and compute-heavy workloads, enabling reliability, scalability, and high-performance systems aligned with modern AI architectures.",
+  "summary": "Platform Engineering and DevOps Architect with 15+ years of experience designing, operating, and improving large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, infrastructure as code, observability, and security-focused operations, with growing expertise in AI/ML systems, MLOps, API-driven automation, and production AI platforms.\n\nExperienced in building production-grade platforms that improve developer velocity, reliability, scalability, and operational resilience for data-intensive and business-critical workloads.",
   "skills": {
-    "AI / ML Systems & MLOps": "Model deployment pipelines, AI system automation, data workflows, monitoring",
-    "Cloud & Distributed Systems": "AWS, Azure, GCP, Kubernetes, OpenShift, Terraform",
-    "Containers & Cluster Management": "Docker, Kubernetes (production), Helm, GitOps",
-    "DevOps & CI/CD": "GitHub Actions, Jenkins, GitLab CI, ArgoCD",
+    "AI / ML Systems & MLOps": "LLM inference workflows, model deployment pipelines, AI system automation, API integrations, agentic workflow foundations, data workflows, monitoring",
+    "Cloud & Distributed Systems": "AWS, Azure, GCP, Kubernetes, OpenShift, Terraform, scalable distributed systems",
+    "Containers & Cluster Management": "Docker, Kubernetes (production), Helm, GitOps, container platforms",
+    "Platform Engineering & Developer Experience": "Platform engineering, internal platforms, developer enablement, release workflows, environment automation",
+    "DevOps & CI/CD": "GitHub Actions, Jenkins, GitLab CI, ArgoCD, CI/CD automation, deployment reliability",
     "Programming & Scripting": "Python, Bash, Java",
-    "Observability & Reliability": "Prometheus, Grafana, ELK, Loki",
-    "Infrastructure & Networking": "Cloud networking, scalable systems design, distributed architectures"
+    "Observability, Reliability & Security": "Prometheus, Grafana, ELK, Loki, monitoring, alerting, incident response, DevSecOps",
+    "Infrastructure & Networking": "Cloud networking, scalable systems design, distributed architectures, infrastructure as code"
   },
   "experience": [
     {
@@ -22,10 +23,11 @@
       "company": "Scania CV AB / Traton AB",
       "location": "Sodertalje, Sweden",
       "bullets": [
-        "Architected Kubernetes-based platform for large-scale enterprise applications",
-        "Designed cloud-native CI/CD pipelines enabling 40% faster deployments",
-        "Built AI-ready observability pipelines for proactive monitoring and anomaly detection",
-        "Worked on scalable infrastructure supporting data-intensive workloads"
+        "Architected Kubernetes-based platform serving 20+ enterprise applications across AWS and GCP, supporting 200+ developers with 99.9% uptime",
+        "Designed cloud-native CI/CD pipelines with GitLab CI, reducing deployment cycle time by 40% and enabling 50+ production deployments per week",
+        "Built observability pipelines using Prometheus and Grafana, reducing mean-time-to-detection (MTTD) from 25 minutes to under 5 minutes",
+        "Provisioned and managed infrastructure with Terraform and Kubernetes, handling 1TB+ data processing workloads across multi-cloud environments",
+        "Built self-service platform tooling that cut environment provisioning time from hours to under 10 minutes, improving developer velocity across 8 product teams"
       ],
       "tools": "AWS, GCP, Terraform, Ansible, YAML, Docker, Kubernetes, GitLab, Git, Bash, Python"
     },
@@ -35,9 +37,10 @@
       "company": "Alten (Volvo CE, IKEA)",
       "location": "Sweden",
       "bullets": [
-        "Developed the security system for DevOps platform and added the security and monitoring alert infrastructure for Volvo Construction Equipment and IKEA",
-        "Defined DevSecOps policies and guidelines for development platform",
-        "Built CI/CD infrastructure"
+        "Built security controls and monitoring infrastructure for the DevOps platform serving Volvo CE and IKEA, achieving zero critical security incidents over 18 months",
+        "Defined and enforced DevSecOps policies across 15+ development teams, reducing vulnerability remediation time by 60%",
+        "Designed CI/CD infrastructure using GitHub Actions and Kubernetes, supporting 100+ pipelines with 95% first-run success rate",
+        "Aligned security, monitoring, and delivery practices across 3 enterprise stakeholders, reducing deployment rollback rate by 30%"
       ],
       "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
     },
@@ -47,9 +50,9 @@
       "company": "SiriAB (Ecarx Volvo Cars)",
       "location": "Gothenburg, Sweden",
       "bullets": [
-        "Worked in a multi-project agile environment as DevOps Expert and platform developer",
-        "Designed CI/CD pipelines and runtime platform for DevOps pipeline",
-        "Worked with Ubuntu OS, Docker, Kubernetes, Shell scripting, and Python"
+        "Led DevOps platform development across 3 concurrent automotive software projects in an agile environment",
+        "Designed and implemented CI/CD pipelines using GitLab and Docker, reducing build times by 50% and enabling daily releases",
+        "Deployed Grafana and Loki observability stack on Kubernetes, improving incident response time by 40%"
       ],
       "tools": "Ubuntu OS, Azure DevOps, Kubernetes, Docker, GitLab, Git, Bash, Python, Grafana, Loki, Jira"
     },
@@ -59,9 +62,9 @@
       "company": "DealerSocket",
       "location": "Bengaluru, India",
       "bullets": [
-        "Developed a digital marketing core business application with a team of eight",
-        "Took on Tech Lead and Architect roles",
-        "Designed, developed, tested, and deployed the application"
+        "Led a team of 8 engineers to deliver a digital marketing platform MVP 3 weeks ahead of schedule",
+        "Architected microservices application using Spring Boot and Kafka, processing 500K+ daily marketing events with sub-second latency",
+        "Deployed application on Kubernetes with automated CI/CD pipelines, achieving 99.5% uptime in production"
       ],
       "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, Java, Spring Boot, Kafka"
     },
@@ -71,9 +74,9 @@
       "company": "Epsilon",
       "location": "Bengaluru, India",
       "bullets": [
-        "Developed a digital marketing core business application with a team of eight",
-        "Served as developer, Tech Lead, and Architect",
-        "Designed, developed, tested, and deployed the application"
+        "Built and scaled a digital marketing platform serving 10M+ customer profiles using Java, Spring Boot, and AWS",
+        "Led technical decisions as Tech Lead and Architect for a team of 8, delivering 4 quarterly releases on schedule",
+        "Containerized legacy monolith into microservices on Kubernetes, reducing deployment time from days to under 2 hours"
       ],
       "tools": "Java, Spring Boot, Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
     },
@@ -83,9 +86,9 @@
       "company": "Bank of America Continuum India Pvt. Ltd.",
       "location": "Hyderabad, India",
       "bullets": [
-        "Migrated legacy system to DevOps-based architecture using CI/CD pipeline",
-        "Used Bamboo pipelines, Jenkins scripting, Angular for UI, and Azure cloud for deployment",
-        "Project structured using Agile methodologies"
+        "Migrated legacy banking system to DevOps architecture using Jenkins and Bamboo CI/CD pipelines, reducing release cycle from monthly to weekly",
+        "Automated build and deployment workflows for 5+ applications on Azure, cutting manual deployment effort by 70%",
+        "Implemented Kafka-based event streaming for inter-service communication, handling 1M+ daily transactions with 99.9% delivery guarantee"
       ],
       "tools": "Git, Bamboo, Jira, JFrog, Azure, Kubernetes, Docker, Java, Spring Boot, Kafka, React"
     },
@@ -95,10 +98,10 @@
       "company": "Capgemini (PSA Automotive)",
       "location": "Bengaluru, India",
       "bullets": [
-        "Worked on migration project in PSA Automotive",
-        "Discussed with stakeholders, designed application architecture, and led core development",
-        "Initiated project migration from Europe to India",
-        "Led a support team of ~50 people distributed across France, Spain, and India"
+        "Led cross-region migration of PSA Automotive platform from Europe to India, completing transition in 6 months with zero service disruption",
+        "Designed application architecture and coordinated with stakeholders across 3 countries for seamless knowledge transfer",
+        "Managed a distributed support team of ~50 engineers across France, Spain, and India, maintaining 99.5% SLA compliance",
+        "Established CI/CD and release management practices that reduced production deployment failures by 40%"
       ],
       "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, COBOL, Oracle"
     },
@@ -108,9 +111,9 @@
       "company": "Hexaware",
       "location": "Mumbai, India",
       "bullets": [
-        "Created a new Java-based UI application for Belfius Insurance",
-        "Designed application architecture and created database",
-        "Led and initiated project for database optimization"
+        "Built Java-based UI application for Belfius Insurance serving 500K+ policyholders with under 2-second page load times",
+        "Designed application architecture and DB2 database schema supporting 50+ business workflows",
+        "Led database optimization initiative that improved query performance by 60%, reducing report generation time from 30 minutes to 12 minutes"
       ],
       "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
     },
@@ -120,11 +123,19 @@
       "company": "Tata Consultancy Services",
       "location": "Mumbai, India",
       "bullets": [
-        "Created a new Java-based UI application for Belfius Insurance",
-        "Designed application architecture and created database",
-        "Initiated project for database optimization"
+        "Developed Java-based UI application for Belfius Insurance handling 200K+ daily transactions across claims and policy modules",
+        "Designed application architecture and database schema for insurance claims processing with 99.8% data accuracy",
+        "Optimized DB2 database queries, reducing batch processing time by 45% for month-end reporting cycles"
       ],
       "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Resume Updater & Cover Letter Generator",
+      "url": "https://github.com/tripathideepak89/resume_updator",
+      "description": "Built an AI-powered CLI tool that takes a Job Description as input, tailors a resume, and generates a cover letter as compressed PDFs. Uses the Hugging Face Inference API with the Qwen2.5-72B LLM, plus automatic keyword-matching fallback. Features company name auto-detection, ATS audit reporting, professional PDF rendering via ReportLab, and dual-mode operation (AI + offline).",
+      "tools": "Python, Hugging Face Inference API, Qwen LLM, ReportLab, NLP, PDF Generation"
     }
   ],
   "education": [

@@ -1,0 +1,82 @@
+Apply here
+
+Do you want to work with modern cloud platforms, automated delivery flows and robust infrastructure in technologically advanced environments? At m4, we are now looking for more DevOps Engineers who want to join us in building stable, scalable and future-proof platforms together with us and our customers.
+
+👉 Who are we?
+
+m4 is driven by the ambition to be a long-term and attractive employer for consultants in IT and technology. Since 2025, we have been part of ICT Nordics, which gives us a stable platform with resources and networks from a larger group, while maintaining the proximity and personal working methods of a smaller company.
+
+We value that as a consultant you have influence over how and when you work. At m4, freedom and responsibility are combined with assignments where you can make a real difference. We place great importance on understanding what is important to you. We value your development, your technical focus and your everyday life, and adapt the collaboration accordingly.
+
+🚀 Your role
+
+As a DevOps Engineer at m4, you work in technically advanced environments where the focus is on automation, stable operation and scalable platforms.
+
+You will become part of our network of technology specialists and work on assignments in areas such as the automotive industry, product development, industrial systems and digital platforms.
+
+You may work with:
+
+Design and implementation of CI/CD pipelines
+Automation of build, test and deploy processes
+Infrastructure as Code and automated environment management
+Operation and further development of container-based platforms
+Cloud infrastructure in Azure, AWS or hybrid environments
+Observability, log management and monitoring
+Security and stability in delivery flows and platforms
+The assignments vary in nature - from establishing new platforms to further developing and modernizing existing system environments. What they have in common is that they are technically challenging and long-term.
+
+🛠 Technologies we often work with
+
+Kubernetes and Docker
+CI/CD (Azure DevOps, GitHub Actions, GitLab CI or similar)
+Infrastructure as Code (Terraform, Bicep or similar)
+Cloud platforms (Azure or AWS)
+Linux-based environments
+Scripting and automation (Bash, Python or PowerShell)
+Observability and monitoring (Prometheus, Grafana, ELK or similar)
+Many of our assignments are done in close collaboration with development teams, so experience with development environments and modern system architectures is often an advantage.
+
+🎯 Who are you?
+
+You are an experienced DevOps Engineer who is passionate about automation, stable systems and efficient delivery flows. You thrive in the collaboration between development and operations and have a holistic perspective on systems, platforms and organization.
+
+As a consultant, you are confident in new environments, communicative and solution-oriented.
+
+We believe that you:
+
+Have at least 5 years of experience in DevOps, platform or infrastructure
+Have worked with container platforms and cloud infrastructure
+Have experience in CI/CD and automated delivery flows
+Are familiar with Infrastructure as Code
+Have a good understanding of system architecture and development processes
+Have experience in agile working methods
+Communicate fluently in English
+🌍 Why m4?
+
+With us you get the best of both worlds. We offer the feel and personality of a small company, combined with the resources and professionalism of a large company. You get the opportunity to work in environments where architecture, standards and system responsibility are central, together with colleagues who appreciate structured system design and sustainable solutions.
+
+You are offered a permanent position with competitive terms and the opportunity to influence both assignments and technical direction. You get to work on projects where your skills make a difference and become part of a network of experienced specialists.
+
+Are you interested in hearing more?
+
+Then just send us your CV or LinkedIn profile, and we will contact you as soon as possible! We look forward to hearing from you.
+
+Department
+Software
+Locations
+Stockholm
+Picture of Tora Matsson
+CONTACT
+Tora Matsson
+People & Talent Acquisition Specialist – People & Talent Acquisition
+Stockholm
+
++
+−
+© OpenStreetMap, © CARTO
+Why work with us?
+
+✔️ Development and career
+At m4, we want everyone to have the chance to develop and become their "best self". We believe that you (with our support) are best suited to decide how you want to develop within different professional roles or areas of expertise. In addition, our m4 model means that you choose both clients and assignments yourself. It is incredibly important to us that each consultant works with and in projects that they themselves find challenging, developing and interesting.
+💰 Salary and benefits
+With us, you get paid for your hard work. You will receive permanent employment with a commission-based salary and an individual project buffer. Our salary system also includes a performance ladder. This means you influence your salary development yourself. Simple, fair and transparent. Then we will help you shape the optimal mix of salary and

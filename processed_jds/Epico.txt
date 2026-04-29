@@ -1,0 +1,40 @@
+About the job
+We are recruiting a Senior Platform Engineer for employment with one of our clients in Gothenburg. This is a senior, hands-on role for someone who enjoys solving complex technical problems, taking ownership of key platform areas, and driving continuous improvements across identity, security, cloud, and datacenter services.
+The role suits a self-driven engineer who thrives in a technically deep environment and wants to contribute to a modern platform built on automation, Zero Trust principles, and cloud-first operations.
+About the role
+You will join a platform team with an important role in building a secure, cloud-driven, and globally unified IT environment. The position is part of a broader digital transformation journey, with strong focus on modern platform engineering, automation, security, and operational excellence.
+Responsibilities
+Act as a senior technical specialist across identity, Azure infrastructure, hybrid environments, and core datacenter services
+Lead troubleshooting of complex incidents, platform issues, and performance challenges
+Take ownership of configurations, lifecycle management, and long-term technical quality
+Perform root cause analysis and implement sustainable technical improvements
+Independently plan, prioritize, and execute work in line with platform roadmaps and operational needs
+Coordinate technically with engineers, architects, and project teams
+Implement and optimize Microsoft Entra ID, hybrid identity, Conditional Access, MFA, and Privileged Access Management
+Support and strengthen Zero Trust architecture and modern authentication flows
+Automate provisioning, configuration, and identity operations using tools such as PowerShell, Terraform, or Bicep
+Build scripts, tools, and pipelines to reduce manual work and improve platform reliability
+Use Azure Monitor, Defender, Sentinel, and Log Analytics to improve monitoring, visibility, and detection
+Contribute to security hardening across identity, endpoints, servers, and cloud infrastructure
+Ensure alignment with security and compliance frameworks such as ISO 27001, NIST, and CIS benchmarks
+Requirements
+At least 5 years of hands-on experience in platform engineering, identity services, or cloud/infrastructure operations
+Strong expertise in Microsoft Entra ID, Conditional Access, MFA, RBAC, and hybrid identity
+Solid experience troubleshooting advanced cloud or infrastructure issues
+Practical hands-on experience with PowerShell, Terraform, or Bicep
+Good understanding of Zero Trust principles
+Experience with Azure infrastructure, monitoring, and security tooling
+Ability to work independently and deliver technical solutions end-to-end
+Strong communication skills and ability to collaborate across technical teams
+Fluent in English
+Nice to have
+Experience from global or multi-site IT environments
+Experience from security-driven platform modernization
+Microsoft certifications within Identity, Azure, or Cybersecurity
+Other relevant certifications, such as CISSP or CCNP
+Experience working in regulated or business-critical environments
+Other information
+Location: Gothenburg
+Employment type: Permanent employment with our client
+Start date: According to agreement
+Language: English

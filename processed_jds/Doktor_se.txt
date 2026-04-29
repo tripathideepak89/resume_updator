@@ -1,0 +1,64 @@
+Company: Doktor.se
+Role: Senior Platform Engineer
+Location: Stockholm, Sweden - hybrid / on-site Monday-Thursday at Sveavagen 63, Fridays flexible
+Department: Tech
+Source: https://jobs.doktor.se/jobs/7478835-senior-platform-engineer
+
+Own the platform for Sweden's largest digital healthcare provider. AWS, Kubernetes, AI workloads in production. Small engineering team, real influence, no red tape.
+
+Why Doktor.se
+
+Doktor.se is Sweden's largest digital healthcare provider. The company combines physical clinics with a digital platform serving millions of consultations per year across Sweden, Germany, and Norway. The engineering team has around 25 people with startup autonomy inside a profitable international organization with 1,000+ employees and over 1B SEK in revenue.
+
+Doktor.se runs OpenAI and Anthropic models in production across patient and clinician workflows, and that footprint is growing quickly.
+
+What you will do
+
+- Build a deployment platform where teams ship their own services without asking for permission.
+- Design infrastructure that is secure by default, including encryption, network isolation, and data residency.
+- Create deployment pipelines where security scanning, policy checks, and compliance happen automatically.
+- Support and scale infrastructure for AI workloads running models in production.
+- Set up observability that gives teams real insight into their own services with useful dashboards and meaningful alerts.
+- Work closely with developers to understand what slows them down and fix it by making self-service easier.
+- Maintain and evolve cloud account structure, networking, and identity management across multiple regions and products.
+- Write infrastructure code, pair with developers to debug slow services, and design isolated infrastructure for new products.
+- Make developers faster, not more dependent on the platform team.
+
+What Doktor.se is looking for
+
+- Built and operated Kubernetes in production, including debugging networking issues, designing RBAC policies, and thinking about how multiple teams share a cluster safely.
+- Strong AWS knowledge: accounts, networking, IAM, KMS.
+- Ability to decide what should live in Kubernetes versus AWS managed services, with a preference for keeping things in Kubernetes where possible.
+- Experience with GitOps and infrastructure as code. Flux, ArgoCD, Terraform, or equivalent approaches where infrastructure changes go through pull requests, reviews, and auditable workflows.
+- Developer empathy and software engineering background: able to read code, understand pipelines, and discuss architecture meaningfully.
+- Security-first mindset: design security into systems instead of reviewing it at the end.
+- Strong opinions, with the ability to change them when someone has a better argument.
+- University degree in computer science, engineering, or equivalent experience.
+
+Tech stack
+
+- Cloud: AWS multi-account, multi-region
+- Orchestration: Kubernetes / EKS
+- Infrastructure as code: Terraform
+- CI/CD: GitHub Actions
+- Languages: Python, TypeScript
+- AI: OpenAI, Anthropic in production and tooling
+- Observability: Datadog / Grafana
+
+What Doktor.se offers
+
+- Real influence shaping how the platform works.
+- Healthcare context with patient data, regulatory compliance, and meaningful consequences.
+- Small team and direct impact with around 25 engineers.
+- Autonomy, no micromanagement, no endless approval chains.
+- AI in production with LLMs in patient and clinician workflows.
+- Collective agreement, 30 days vacation, wellness allowance, and personal development budget.
+
+Practical details
+
+- Start: As soon as the right person is found, with notice period accommodated.
+- Employment: Permanent, full-time, six month probation period.
+- Language: English is the working language in tech. Swedish is a bonus.
+- Work permit: Candidate must already have the right to work in Sweden.
+- Contact: Andrew Crookston, VP of Engineering.
+- Recruitment handled internally; no agencies, consultants, or external recruiters.

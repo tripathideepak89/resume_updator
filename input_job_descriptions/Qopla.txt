@@ -1,0 +1,59 @@
+About the job
+Senior Cloud DevOps Engineer (AWS)
+
+About QoplaQopla was founded by restaurant owners in 2018 with a simple goal: to help restaurants run their operations more smoothly and intelligently. Today, more than 2,000 restaurants rely on Qopla for table ordering, self-service kiosks, and online ordering.
+
+We build and operate business-critical systems used daily in real restaurant environments — where downtime directly impacts revenue. Reliability, stability, and scalability are at the core of everything we do.
+
+The RoleWe are looking for a Senior Cloud DevOps Engineer (AWS) to take ownership of our existing cloud platform and infrastructure.
+
+You will take over and evolve our AWS-based Kubernetes environment, ensuring it is extremely stable, highly available, and scalable — with a strong focus on zero downtime and proactive operations.
+
+This is not a “set up from scratch” role — it’s about improving, hardening, and scaling a system already running in production at real scale.
+
+This is primarily an on-site role based in our Solna office, working closely with the CTO. Some hybrid flexibility is possible, but we believe close collaboration is key for this role.
+
+What You’ll Work WithOur platform includes:
+
+Kubernetes (EKS) on AWS
+Java (Spring Boot) services
+Node.js / NestJS services
+MongoDB, Redis
+Kafka and event-driven systems
+React and React Native applications
+
+What You’ll Do
+
+Take ownership of our AWS and Kubernetes infrastructure
+Ensure high stability, uptime, and zero-downtime deployments
+Proactively identify weaknesses and eliminate potential failures before they happen
+Set up and improve monitoring, alerting, and observability
+Design and maintain reliable backup and disaster recovery strategies
+Optimize performance, scalability, and cost in production environments
+Improve CI/CD and deployment workflows for safe and predictable releases
+Work closely with developers to ensure systems are built for reliability from day one
+
+What We’re Looking For
+
+Strong experience running production systems on AWS and Kubernetes
+Proven track record of building stable, highly available systems
+Experience with microservices architectures and distributed systems
+Solid understanding of observability, monitoring, and incident response
+Experience with databases like MongoDB and Redis in production
+Experience working with event-driven systems (e.g., Kafka)
+Pragmatic mindset — you focus on what actually works in production
+
+Meriting:
+
+Experience with on-premise infrastructure or hybrid cloud setups (we are exploring hosting some services ourselves)
+Interest in hardware and infrastructure beyond the cloud
+Willingness to take ownership of internal hardware (e.g., preparing and managing staff laptops and basic office infrastructure) as a smaller side responsibility since we still are a small company.
+
+Why Qopla?
+
+Real-world impact — your work runs in restaurants every day
+Full ownership of a live, business-critical platform
+Small, experienced team with fast decision-making
+Focus on building long-term, stable systems — not hype
+
+If you care about stability, uptime, and building systems that just work — every time — we’d love to hear from you.

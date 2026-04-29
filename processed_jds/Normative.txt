@@ -1,0 +1,75 @@
+About the job
+Join the planet’s most important fight!
+
+Normative is now looking for a DevOps Engineer in Stockholm.
+
+At Normative, we're on a mission to accelerate the transition to a net-zero world. We provide science-based carbon accounting software and tailored advice from net-zero experts, empowering companies to reduce their carbon footprints.
+
+Our Platform team is responsible for cloud infrastructure, platform reliability, security, and quality. We're now looking for a DevOps Engineer to join a small, high-impact team where your work directly enables the technology that helps businesses take action on climate change.
+
+About The Role
+
+As a DevOps Engineer, you will play a key role in designing, implementing, and maintaining our cloud infrastructure, automate CI/CD pipelines, and apply Site Reliability Engineering (SRE) principles to enhance system uptime, monitoring, and incident response. Your work will ensure the reliability, scalability, and security of our systems while enabling seamless deployment and operations.
+
+You'll be joining a lean team of two engineers meaning you'll have real ownership from day one. The work is hands-on and varied: from AWS and GitHub Actions to deployment pipeline automation. We're looking for someone who has thrived in a start-up or scale-up environment.
+
+What You'll Do
+
+Architectural Leadership: Drive the AWS Well-Architected Framework as a key advocate, balancing rapid delivery with system stability, security, and cost-efficiency. 
+Infrastructure as Code: Design and automate scalable cloud infrastructure on AWS (and GCP) using Terraform or CloudFormation. 
+CI/CD & Containers: Build and optimize automated pipelines (GitHub Actions) and manage container orchestration (Docker, ECS/Kubernetes) for seamless microservices delivery. 
+Reliability & Observability: Maintain high availability by evolving our monitoring, logging, and alerting stacks (Grafana, etc.) and leading proactive incident management. 
+Security & Optimization: Implement infrastructure security best practices and continuously optimize cloud resource performance and spend. 
+Cross-Functional Collaboration: Partner with developers and security teams to resolve bottlenecks and improve overall deployment frequency and system health. 
+
+What You Bring
+
+Proven experience as a DevOps Engineer, Site Reliability Engineer (SRE), or Cloud Engineer. 
+In-depth experience designing and managing infrastructure on AWS (familiarity with GCP is a strong plus)
+Deep understanding of the AWS Well-Architected Framework to drive security, reliability, and cost-optimization strategies. 
+Solid understanding of Site Reliability Engineering principles, including monitoring/alerting, observability (Grafana, Datadog, NewRelic), and incident management (SLIs, SLOs, SLAs). 
+Advanced skills in containerization technologies (Docker, AWS ECS, Kubernetes) including container orchestration and microservices management. 
+Hands-on experience with CI/CD tools (Jenkins, GitHub Actions, GitLab CI, etc.)
+Experience with Terraform or other Infrastructure as Code (IaC) technologies for automating infrastructure management. 
+Proficient in Bash for automation; additional experience in Python, JavaScript, or TypeScript is a significant advantage. 
+Experience with monitoring, logging, and alerting tools
+Excellent problem-solving skills and ability to work collaboratively in a team and with a wider group of engineers
+
+If you are a driven and passionate individual with a strong desire to make a positive impact on the world, and a real love for DevOps culture, we encourage you to apply. This is an exciting opportunity to join a mission-driven company and make a real difference in the fight against climate change.
+
+Join us and be a part of something bigger than yourself. Together, we can create a more sustainable future for all.
+
+Not sure you meet 100% of our qualifications? Apply anyway!
+
+Location
+
+Normative operates on a hybrid remote model with offices in Stockholm, Copenhagen, and London. For this role you will be located in our wonderful HQ in Stockholm.
+
+At this time we are not able to offer relocation or VISA support for this position.
+
+Benefits
+
+Market-based salaries and annual merit-based salary reviews
+30 days/year of paid vacation + up to 2 additional days off
+Pension and parental leave
+5,000 SEK wellness allowance (friskvårdsbidrag) + 1 wellness hour per week
+Social and team-building activities (off-site, after work, winter/summer parties)
+An opportunity to make a real positive impact on the world
+A friendly, supportive and humble working culture
+
+We review our benefits packages on a regular basis and might modify our benefits from time to time.
+
+How To Apply
+
+We adopt a continuous selection process, so please make sure to apply with your CV in English.
+
+Our interview process consists of 4 stages:
+
+ Screening interview with a member of our Talent Acquisition team
+ First interview with the hiring manager
+ Interview with members of the Engineering team
+ Practical Case Interview
+
+We’re committed to hiring diversely. Having employees from diverse backgrounds brings a wealth of perspectives and experience to our team. We assess candidates based on their experience, skills and unique talents and evaluate everyone against the same criteria.
+
+Normative handles sensitive financial data and we will therefore conduct a background check before hiring any candidate.

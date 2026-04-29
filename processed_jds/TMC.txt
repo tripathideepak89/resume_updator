@@ -1,0 +1,5 @@
+Are you an experienced DevOps Engineer with at least 5 years of experience and looking for a new challenge? At TMC, we are searching for passionate and dedicated engineers with a strong enthusiasm for optimizing and automating systems.
+
+In this role, you will hold a central position in developing and implementing solutions for continuous integration and delivery. You will work on optimizing deployment pipelines, ensuring high availability and performance for our clients' systems. Your responsibilities will also include supporting development teams with tools and processes that improve efficiency and quality in the client’s software delivery.
+
+You will work in a dynamic environment with close collaboration between various teams, which gives you the opportunity to develop both technical and communicative skills.

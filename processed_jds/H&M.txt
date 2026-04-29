@@ -1,0 +1,66 @@
+About the job
+Job Description
+
+We’re looking for a Lead Platform Engineer to take ownership of our Kubernetes-based multi-cluster internal developer platform that powers mission-critical microservices across the organization.
+
+This role is equal parts technical leadership, hands-on engineering, product thinking, and communication. You will shape the direction of the platform as a product, obsess over developer experience, and ensure the platform is intuitive, reliable, and well-documented.
+
+You will work closely with product teams, architects, and engineering managers to evolve our platform into a highly automated, self-service ecosystem that accelerates developer productivity and enables secure, seamless deployments at scale.
+
+Our technical stack includes Azure Kubernetes Service, Envoy Gateway, Opentelemetry Operator, LGTM Stack, Crossplane, KEDA, Cert Manager, External DNS, Kyverno, External Secrets Operator, Argo CD, Helm, Bicep, Github Actions.
+
+
+
+Qualifications
+
+WHAT YOU'LL DO
+
+Own the technical direction of our Kubernetes platform with a strong focus on developer experience and operational excellence. 
+Treat the platform as a product. This involves gathering feedback, identifying friction, and continuously improving workflows and interfaces. 
+Design, build, and operate cloud-native infrastructure with an everything-as-code mindset. 
+Write production-quality code (Bash, YAML, Bicep, Github Actions) - this is a hands-on engineering role. 
+Drive complex features and refactoring efforts across provisioning, deployments, observability, and cluster lifecycle management. 
+Partner closely with product teams to understand real workflows and deliver a frictionless self-service experience. 
+Mentor engineers through collaboration and example, fostering a culture of curiosity, ownership, and learning. 
+Raise the bar on maintainability and engineering craftsmanship through strong attention to detail. 
+ 
+
+WHO YOU ARE:
+
+5+ experience in platform engineering, SRE, or application engineering roles. 
+Deep expertise in Kubernetes, containers, and the cloud-native ecosystem. 
+A builder mindset - you write and ship code regularly. 
+Excellent technical writing skills. 
+Experience operating in public cloud environments (Azure, AWS, or GCP) with modern IaC and GitOps tooling. 
+Proven track record improving developer workflows, self-service capabilities, or internal platforms. 
+Understanding of networking (TLS, DNS, HTTP, GRPC, proxies). 
+Experience with modern observability practices and tooling (instrumentation, metrics, logs, tracing, profiling). 
+Pragmatic, collaborative, and humble approach to technical leadership. 
+High attention to detail and a bias for architectural simplicity and clarity. 
+ 
+
+WHY JOIN US
+
+Make a real impact - you’ll have significant influence over the direction of the platform and shape how platform engineering works across the company. 
+Platform at the center of transformation - as the organization continues its transition to microservices, the platform sits at pole position, with rapid growth and growing strategic importance. 
+Modern, cloud-native stack - we invest in staying current with the cloud-native ecosystem and evolving our architecture accordingly. 
+Ideas matter here - we value curiosity, experimentation, and thoughtful innovation, and give engineers space to turn ideas into reality. 
+Supportive, low-ego culture - you’ll work with collaborative teammates who care about helping each other succeed and building great things together.
+
+Additional Information
+
+Please note: As our culture and teamwork are very important to us, four days (80%) per week of in-office presence in our office are required.
+
+This is a full-time position with placement in Stockholm.
+
+ 
+
+WHO WE ARE:  
+
+Shaping the future of fashion with people, data, and tech. The fashion and retail industries are going through a transformation, driven by customers' technology and sustainability expectations. At H&M Group, we want to shape the future of fashion and lifestyle by harnessing the power of smart tech and data. With our 74-year history of innovation, we understand the need to collaborate and co-create with engineers and tech specialists around the world to achieve our vision.
+
+ 
+
+WHAT WE OFFER!    
+
+You are joining a unique value-driven culture, a large tech network and community where you can be yourself. Besides the obvious perks such as staff discount card, flexible work life, learning communities, wellness benefits, parental benefits etc. There are endless opportunities to experiment and grow in any direction that you want, and when you grow, we grow. Being a major player gives us countless opportunities to make a real impact and shape the future.

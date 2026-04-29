@@ -1,0 +1,52 @@
+About the job
+In the role, you will
+
+ Participate in daily operational work, in addition to release packaging and development activities, with monitoring and maintaining environments and applications, support and troubleshooting :
+
+Handling incidents related to service disruptions, performance issues, and system alerts.
+
+ Develop and maintain solutions and tools that will optimize deliveries and streamline processes :
+
+pipelines, windows services, integrations, XAIS
+
+ take the lead in interesting development projects
+ infrastructure as code, developing and maintaining solutions
+ Participation in customer projects
+ Be available to provide guidance of technical questions and share your expertise within team, with other teams, project managers, and stakeholders.
+
+Who You Are
+
+We see that you are a self-driven, solution-oriented team player.
+You understand the significance of ensuring that not only our customers, but also our colleagues, have access to our payroll systems and databases that are continuously up and running.
+You are motivated by operational challenges, interested in how the system works, and are curious to find out how the system can be made more efficient.
+Not afraid to learn new tech and take lead in projects to develop new solutions
+We are looking for someone with strong communication skills as the role involves collaboration with our customers. You are used to participating in customer meetings and have experience contributing to implementation projects, to conduct professional dialogues, and understand customer needs.
+
+Feel safe with and/or have experience from:
+
+ Development in asp.net core C#
+ IIS web server (on virtual machine) and knowledge of containers is desirable
+ Yaml CI/CD Pipelines in Azure Devops or similar
+ Scripting in powershell and infrastructure as code
+ SQL
+ Experience of monitoring and alarm procedures for operation Azure app insights
+ Experience in instrumentation of code for Observability and Monitoring
+ Azure cloud
+ Swedish and English proficiency is a must
+
+Advantageous if you know
+
+ Docker
+ Kubernetes
+ Splunk
+
+What We Offer
+
+Competitive salary based on experience and achievements, plus a flexible benefits package.
+A dynamic environment with flexible working hours and remote work options.
+Continuous learning opportunities through individual development plans and professional training.
+Career growth: whether you want to deepen your expertise or broaden your knowledge, there’s always room to grow at SD Worx.
+
+From many places, we work as one—moving from better to best together.
+
+SD Worx embraces diversity in the workplace. Diversity drives inspiration and innovation in our company. We welcome applications from qualified talent regardless of origin, nationality, gender, ethnicity, religion, age, disability, sexual orientation or life stage.

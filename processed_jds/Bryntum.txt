@@ -1,0 +1,47 @@
+About the job
+Bryntum’s components are used in applications at thousands of companies worldwide, for scheduling, planning and operations. Those systems depend on infrastructure that is reliable, secure and easy to maintain.
+
+That's where you come in.
+
+Bryntum's JavaScript components are embedded in business-critical systems at 5,000 companies across 80 countries. Keeping that infrastructure reliable, secure and scalable is the foundation everything else rests on.
+
+Bryntum is looking for a Senior DevOps Engineer who takes that responsibility and wants to help us build for the next phase of growth.
+
+About the role
+You'll join a small, sharp DevOps team and take on shared responsibility for the infrastructure that keeps Bryntum running. You'll have access to production servers and the systems our customers depend on. We need someone who is thorough, dependable, and takes pride in doing things properly.
+
+We're in the middle of a maturity journey: moving towards AWS, consolidating infrastructure and replacing ad hoc solutions with more robust setups. You'll be part of shaping that transition alongside your colleagues, with real ownership over the decisions you make.
+
+Today we run a mix of physical servers in data centers in the Netherlands and the US alongside virtual infrastructure. You'll work across both, with a focus on consolidation, reliability and keeping things simple to maintain.
+
+What we're looking for
+5+ years of experience in DevOps or infrastructure engineering
+Experience with GitHub
+Solid experience with AWS, Docker, and cloud infrastructure
+Comfortable with scripting and automation, Node.js and Bash in particular
+Experience managing both physical and virtual server environments
+A methodical, detail-oriented approach
+
+Meritorious
+What matters is that you're not afraid of new technology and can get up to speed quickly. Experience using AI tools like Claude Code for scripting, debugging or operational workflows is a big plus. We’re interested in people who actively use modern tools to move faster and reduce manual work.
+
+Fluent English is a requirement, Swedish is a plus.
+
+Who you are
+You're driven, take pride in your work and set a high bar for yourself. You enjoy working independently and act proactively even under uncertainty. You're the kind of person who spots a problem and fixes it. You find it genuinely satisfying to keep systems clean, stable, and well-organized.
+
+What we offer
+6 weeks of vacation
+ITP pension and insurance
+Wellness allowance
+Freedom with responsibility. You own your day as long as the work gets done
+Hybrid model with a Stockholm hub at Epicenter
+One joint team trip per year where the whole organization comes together
+
+Apply
+Does this sound like a role for you? We review applications on a rolling basis, so don't hesitate to reach out today. For questions, contact Johanna Ottosson at johanna.ottosson@ants.se.
+
+About Bryntum
+Bryntum was founded in 2009 by Mats, who remains CEO and active in the company today. In 2025 we were acquired by Adelis Equity Partners and are now establishing a Stockholm hub at Epicenter.
+
+For over 15 years we've delivered world-class JavaScript components for scheduling, project management and data visualization. We're a team of developers driven by quality and genuine passion for what we build. The culture is unpretentious and open. We believe in freedom with responsibility and a low meeting culture, so you can focus on what actually matters and what you enjoy. Read more about us here: Bryntum

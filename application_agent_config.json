@@ -1,0 +1,69 @@
+{
+  "browser": {
+    "name": "Google Chrome",
+    "remote_debugging_port": 9223,
+    "profile_dir": "/private/tmp/resume_updator_application_agent_chrome",
+    "chrome_paths": [
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+      "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+    ]
+  },
+  "application_defaults": {
+    "authorized_to_work_in_sweden": true,
+    "requires_employer_sponsorship": false,
+    "can_work_stockholm_office_4_days": true,
+    "background_check_consent": null,
+    "future_job_offers_consent": false,
+    "submit_requires_confirmation": true
+  },
+  "teamtailor": {
+    "boolean_answers": [
+      {
+        "question_contains_any": [
+          "authorized to work in sweden",
+          "right to work in sweden",
+          "work permit",
+          "arbetstillstand",
+          "arbetstillstånd"
+        ],
+        "answer": true
+      },
+      {
+        "question_contains_any": [
+          "4 days",
+          "4 dagar",
+          "stockholm office",
+          "kontoret i centrala stockholm",
+          "centrala stockholm"
+        ],
+        "answer": true
+      }
+    ],
+    "linkedin_question_contains_any": [
+      "linkedin"
+    ]
+  },
+  "ashby": {
+    "fill_optional_note_from_cover_letter": true,
+    "max_optional_note_chars": 3500,
+    "question_answers": [
+      {
+        "question_contains_any": [
+          "legally authorized to work",
+          "authorized to work full-time",
+          "right to work"
+        ],
+        "answer": true
+      },
+      {
+        "question_contains_any": [
+          "require employer sponsorship",
+          "future require employer sponsorship",
+          "visa/work permit sponsorship"
+        ],
+        "answer": false
+      }
+    ]
+  }
+}

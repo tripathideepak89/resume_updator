@@ -1,0 +1,36 @@
+About the job
+Do you want to take clear ownership of a business-critical cloud environment and help build a more structured, sustainable, and scalable way of working with operations and delivery?
+At Aimo, you will have a central role in IT Operations, working close to our production environment and supporting development teams with what they need to create more stable, secure, and well-functioning deliveries over time.
+
+About the role
+As a Cloud Operations Engineer, you will be part of Aimo’s IT Operations team, which currently includes expertise across cloud, infrastructure, IT operations, security, support, and processes. You will join a team of around eight people with diverse competencies in these areas.
+This role plays a key part in developing how we work with cloud, operations, and automation, and in establishing clear ownership of our cloud infrastructure, pipelines, and operational quality.
+You will work closely with our AWS-based production environment, where a large part of our platform is hosted. You will have an important role in maintaining, improving, and evolving Kubernetes clusters, CI/CD pipelines, monitoring, and infrastructure as code.
+This is a hands-on role with broad responsibility, ranging from troubleshooting and incident management to driving improvements in operations, delivery, and automation.
+You will also collaborate closely with several development teams in an environment with a modern tech stack and continuous releases. The role includes a clear mandate to create better structure, stronger support, and more sustainable ways of working within operations, automation, and delivery over time.
+
+Who we believe you are
+We believe you have a few years of experience working in modern cloud environments and are used to taking responsibility beyond a single technical component.
+You are comfortable working hands-on in operations, but also motivated by improving, structuring, and building things that are not yet fully in place.
+You likely thrive in environments where you can use both your technical breadth and your ability to drive progress, even when not everything is clearly defined.
+
+We believe you have experience with:
+AWS
+Kubernetes in production environments
+CI/CD and tools such as GitLab or similar
+Monitoring and observability, preferably Datadog
+Infrastructure as Code
+Incident management and cloud operations
+
+It is a plus if you also have experience with:
+MongoDB
+Azure or GCP
+Building ways of working, processes, or delivery structures within Cloud Ops or DevOps
+Public-facing services with high demands on security and availability
+
+About us
+With more than 50 years of experience in parking services and pioneering knowledge in car sharing, we are shaping the future of mobility. We are building comprehensive charging infrastructure for electric cars, creating efficient mobility hubs, launching new digital services, and continuously expanding our fleet of electric vehicles.
+Our goal is clear: to make life easier for our customers while promoting sustainable mobility. To achieve this, we have created an ecosystem of smart and sustainable solutions – covering everything from parking and car sharing to charging and environmentally friendly mobility hubs.
+
+Part of the Sumitomo Group
+Aimo is owned by Sumitomo Corporation – a global investment company and member of the Sumitomo Group. With extensive experience in long-term investments and successful business partnerships, Sumitomo is ranked in the Fortune Global 500. Their ambition is to continuously create new value and contribute positively to society – a vision we share and bring to life every day.

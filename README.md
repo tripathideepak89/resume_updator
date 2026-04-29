@@ -1,6 +1,8 @@
 # Resume Updater & Cover Letter Generator
 
-A CLI utility that takes a **Job Description** (`.txt`) as input, tailors your resume and generates a cover letter as **compressed PDFs**.
+A CLI utility that takes a **Job Description** (`.txt`) as input, tailors your resume, generates a cover letter, and produces a resume-match audit report.
+
+It can also run as a drop-folder automation: watch a directory, detect new JD files, generate the PDFs and audit automatically, and archive the processed text files.
 
 Uses **Hugging Face Inference API** (free tier, Qwen2.5-72B) for AI-powered tailoring, with an automatic keyword-matching fallback when no API is available.
 
@@ -120,6 +122,12 @@ Get a free token at [huggingface.co/settings/tokens](https://huggingface.co/sett
 export HF_TOKEN="hf_your_token_here"
 ```
 
+You can also put the token in a local `.env` file. `.env` is ignored by git.
+
+```bash
+HF_TOKEN=hf_your_token_here
+```
+
 ### Keyword-Match Mode (no token needed)
 
 Works out of the box — parses JD for keywords, reorders skills/bullets, and generates a template-based cover letter.
@@ -127,26 +135,97 @@ Works out of the box — parses JD for keywords, reorders skills/bullets, and ge
 ## Usage
 
 ```bash
-python main.py <jd_file.txt> [--output output_dir]
+python main.py <input_job_descriptions/jd_file.txt> [--output output_dir]
 ```
 
 ### Examples
 
 ```bash
 # Basic usage
-python main.py job_posting.txt
+python main.py input_job_descriptions/job_posting.txt
 
 # Custom output directory
-python main.py job_posting.txt --output ./pdfs
+python main.py input_job_descriptions/job_posting.txt --output ./pdfs
 ```
+
+### URL Application Agent
+
+For supported job pages, you can now start from a job URL instead of manually
+copying the description.
+
+```bash
+export HF_TOKEN="hf_your_token_here"
+python apply_agent.py "https://jobs.doktor.se/jobs/7478835-senior-platform-engineer"
+```
+
+What it does:
+
+1. Fetches the job posting URL and saves a JD text file in `input_job_descriptions/`
+2. Runs `main.py` to generate the tailored resume, cover letter, and audit report
+3. For supported ATS postings, opens Google Chrome, fills the application form from
+   `resume_data.json` and `application_agent_config.json`, and uploads the generated CV
+4. Keeps Chrome open for review and asks you to type `SUBMIT` before final submission
+
+The final submit step is deliberately confirmation-gated because it sends your
+application and personal details to a third party.
+
+Useful options:
+
+```bash
+# Generate files only; do not fill the browser form
+python apply_agent.py "<job_url>" --no-fill
+
+# Fetch/save the JD only
+python apply_agent.py "<job_url>" --no-generate
+
+# Fill the form and leave it open without a submit prompt
+python apply_agent.py "<job_url>" --no-submit-prompt
+```
+
+Default form answers live in `application_agent_config.json`. Current defaults:
+
+- Authorized to work in Sweden: yes
+- Requires employer sponsorship: no
+- Can work 4 days/week from central Stockholm office: yes
+- Background-check consent: unset, so Ashby forms pause for your input if they ask this
+- Future job-offer consent: no
+- Submit requires confirmation: yes
+
+Supported browser-fill providers:
+
+- Teamtailor
+- Ashby
+
+Form filling uses the Node Playwright package. In Codex Desktop this
+is available through the bundled runtime. Outside Codex, install it with:
+
+```bash
+npm install playwright
+```
+
+### Automated Watch Mode
+
+```bash
+# Watch the current project folder for new JD .txt files
+python watch.py
+
+# Process existing .txt files on startup too
+python watch.py --process-existing
+
+# Watch a dedicated inbox folder and store output elsewhere
+python watch.py --dir ./incoming_jds --output ./output
+```
+
+By default, the watcher monitors `input_job_descriptions/` and moves successful inputs into `processed_jds/` so the same file is not reprocessed repeatedly. Use `--no-archive` if you want the `.txt` files to stay in place.
 
 ## Output
 
-Two compressed PDF files named after the detected company:
+Two compressed PDF files and one markdown audit report named after the detected company:
 
 ```
-output/Resume_FDJ_UNITED_20260420_103807.pdf
-output/CoverLetter_FDJ_UNITED_20260420_103807.pdf
+output/Resume_Deepak_Tripathi_FDJ_UNITED.pdf
+output/CoverLetter_Deepak_Tripathi_FDJ_UNITED.pdf
+output/ResumeAudit_Deepak_Tripathi_FDJ_UNITED.md
 ```
 
 ## Files
@@ -154,9 +233,13 @@ output/CoverLetter_FDJ_UNITED_20260420_103807.pdf
 | File | Purpose |
 |------|---------|
 | `main.py` | Main utility script |
+| `apply_agent.py` | URL-to-application agent orchestration |
+| `application_agent_config.json` | Default application answers and browser settings |
+| `browser_fill_teamtailor.js` | Teamtailor browser form filler |
 | `resume_data.json` | Your structured resume data (edit with your details) |
 | `requirements.txt` | Python dependencies |
-| `sample_jd.txt` | Example job description for testing |
+| `watch.py` | Automated watcher for drop-folder processing |
+| `input_job_descriptions/` | Inbox folder for job description `.txt` files |
 | `.env.example` | Template for environment variables |
 
 ## How It Works
@@ -166,4 +249,5 @@ output/CoverLetter_FDJ_UNITED_20260420_103807.pdf
 3. Detects the company name from the JD for output file naming
 4. Uses Hugging Face LLM (or keyword matching) to tailor summary, skills, and experience bullets
 5. Generates a matching cover letter
-6. Renders both as professionally formatted, compressed PDFs
+6. Scores resume-vs-JD alignment for ATS/AI style checks such as explicit keywords, role alignment, and bullet impact
+7. Renders the resume and cover letter as professionally formatted, compressed PDFs

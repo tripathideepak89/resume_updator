@@ -1,0 +1,29 @@
+About the job
+About HypertypeWe’re building the next generation of AI products and AI Agents in the Customer Support space. Focused on manufacturing but with clients across other sectors like fintech, health tech and more we are giving hundreds of companies across the globe the capacity to transform their customer journey with the latest advancements in AI. Our customers proudly recognise us for delivering the "highest quality answers in the market... outsmarting Gemini, Fin, Microsoft Copilot etc". —a testament to our unwavering commitment to excellence and precision in every interaction.
+
+We are a group of people that work the extra mile together, that fearlessly push the boundaries to new heights and that deeply own what they deliver. We look for those who are ambitious, humble and fast to build together things humankind has not witnessed yet.
+
+About The RoleAs a Platform engineer at Hypertype you’ll design, operate, and evolve the cloud foundation that keeps our AI products fast, reliable, and cost-efficient. You’ll own GCP architecture (networking, security, deploys), Terraform-based IaC, observability, and SLOs. Your days will involve shaping golden paths for services, improving CI/CD, and partnering with engineers to keep latency and unit costs down as we scale.
+
+What You’ll Do
+
+Build and maintain secure, scalable infrastructure on GCP (Kubernetes, VPC, Pub/Sub, etc.).
+Define and manage Terraform modules, CI/CD pipelines, secrets and safe rollouts/rollbacks.
+Establish observability (logs, metrics, tracing), SLOs/SLIs and on-call playbooks; drive incident response improvements.
+Optimise performance and cost (autoscaling, casing, connection pooling, query tuning, storage cycle).
+Collaborate with Software and ML Engineers to set targets, debug production issues and improve developer experience.
+
+Who Are You
+
++4 years in Platform/SRE/Cloud Engineering operating production systems.
+Deep experience with GCP or equivalent cloud; strong Terraform/IaC fundamentals.
+Solid grasp of networking, security hardening and least-privilege access.
+Hands-on with observability stacks and SLO/error-budget practices.
+Commitment to very solid reliability, simplicity and creating paved roads for developers.
+
+What we offer
+
+The opportunity to be part of an early, well-funded and promising startup. The right place at the right time.
+A role and position that gives you the freedom to develop your skills and persona the way you want.
+Take part of our journey as we grow to be at the forefront on solving the world's AI challenges and work towards AGI.
+Competitive salary + stock options + maximum growing opportunities.
