@@ -1,152 +1,326 @@
-# Resume Updater & Cover Letter Generator
+# Resume Tailoring & Application Automation Platform
 
-A CLI utility that takes a **Job Description** (`.txt`) as input, tailors your resume, generates a cover letter, and produces a resume-match audit report.
+An end-to-end CLI platform that takes a **Job Description** as input, tailors a resume using AI, generates a cover letter, produces an ATS match audit report, and optionally fills online application forms — all automated.
 
-It can also run as a drop-folder automation: watch a directory, detect new JD files, generate the PDFs and audit automatically, and archive the processed text files.
+Built with Python, Hugging Face LLMs, and headless browser automation.
 
-Uses **Hugging Face Inference API** (free tier, Qwen2.5-72B) for AI-powered tailoring, with an automatic keyword-matching fallback when no API is available.
+---
+
+## What It Does
+
+| Capability | Description |
+|---|---|
+| **Resume Tailoring** | Rewrites summary, reorders skills, reframes experience bullets to match a JD |
+| **Cover Letter Generation** | Produces a tailored cover letter referencing specific resume achievements |
+| **ATS Audit Report** | Scores keyword match, required terms, role alignment, and bullet impact |
+| **Application Form Filling** | Automates Teamtailor and Ashby form filling with resume upload |
+| **File Watcher** | Drop a `.txt` JD file in a folder → auto-generates all outputs |
+| **Dual-Mode Engine** | AI-powered (Hugging Face LLM) with automatic keyword-match fallback |
+
+---
 
 ## Architecture
 
 ```mermaid
-graph TB
-    subgraph Input
-        JD["📄 Job Description<br/>(*.txt)"]
-        RD["📋 Resume Data<br/>(resume_data.json)"]
+graph LR
+    subgraph "Input Sources"
+        URL["🔗 Job URL"]
+        TXT["📄 JD Text File"]
+        RD["📋 resume_data.json"]
+    end
+
+    subgraph "Application Agent (apply_agent.py)"
+        FETCH["Fetch & Parse\nJob Posting"]
+        DETECT_PLATFORM["Detect Platform\nTeamtailor · Ashby"]
     end
 
     subgraph "Core Engine (main.py)"
-        PARSE["JD Parser<br/>Company Name Extraction<br/>Keyword Extraction"]
-        
+        PARSE["JD Parser\nCompany Detection\nKeyword Extraction"]
+
         subgraph "AI Layer"
-            HF["Hugging Face API<br/>Qwen2.5-72B-Instruct"]
-            KW["Keyword-Match<br/>Fallback Engine"]
+            HF["Hugging Face API\nQwen2.5-72B-Instruct"]
+            KW["Keyword-Match\nFallback Engine"]
         end
 
-        TAILOR["Resume Tailor<br/>• Rewrite Summary<br/>• Reorder Skills<br/>• Reframe Bullets"]
-        
-        COVER["Cover Letter Generator<br/>• Template Fallback<br/>• AI-Powered Writing"]
+        TAILOR["Resume Tailor"]
+        COVER["Cover Letter\nGenerator"]
+        AUDIT["ATS Audit\nAnalyzer"]
     end
 
     subgraph "PDF Renderer (ReportLab)"
-        RPDF["Resume PDF Builder<br/>• Header & Contact<br/>• Skills Matrix<br/>• Experience<br/>• Education"]
-        CPDF["Cover Letter PDF Builder<br/>• Letterhead<br/>• Body Paragraphs<br/>• Sign-off"]
+        RPDF["Resume PDF\nA4 · Compressed"]
+        CPDF["Cover Letter PDF\nA4 · Compressed"]
     end
 
-    subgraph Output
-        ROUT["📄 Resume_Company_timestamp.pdf"]
-        COUT["📄 CoverLetter_Company_timestamp.pdf"]
+    subgraph "Browser Workers (Playwright)"
+        TT["Teamtailor\nForm Filler"]
+        ASH["Ashby\nForm Filler"]
     end
 
-    JD --> PARSE
+    subgraph "Output"
+        R_OUT["📄 Resume PDF"]
+        C_OUT["📄 Cover Letter PDF"]
+        A_OUT["📊 Audit Report"]
+    end
+
+    URL --> FETCH
+    FETCH --> PARSE
+    FETCH --> DETECT_PLATFORM
+    TXT --> PARSE
     RD --> TAILOR
     RD --> COVER
     PARSE --> HF
     PARSE --> KW
-    HF -->|AI response| TAILOR
-    HF -->|AI response| COVER
-    KW -->|Fallback| TAILOR
-    KW -->|Fallback| COVER
+    HF --> TAILOR
+    HF --> COVER
+    KW --> TAILOR
+    KW --> COVER
+    PARSE --> AUDIT
     TAILOR --> RPDF
     COVER --> CPDF
-    RPDF -->|Compressed PDF| ROUT
-    CPDF -->|Compressed PDF| COUT
+    RPDF --> R_OUT
+    CPDF --> C_OUT
+    AUDIT --> A_OUT
+    R_OUT --> TT
+    R_OUT --> ASH
+    DETECT_PLATFORM --> TT
+    DETECT_PLATFORM --> ASH
 
-    style JD fill:#E3F2FD,stroke:#1565C0,color:#000
+    style URL fill:#E3F2FD,stroke:#1565C0,color:#000
+    style TXT fill:#E3F2FD,stroke:#1565C0,color:#000
     style RD fill:#E3F2FD,stroke:#1565C0,color:#000
     style HF fill:#FFF3E0,stroke:#E65100,color:#000
     style KW fill:#FFF3E0,stroke:#E65100,color:#000
-    style ROUT fill:#E8F5E9,stroke:#2E7D32,color:#000
-    style COUT fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style R_OUT fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style C_OUT fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style A_OUT fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style TT fill:#F3E5F5,stroke:#6A1B9A,color:#000
+    style ASH fill:#F3E5F5,stroke:#6A1B9A,color:#000
 ```
+
+---
 
 ## Execution Flow
 
 ```mermaid
 flowchart TD
-    START(["▶ python main.py jd_file.txt"]) --> READ_JD["Read Job Description<br/>from .txt file"]
-    READ_JD --> READ_RESUME["Load resume_data.json"]
-    READ_RESUME --> DETECT["Detect Company Name<br/>from JD text"]
-    DETECT --> CHECK_TOKEN{"HF_TOKEN<br/>set?"}
+    START(["▶ Start"]) --> MODE{"Input type?"}
 
-    CHECK_TOKEN -->|Yes| CHECK_LIB{"huggingface_hub<br/>installed?"}
-    CHECK_TOKEN -->|No| KEYWORD_MODE["Keyword-Match Mode"]
-    CHECK_LIB -->|Yes| AI_MODE["AI Mode<br/>Hugging Face API"]
-    CHECK_LIB -->|No| KEYWORD_MODE
+    MODE -->|URL| AGENT["apply_agent.py\nFetch job posting HTML\nExtract JD text"]
+    MODE -->|Text file| DIRECT["main.py\nRead .txt file"]
+    MODE -->|Drop folder| WATCH["watch.py\nDetect new file\nTrigger main.py"]
 
-    AI_MODE --> CALL_TAILOR["Call LLM: Tailor Resume<br/>• Rewrite summary<br/>• Reorder skills<br/>• Reframe experience"]
-    AI_MODE --> CALL_COVER["Call LLM: Generate<br/>Cover Letter"]
+    AGENT --> SAVE["Save JD to\ninput_job_descriptions/"]
+    SAVE --> GENERATE
+    DIRECT --> GENERATE
+    WATCH --> GENERATE
 
-    CALL_TAILOR --> LLM_OK1{"Valid JSON<br/>response?"}
-    LLM_OK1 -->|Yes| TAILORED["Tailored Resume Data"]
-    LLM_OK1 -->|No| KW_RESUME
+    GENERATE["Generate Outputs"] --> DETECT["Detect Company Name\n6-pattern extraction chain"]
+    DETECT --> CHECK{"HF_TOKEN\navailable?"}
 
-    CALL_COVER --> LLM_OK2{"Response<br/>length > 50?"}
-    LLM_OK2 -->|Yes| COVER_TEXT["Cover Letter Text"]
-    LLM_OK2 -->|No| KW_COVER
+    CHECK -->|Yes| AI["AI Mode\nHugging Face LLM"]
+    CHECK -->|No| FALLBACK["Fallback Mode\nKeyword matching"]
 
-    KEYWORD_MODE --> KW_RESUME["Keyword Fallback:<br/>• Extract JD keywords<br/>• Reorder skills by match<br/>• Sort bullets by relevance"]
-    KEYWORD_MODE --> KW_COVER["Template Fallback:<br/>• Find best matching role<br/>• Map skills to JD<br/>• Generate from template"]
+    AI --> TAILOR_AI["Tailor Resume via LLM\nRewrite summary · Reorder skills\nReframe bullets"]
+    AI --> COVER_AI["Generate Cover Letter\nvia LLM"]
+    FALLBACK --> TAILOR_KW["Keyword-Match Tailor\nExtract JD keywords\nSort by relevance"]
+    FALLBACK --> COVER_KW["Template Cover Letter\nBest-match role mapping"]
 
-    KW_RESUME --> TAILORED
-    KW_COVER --> COVER_TEXT
+    TAILOR_AI --> VALIDATE{"Valid JSON?"}
+    VALIDATE -->|Yes| BUILD
+    VALIDATE -->|No| TAILOR_KW
 
-    TAILORED --> BUILD_RESUME["Build Resume PDF<br/>ReportLab / A4 / Compressed"]
-    COVER_TEXT --> BUILD_COVER["Build Cover Letter PDF<br/>ReportLab / A4 / Compressed"]
+    COVER_AI --> CHECK_LEN{"Length > 50?"}
+    CHECK_LEN -->|Yes| BUILD
+    CHECK_LEN -->|No| COVER_KW
 
-    BUILD_RESUME --> OUT_R["📄 output/Resume_Company_ts.pdf"]
-    BUILD_COVER --> OUT_C["📄 output/CoverLetter_Company_ts.pdf"]
+    TAILOR_KW --> BUILD
+    COVER_KW --> BUILD
 
-    OUT_R --> DONE(["✅ Done!"])
-    OUT_C --> DONE
+    BUILD["Build PDFs\nReportLab · A4 · Compressed"] --> AUDIT["ATS Audit Report\nKeyword · Terms · Role · Impact"]
+    AUDIT --> OUTPUT["📄 Resume PDF\n📄 Cover Letter PDF\n📊 Audit Report"]
+
+    OUTPUT --> FILL{"Fill application\nform?"}
+    FILL -->|Yes| BROWSER["Open Chrome\nFill form · Upload CV\nPause before submit"]
+    FILL -->|No| DONE(["✅ Done"])
+    BROWSER --> CONFIRM{"User confirms\nSUBMIT?"}
+    CONFIRM -->|Yes| SUBMIT["Submit Application"]
+    CONFIRM -->|No| DONE
+    SUBMIT --> DONE
 
     style START fill:#1565C0,stroke:#0D47A1,color:#fff
     style DONE fill:#2E7D32,stroke:#1B5E20,color:#fff
-    style AI_MODE fill:#FFF3E0,stroke:#E65100,color:#000
-    style KEYWORD_MODE fill:#F3E5F5,stroke:#6A1B9A,color:#000
-    style OUT_R fill:#E8F5E9,stroke:#2E7D32,color:#000
-    style OUT_C fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style AI fill:#FFF3E0,stroke:#E65100,color:#000
+    style FALLBACK fill:#F3E5F5,stroke:#6A1B9A,color:#000
+    style BROWSER fill:#FCE4EC,stroke:#C62828,color:#000
+    style OUTPUT fill:#E8F5E9,stroke:#2E7D32,color:#000
 ```
+
+---
+
+## Project Structure
+
+```
+resume_updator/
+├── main.py                        # Core engine: tailor, generate, audit, render PDFs
+├── apply_agent.py                 # URL-based application agent with browser automation
+├── watch.py                       # File watcher: auto-process new JD files
+├── resume_data.json               # Candidate profile data (skills, experience, education)
+├── application_agent_config.json  # Default form answers and browser settings
+├── browser_fill_teamtailor.js     # Playwright worker: Teamtailor form automation
+├── browser_fill_ashby.js          # Playwright worker: Ashby form automation
+├── browser_render_page.js         # Playwright worker: render JS-heavy pages
+├── requirements.txt               # Python dependencies
+├── input_job_descriptions/        # Raw JD text files (input)
+├── processed_jds/                 # Archived JDs after processing
+├── output/                        # Generated PDFs and audit reports (git-ignored)
+├── AGENTS.md                      # AI agent instructions for automated workflows
+└── .env                           # API tokens (git-ignored)
+```
+
+---
 
 ## Setup
 
+### Prerequisites
+
+- Python 3.10+
+- Node.js (for browser automation, optional)
+
+### Install
+
 ```bash
+git clone https://github.com/tripathideepak89/resume_updator.git
+cd resume_updator
 pip install -r requirements.txt
 ```
 
-### AI Mode (recommended)
+### Configure AI Mode (recommended)
 
 Get a free token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) with **Inference Providers** permission enabled.
 
 ```bash
+# Option 1: Environment variable
 export HF_TOKEN="hf_your_token_here"
-```
 
-You can also put the token in a local `.env` file. `.env` is ignored by git.
-
-```bash
-HF_TOKEN=hf_your_token_here
+# Option 2: .env file (git-ignored)
+echo 'HF_TOKEN=hf_your_token_here' > .env
 ```
 
 ### Keyword-Match Mode (no token needed)
 
-Works out of the box — parses JD for keywords, reorders skills/bullets, and generates a template-based cover letter.
+Works out of the box. Parses JD for keywords, reorders skills and bullets by relevance, and generates a template-based cover letter.
+
+---
 
 ## Usage
 
-```bash
-python main.py <input_job_descriptions/jd_file.txt> [--output output_dir]
-```
-
-### Examples
+### Generate tailored resume + cover letter + audit from a JD file
 
 ```bash
-# Basic usage
-python main.py input_job_descriptions/job_posting.txt
-
-# Custom output directory
-python main.py input_job_descriptions/job_posting.txt --output ./pdfs
+python3 main.py input_job_descriptions/job_posting.txt
 ```
+
+### Generate from a job URL (fetch JD, generate, fill form)
+
+```bash
+python3 apply_agent.py "https://career.example.com/jobs/12345"
+```
+
+### Generate only (no form filling)
+
+```bash
+python3 apply_agent.py "https://career.example.com/jobs/12345" --no-fill
+```
+
+### Watch folder for new JD files (auto-process on drop)
+
+```bash
+python3 watch.py
+```
+
+### Custom output directory
+
+```bash
+python3 main.py input_job_descriptions/job_posting.txt --output ./pdfs
+```
+
+---
+
+## Output
+
+For each JD, three files are generated in `output/`:
+
+| File | Description |
+|---|---|
+| `Resume_<Name>_<Company>.pdf` | Tailored resume with reordered skills and reframed bullets |
+| `CoverLetter_<Name>_<Company>.pdf` | Personalized cover letter matching JD requirements |
+| `ResumeAudit_<Name>_<Company>.md` | ATS match report with scores and recommendations |
+
+### Audit Report Scores
+
+The audit system evaluates four dimensions:
+
+- **Keyword Score** — % of high-signal JD keywords found in the resume
+- **Required Terms Score** — coverage of must-have technologies and tools
+- **Role Alignment Score** — match against inferred role tracks (DevOps, Platform, SRE, etc.)
+- **Impact Score** — % of experience bullets containing quantified metrics
+
+---
+
+## Key Features
+
+### Company Name Extraction
+
+Automatically detects company names from JD text using a 6-pattern extraction chain:
+
+1. `<Company> is looking/seeking/hiring...`
+2. `at <Company>` / `@ <Company>`
+3. Filename-based fallback
+4. Capitalized multi-word names (filtered for job titles)
+5. Repeated proper nouns
+6. First short line fallback
+
+### Resume Tailoring (AI Mode)
+
+- Rewrites professional summary to highlight JD-relevant experience
+- Reorders skill categories by relevance
+- Reframes experience bullets to emphasize matching achievements
+- Never invents facts — only reframes existing experience
+
+### Resume Tailoring (Keyword-Match Fallback)
+
+- Extracts keywords from JD text
+- Sorts skills by keyword overlap
+- Reorders experience bullets by relevance score
+- Zero external API calls required
+
+### Application Form Automation
+
+- **Teamtailor** — fills personal details, answers boolean questions, uploads CV
+- **Ashby** — fills application form, attaches resume, handles custom questions
+- Configurable default answers via `application_agent_config.json`
+- **Submission is always confirmation-gated** — never auto-submits
+
+---
+
+## Tech Stack
+
+| Component | Technology |
+|---|---|
+| Core engine | Python 3, ReportLab |
+| AI tailoring | Hugging Face Inference API, Qwen2.5-72B-Instruct |
+| NLP & matching | Regex-based keyword extraction, multi-pattern company detection |
+| PDF generation | ReportLab (A4, compressed, professional styling) |
+| Browser automation | Playwright (Node.js), Chrome/Chromium |
+| File watching | watchdog |
+| Configuration | JSON (resume data, form defaults) |
+
+---
+
+## License
+
+MIT
 
 ### URL Application Agent
 
