@@ -1,0 +1,64 @@
+About the job
+About Newcode
+
+We build AI tools for firms in legal and professional services: software people use for real work, not demos. We started a few months ago and already have paying clients who rely on what we ship. The team is small and moving fast.
+
+The role
+
+You'll own the infrastructure our AI products run on. That means the cloud environments, the deployment pipelines, and the Kubernetes setup that keeps everything serving reliably under load. A lot of the interesting work is specific to running AI in production: serving models cost-effectively, scaling for uneven demand, and keeping confidential client data properly isolated in a multi-tenant setup.
+
+You're joining early enough to shape how we do this rather than inherit someone else's decisions. You'll set the practices, make the architecture calls, and live with them.
+
+Requirements
+
+Stack
+
+Azure, Kubernetes (AKS), Terraform, Helm, GitHub Actions. Microservices, multi-tenant architecture, infrastructure-as-code throughout.
+
+What The Job Involves
+
+Building and running our cloud environments and CI/CD pipelines so deployments are fast, repeatable, and boring
+Owning reliability: monitoring, alerting, and the kind of automation that means nobody gets paged for the same thing twice
+Keeping security and tenant isolation tight, since clients trust us with confidential material
+Managing the infrastructure behind model serving and AI workloads, including cost and scaling under uneven demand
+Working with the engineers shipping features so the path to production stays smooth as the team grows
+
+Who You Are
+
+At least seven years running production infrastructure for web applications
+You automate by default and treat manual, one-off fixes as a smell
+You think about failure, blast radius, and recovery, not just the deploy that goes well
+You take security and multi-tenant isolation seriously and can reason about where data is allowed to flow
+You use AI coding tools (Claude Code, Cursor, Copilot) and use them well. Faster output, but you understand and stand behind every change
+You're fine in a startup that changes direction. Decisions get made, then revisited
+
+Experience we expect with the stack:
+
+Terraform: 5+ years
+Kubernetes (AKS): 5+ years
+Azure: 3+ years
+Helm: 3+ years
+CI/CD, ideally GitHub Actions: 2+ years
+Microservices and multi-tenant architecture: proven, hands-on track record
+
+Nice to have:
+
+Python, enough to write and maintain real tooling rather than just glue scripts
+PostgreSQL administration: tuning, backups, replication
+Comfortable scripting in Bash
+You already work with AI agents day to day
+Experience running GPU or model-inference workloads
+Observability tooling (Prometheus, Grafana, OpenTelemetry)
+A security or compliance background relevant to handling sensitive data
+
+Benefits
+
+Why Newcode.ai?
+
+Join a collaborative, high-energy team where your ideas are heard and your impact is real
+Help design, build, and launch products shaping the future of artificial intelligence
+Work flexibly, in English, from anywhere in the EU
+
+At Newcode.ai, you don't just see the future—you help create it.
+
+Ready to shape what's next? Apply today and join us in building a smarter, more efficient world powered by AI.

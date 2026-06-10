@@ -1,0 +1,46 @@
+About the job
+Bannerflow is a fast-growing global SaaS company building a Creative Intelligence Platform that enables enterprise brands to predict, create, and optimize advertising across channels.
+
+We’re on a company-wide AI transformation journey, where AI and agentic workflows are becoming a core part of how we build and innovate, with high expectations on adoption across all teams.
+
+Our teams are highly autonomous, collaborative, and we are now looking for another passionate engineer to join us!
+
+⭐ Ready for a new challenge? Here is what we offer:
+
+At Bannerflow, we build flexible and autonomous teams based on trust. We believe that when people are given the freedom to take ownership and work closely together, great things happen. Our engineering culture is shaped by openness, respect, and a shared drive to keep improving.
+
+We are passionate about solving real problems and making a meaningful impact, and we are always open to exploring new ideas. With us, you will be part of a growing tech company where ideas are valued, feedback is encouraged, and personal development is supported. We bring the energy of a fast-moving company together with the stability of a proven product and a strong customer base.
+
+You will join a team where motivation is high, knowledge is shared openly, and having fun is part of everyday life, whether it’s through hackathons, board game nights, or spontaneous team activities.
+
+Our Ever Evolving Tech Stack Currently Consists Of
+
+TypeScript / Angular
+C# / .NET
+MongoDB
+Azure & Kubernetes
+Cloudflare
+…and some more stuff
+
+🦋 Are you + Bannerflow = true?
+
+We are looking for a Platform Engineer who will keep our platform and infrastructure secure, stable and future-proof as we scale to new markets. As a Platform Engineer, you will not only build cool solutions together with our Platform team and Chief Architect, you will also work side by side with other product teams; educating, guiding, collecting feedback and removing bottlenecks from our development teams.
+
+So, what are we looking for?
+
+A senior Platform Engineer with experience planning, designing, and implementing DevOps processes, strategies, and tooling to remove hurdles and pains from product development life cycles. You’ll need a strong sense of ownership, personal drive, and the ability to write clean, efficient, and well-documented code. You are interested in keeping up with best practices and like to continually improve our product and processes. We believe you are an excellent communicator that thrives in a highly collaborative environment.
+
+In addition to these traits, we’re looking for expertise in,
+
+Deep knowledge of kubernetes
+Solid familiarity with Azure Services
+Networking
+Linux
+IAC DSLs like Terraform or Biceps
+CI/CD best practices and tools like Github Actions, ArgoCD, ASO and Helm
+Disaster recovery
+You are deeply invested in AI and how it can drive value and enable more efficient ways of working.
+
+We believe that our employees are the key to our success and we are dedicated to building a positive and supportive work environment where our employees can thrive and grow. We are committed to building a diverse and inclusive team and welcome applications from candidates of all backgrounds, experiences, and abilities.
+
+If you are ready to take your career to the next level, we want to hear from you!

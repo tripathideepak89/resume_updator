@@ -1,0 +1,72 @@
+About the job
+Job Title: Senior DevOps / Platform Engineer (EU - Remote)
+
+Location: Fully remote within the European Union. Candidates must reside in, and be authorized to work in, an EU member state that participates in the Schengen Area.
+
+Do you love building the cloud platforms that power mission-critical software, and do you want to know that your work helps keep communities safer? Kaseware builds case management and investigations software trusted by law enforcement and corporate security teams around the world. Our European customers depend on a platform that is reliable, secure, and engineered to meet the demands of serving the public - and that is where you come in.
+
+We are looking for a Senior DevOps / Platform Engineer to join our Architecture Team. You will design, build, automate, and operate the cloud infrastructure platform that powers Kaseware's commercial and international customer deployments. The role combines deep Kubernetes and Linux expertise with strong infrastructure-as-code, GitOps, and observability discipline. You will work across our cloud footprint - primarily Azure and AWS - partner closely with engineering and customer operations teams, and have a direct hand in shaping how Kaseware delivers and runs software at scale.
+
+Responsibilities and Duties:
+
+Design, build, and operate cloud infrastructure across Azure and AWS commercial environments supporting Kaseware's customer deployments
+Administer and operate Kubernetes clusters (AKS, EKS), including upgrades, networking, RBAC, storage, and platform-level tooling
+Author, modify, and maintain Infrastructure as Code using Terraform - including modules, state management, and multi-environment deployment patterns
+Implement and operate GitOps continuous delivery using ArgoCD; build and maintain workflows with Argo Workflows where applicable
+Author and maintain Helm charts - templating, dependencies, and release management
+Build, maintain, and enhance CI/CD pipelines and automation across the development and deployment lifecycle
+Instrument, monitor, and troubleshoot cloud and Kubernetes workloads using Datadog and other observability tooling (Prometheus, Grafana, Elastic stack, Fluentd, Istio, etc.)
+Support customer installations and consult on deployment topology for both cloud and on-premises environments
+Administer development environments and developer tooling that keep engineering teams productive
+Participate in production incident response and on-call rotations across distributed time zones, supporting any Kaseware system other than U.S. federal government protected environments
+Contribute new ideas, tools, and patterns to the Kaseware technical stack - we encourage every team member to innovate
+
+
+Required Education:
+
+Bachelor's degree in Computer Science, Computer Information Systems, Engineering, or a related field, or equivalent professional experience.
+
+Required Skills & Experience:
+
+4+ years of professional experience in DevOps, Platform Engineering, Site Reliability Engineering, or Cloud Infrastructure roles
+Strong Kubernetes platform expertise, including cluster lifecycle management, networking, RBAC, CSI / storage classes and provisioners, and ingress controllers (NGINX or comparable); fluent with kubectl
+Hands-on Terraform experience - able to write new modules, modify existing ones, manage state, and operate multi-environment workflows
+Production experience with ArgoCD and GitOps deployment patterns; familiarity with Argo Workflows is a plus
+Helm chart authoring - templating, dependencies, releases, and CLI usage
+Container technologies (Docker, BuildKit, container registries) including image authoring, local testing, and registry management
+Comprehensive Linux administration and command-line proficiency
+Cloud platform experience with Azure and AWS commercial environments; AKS and EKS in particular
+Cloud database and data services, especially PostgreSQL; experience with NoSQL stores such as ArangoDB or MongoDB is a plus
+Observability and monitoring - production experience with Datadog and/or comparable tooling such as Prometheus, Grafana, Elasticsearch, Fluentd, and Istio
+Networking concepts, technologies, and troubleshooting (DNS, TLS, routing, load balancing)
+CI/CD pipeline design and implementation experience (GitLab CI, GitHub Actions, or comparable platforms); strong understanding of software development lifecycle and workflows
+Comprehensive understanding of Git repositories, branching strategies, and the Git CLI
+Scripting and/or programming proficiency in Bash and Python
+Demonstrated ability to manage and automate deployments for complex applications across cloud and on-premises environments
+Single Sign-On and Identity Provider experience, especially Keycloak (preferred)
+Strong written and verbal communication; able to collaborate effectively across distributed teams and time zones
+Ability to work independently, prioritize against team objectives, and operate effectively in an asynchronous remote environment
+Other duties as needed.
+
+
+Other Requirements:
+
+Language: English (business fluency required for technical communication, documentation, and customer-facing collaboration)
+Residence and work authorization: Candidate must reside in, and have the legal right to work in, an EU member state that participates in the Schengen Area
+Availability: Willingness to participate in on-call and incident response rotations across global time zones for any Kaseware system 
+
+
+Benefits:
+
+Base salary range: €80,000 - €100,000 per year 
+Competitive salary in an entrepreneurial environment
+Total compensation and benefits package will be administered through Kaseware's Employer of Record (EOR) partner and aligned with the local market in the candidate's country of residence
+
+
+About Kaseware:
+
+Kaseware is a rapidly growing start-up located in the Denver metro area. We build state-of-the-art software for law enforcement and corporate security customers. We serve those that serve our communities and make our world safer.
+
+Due to the nature of our business, you must be able to pass a full CJIS compliant fingerprint based background check, which is required for individuals needing access to criminal justice information (CJI).
+
+We expect this role to be open until June 30th, 2026 or until filled.   

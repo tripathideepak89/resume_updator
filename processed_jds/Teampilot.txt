@@ -1,0 +1,64 @@
+About the job
+Our customer is a pioneer in providing secure, high-performance digital case management and information exchange solutions that are fundamental to the digitalization and security of the modern public sector.
+
+The Challenge: Moving from Firefighting to Future-Proofing
+
+For over a decade, our IT Platform team has operated in a lean, "firefighting" mode. Now, backed by new leadership and a clear vision from our CIO and CTO, we are transforming. We are moving away from reactive incident management toward proactive change management and architectural excellence.
+
+We are looking for a Senior Platform Engineer to fill a critical competency gap. You won't just be using a platform; you will be the one building, drifting, and troubleshooting the very engine that powers our SaaS delivery and internal development platforms.
+
+The Role
+
+As a Senior member of the IT Platform team, you will hold the keys to our infrastructure. Your mission is to ensure our "Vanilla" Kubernetes environment and Jenkins pipelines are not just running, but evolving. You will work closely with our product teams to provide a seamless development platform while ensuring our SaaS delivery remains rock-solid.
+
+In this role, you will:
+
+ Own the Kubernetes Lifecycle: Lead the setup, maintenance, and deep-level troubleshooting of our Kubernetes clusters.
+ Master the Pipeline: Architect and refine our Jenkins-based CI/CD workflows to support high-velocity development.
+ Bridge the Gap: Act as a technical mentor for a more junior colleague, helping to shape the next generation of platform talent.
+ Drive Stability: Move the needle from manual "incident-based" work to automated, scalable infrastructure-as-code.
+ Collaborate Globally: Work primarily with our teams in Linköping and Stockholm, while supporting a remote-friendly culture that values clear communication.
+
+Who You Are
+
+We are looking for an "Ops-heavy" DevOps professional. You are someone who finds joy in understanding what happens under the hood of a cluster. You aren't just a "Public Cloud DevOps" who clicks buttons in a portal; you are a technician who understands networking, Linux, and the intricacies of container orchestration.
+
+Required Qualifications:
+
+ Deep Kubernetes Expertise: You have extensive experience installing, configuring, and debugging "Vanilla" Kubernetes (not just using managed services like EKS/AKS).
+ Jenkins Mastery: Proven track record of building and managing complex Jenkins pipelines at scale.
+ Infrastructure as Code: A strong mindset for automation and experience with modern configuration management tools.
+ Problem Solver: You thrive when faced with a complex "cold-start" or a deep-seated networking issue.
+ Communication: Fluency in English is required. Swedish proficiency is a significant advantage for internal workflow, but we value technical excellence above all.
+
+Bonus Points:
+
+ Experience with SaaS delivery and internal development platforms.
+ Experience with Linux system administration.
+ Proximity to Stockholm (hybrid flexibility with mostly remote work and bi-monthly office visits).
+
+The Tech Stack
+
+ Orchestration: Kubernetes (Vanilla)
+ CI/CD: Jenkins
+ Infrastructure: Hybrid (Internal & SaaS delivery focus)
+ Environment: Linux-based
+
+The Process
+
+Our selection process is designed to be thorough yet transparent:
+
+Initial short recruiter Interview: a 20-30 minute screening interview.
+
+Initial Screen with Client: A deep dive into your technical journey with our CIO.
+
+Technical Deep Dive: A practical test focused on Kubernetes and Jenkins troubleshooting, led by our technical experts.
+
+What We Offer
+
+ A critical role in a stable, industry-leading Swedish company.
+ The opportunity to transition a platform from "legacy maintenance" to "modern innovation."
+ A high-trust environment where technical expertise is the most valued currency.
+ Flexible working arrangements with a focus on results over "seat time."
+
+Ready to build the foundation of our next decade? Apply now.

@@ -1,0 +1,60 @@
+About the job
+About Us
+
+We build software that makes governance, risk, and compliance approachable: turning dense regulatory frameworks and internal policy into something organizations can work with. AI is central to how we do that, surfacing the right information, making sense of complex documents, and keeping outputs trustworthy in a domain where accuracy matters.
+
+We were founded by Magnus Juvas, serial entrepreneur behind Solidify and Transcendent Group, and Emelie Alftrén, with over two decades in risk management and governance. Two people who had seen the problem from both sides and decided to solve it properly.
+
+We're early-stage, meaning the foundations are in place but there's plenty left to shape. You'll have real ownership over both what you build and how it evolves. We're based in Stockholm and work hybrid.
+
+Joining Nooga means three things.
+
+Own it: we take responsibility and act. If you see a problem, you step up.
+Challenge the norm: we don't build things the way they've always been built. We build them better.
+Succeed together: with each other, and with our customers.
+
+Role Overview
+
+You'll own the platform that everything else runs on: infrastructure, automation, Kubernetes, and Azure, defined in Terraform, operated with discipline, and evolved with intention. You treat the platform as a product: clean developer experience, reliable operations, and security that's built in rather than bolted on.
+
+You'll start with a clear focus on Navigator (our core product) and grow from there as the company scales. You'll own both the operational and security dimensions of the platform, and you'll be the person who makes sure we're running things correctly, not just running them. You're comfortable enough in application code to collaborate closely with the backend team, but the platform is where you want to be.
+
+What You'll Work On
+
+Terraform modules that define, provision, and evolve tenant infrastructure on AKS
+Deployment pipelines and the workflows that ship and manage services across tenants
+AKS cluster operations: node pools, autoscaling, ingress (Front Door + WAF), and day-to-day reliability
+Security and identity: Workload Identity, Key Vault integration, zero-credential service auth, and least-privilege across the platform
+Networking: VNets, subnets, private endpoints, private DNS, TLS
+Docker base-image strategy, CI build pipelines, and image hygiene
+Observability: log routing, health checks, alerting, and metrics, built to be useful during incidents, not just present
+Evolving the platform beyond Navigator as the company grows: automation, standardisation, and broader infrastructure ownership
+
+What We're Looking For
+
+5+ years of platform, SRE, or infrastructure work running production Kubernetes (AKS, EKS, GKE, or on-prem)
+Strong Terraform: modules, remote state, drift management, and a track record of teams actually using the IaC you write
+Solid cloud operations experience: comfortable managing infrastructure in a cloud environment, with attention to cost, security, and scale. We run on Azure; experience on AWS or GCP transfers well
+Solid networking fundamentals: VNets/VPCs, private endpoints, DNS, ingress, TLS
+Container fundamentals: multi-stage Dockerfiles, base-image strategy, build discipline, image security
+Security mindset woven into platform work, not a separate concern
+Helm and/or Kustomize; comfortable with raw manifests when needed
+Opinionated about platform quality, but grounded in what the teams using the platform actually need
+Comfortable reading and debugging Python/Celery application code, enough to collaborate effectively and unblock yourself
+
+Helpful But Not Required
+
+Azure specifically (AKS, Front Door, Workload Identity, Private DNS, AI Foundry)
+Multi-tenant SaaS platform experience
+PostgreSQL extensions (pgvector, AGE) or self-hosted Milvus at production scale
+GitOps tooling (Argo CD, Flux, GitHub Actions, etc.): we use deploy scripts today and welcome a view on whether to change that
+
+What We Offer
+
+Competitive salary and benefits.
+Office in central Stockholm with a flexible hybrid environment.
+Career growth and development opportunities.
+
+How to Apply
+
+Send your resume and preferably a short cover letter detailing your relevant experience and what excites you about this role to careers@nooga.net.

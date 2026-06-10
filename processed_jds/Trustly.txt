@@ -1,0 +1,60 @@
+About the job
+WHO WE ARE
+At Trustly, we're building a smarter, faster, and more secure financial future by revolutionizing the world of payments. As a global leader in Open Banking Payments, we are establishing Pay by Bank as the new standard at checkout, providing unparalleled freedom, speed, and ease to millions of consumers and merchants worldwide.
+
+Our Ambition: To build the world’s most disruptive payment network and redefine what the payment experience should feel like.
+
+Trustly is a global team of innovators, collaborators, and doers.  If you are driven by a strong sense of purpose and thrive in a dynamic, entrepreneurial, and high-growth environment, join us and be part of a team that’s transforming the way the world pays.
+
+ABOUT THE ROLE
+
+To further empower our engineering organisation, we are looking for a product-minded Senior Platform Engineer. Our platform team's mission is clear: Empower teams to deploy and operate services quickly and safely through a self-service platform that reduces cognitive load and enforces security, reliability, and compliance by default.
+
+
+At this level, your biggest shift is moving from owning your personal work to owning organizational outcomes, and from following paths to creating the "paved road" for others. You will act as a true technical partner to our engineering teams, treating the platform as a product, actively shaping its vision, and driving the roadmap that enables our developers to build faster and more safely.
+
+
+WHAT YOU'LL DO
+
+Architect the Paved Road: Own and evolve the product deployment chain utilized by our development teams, including CI/CD pipelines  and underlying delivery infrastructure. You will design these systems for scale, aiming for appropriate complexity ("as simple as possible, but no simpler")
+
+Drive Ways of Working: Act as a cultural and technical driver for modern engineering practices. You will champion and implement SLO frameworks, promote trunk-based development, and build the tooling required for product teams to significantly increase their service availability
+
+Champion Observability: Ensure monitoring, logging, and tracing are built in from the start, never as afterthoughts. You will provide the observability primitives that allow product teams to truly understand and trust their systems in production
+
+Span Boundaries & Elevate Standards: Work closely with Infrastructure, Security, and Product teams to ensure a consistently high standard. You will embed "security and compliance by design" into the daily workflows of the entire engineering org without sacrificing velocity
+
+Multiply your impact: Lift the skills of those around you by developing teammates, mentoring colleagues through detailed feedback, and evangelising platform capabilities across the broader engineering organization
+
+
+
+
+WHO YOU ARE
+
+Experienced Platform Builder: You have significant senior-level experience (typically 7+ years) building, scaling, and operating developer platforms, CI/CD toolchains, and high-availability distributed systems in production
+
+A "Platform as a Product" Thinker: You naturally view internal tooling from a customer perspective. You focus on developer outcomes and reducing cognitive load rather than over-engineering solutions for the sake of technical elegance
+
+Operationally Driven: You have a veteran instinct for spotting systemic failure modes and identifying operational risks long before they impact availability. You deeply understand SLOs, error budgets, and how to balance reliability with feature velocity
+
+Comfortable in Ambiguity: You do not wait for perfect clarity; you make timely decisions, define problems when they are unclear, and do not let uncertainty become paralysis
+
+A Boundary-Spanning Collaborator: You proactively cross team boundaries to solve problems. You know how to build alignment between product developers, security experts, and infrastructure engineers, navigating difficult technical trade-offs with empathy and direct communication
+
+
+
+
+
+Our Fantastic Benefits (varies by location)
+🌴 20 to 25 days of holiday to support a healthy work-life balance
+🥳 Monthly team outing allowance to enjoy social events with your colleagues
+☕ Office perks such as refreshments (coffee, sodas etc.), breakfast, fruit and snacks
+🍴 Meal card to enjoy a daily lunch allowance to make your workdays even more convenient
+💚 Well being support our health allowance covers gym memberships, massages, and much more to help you feel your best
+PLUS additional benefits designed to enhance your work-life experience! 
+
+Shape Your Role and Make an Impact
+Join a dynamic environment where you can take ownership, drive change, and continuously embrace new challenges. We’re looking for dedicated and highly motivated individuals who thrive in a fast-paced environment and enjoy collaborating across different areas of the organisation.
+If your skills and experience align with this role, we’d love to hear from you! Apply now and submit your CV in English.
+
+We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.

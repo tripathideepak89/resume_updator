@@ -262,3 +262,133 @@
 - For "Lead" roles, emphasize team leadership, hiring, mentoring, and cross-org influence more explicitly.
 - Consider saving JD text at application time to enable post-rejection analysis.
 - H&M invited to follow on LinkedIn for future roles — worth monitoring.
+
+---
+
+## Legora
+
+- Role: Platform Engineer
+- JD file: processed_jds/Legora_Platform_Engineer.txt
+- Source: https://jobs.ashbyhq.com/legora/8f04eacb-b330-4166-8c88-a77c9cc4f46f
+- Outcome: Rejected
+- Response: Standard rejection. "After reviewing your application, we have decided to move forward with candidates whose experience align more closely with the role at this time."
+
+### Audit Scores
+
+- Overall: 87%
+- Keyword: 79%
+- Required terms: 100%
+- Role alignment: 67%
+- Impact: 97%
+
+### Analysis
+
+- **Role alignment gap (67%)**: The JD explicitly calls for SRE experience — "sit with all teams and help them structure their SRE efforts: observability, alerting, fault tolerance and reliability." The resume lacks explicit "Site Reliability Engineering" or "SRE" language despite having equivalent experience.
+- **Pulumi**: The JD lists Pulumi as the preferred IaC tool. The resume shows Terraform but no Pulumi experience, which may have been a differentiator for other candidates.
+- **Backend engineering background**: JD states "You have years of experience as a backend engineer but have solid infrastructure, observability, monitoring know-how." The resume leads with DevOps/Platform identity rather than backend-engineer-turned-platform-engineer framing.
+- **Startup culture fit signals**: JD emphasizes "$10bn company isn't always glamorous," "long hours," "fast-paced," "processes are few." The resume shows enterprise/corporate experience (Scania, Volvo, Bank of America) which may signal a mismatch in pace/culture.
+- **Azure-primary**: JD specifies "Pulumi on primarily Azure." While the resume lists Azure, the strongest narratives are around AWS and GCP.
+
+### Best Next Improvements
+
+- Add "SRE" or "Site Reliability Engineering" explicitly to relevant bullets (Scania observability work, incident response at Alten).
+- For startup-stage roles, lead with speed/iteration language rather than enterprise scale.
+- Consider adding Pulumi to skills if any hands-on exploration has been done.
+- Frame the Scania observability + alerting + fault-tolerance work with SRE terminology.
+
+---
+
+## Normative
+
+- Role: DevOps Engineer
+- JD file: processed_jds/Normative.txt
+- Outcome: Rejected
+- Response: Standard rejection. "We have decided to move forward with other candidates that we believe align more closely with our current needs for this particular position."
+
+### Audit Scores
+
+- Overall: 90%
+- Keyword: 90%
+- Required terms: 100%
+- Role alignment: 67%
+- Impact: 94%
+
+### Analysis
+
+- **Role alignment gap (67%)**: The JD explicitly requires "Site Reliability Engineer (SRE)" experience — listed as an alternative title and deeply embedded in the requirements (SLIs, SLOs, SLAs, incident management). The resume now has "CI/SRE observability" but doesn't fully frame the candidate as having SRE identity.
+- **AWS Well-Architected Framework**: JD calls this out as "Architectural Leadership" — a specific AWS certification/framework expertise. The resume shows strong AWS usage but doesn't reference Well-Architected explicitly.
+- **Startup/scale-up experience**: JD states "We're looking for someone who has thrived in a start-up or scale-up environment." The resume's strongest roles are at large enterprises (Scania, Volvo, Bank of America). The lean 2-person team context may have favoured candidates with explicit small-team/startup background.
+- **Missing keyword "IaC"**: While Terraform is listed, the audit flags that the literal term "Infrastructure as Code" or "IaC" doesn't appear prominently.
+- **JavaScript/TypeScript**: JD lists these as "significant advantage." Resume shows Python/Bash/Java but not JS/TS, which may have differentiated other candidates.
+
+### Best Next Improvements
+
+- Add "Site Reliability Engineering" as a standalone skill or in the skills section header (not just embedded in a bullet).
+- Add "Infrastructure as Code (IaC)" explicitly alongside Terraform mentions.
+- For roles mentioning AWS Well-Architected, reference framework alignment in platform architecture bullets.
+- Highlight JavaScript/Node.js experience if any exists (e.g., browser automation scripts in this repo).
+- For small-team roles, emphasize autonomy and breadth of ownership rather than scale of organisation.
+
+---
+
+## Neko Health
+
+- Role: Director, Platform Engineering
+- JD file: processed_jds/Nekohealth.txt
+- Outcome: Rejected
+- Response: Standard rejection. "We will not be progressing forward with your application at this time."
+
+### Audit Scores
+
+- Overall: 99%
+- Keyword: 100%
+- Required terms: 100%
+- Role alignment: 100%
+- Impact: 94%
+
+### Analysis
+
+- **Director-level title**: This is a "0→1 build" leadership role requiring 10-15+ years experience and ownership of an entire AI developer platform. Despite 99% audit score, the rejection likely reflects seniority/scope mismatch — they want someone who has previously built and led an internal platform team end-to-end, not operated within one.
+- **Agentic AI platform ownership**: JD requires "proven experience building and shipping an internal developer platform" and "leading agentic or AI-assisted development work that engineers actually use day-to-day." The resume shows AI-adjacent work (Agentic AI L1 support at Scania) but not platform-level AI tooling ownership.
+- **Workflow engines**: JD explicitly asks for "AWS Step Functions, Azure Durable Functions, Temporal, Conductor or Dagster." None of these appear on the resume.
+- **Java or C# depth**: JD states "recent Java or C# strongly preferred." While Java is listed, recent roles emphasize Python/Bash/infrastructure rather than backend Java development.
+- **High application volume**: Response explicitly notes "high level of applications" — competitive Director-level role at a well-funded health-tech startup.
+
+### Best Next Improvements
+
+- For Director/Head-of roles, emphasize strategic ownership: team building, roadmap definition, platform adoption metrics.
+- Add workflow engine experience (Step Functions, Temporal) if any exists, even in side projects.
+- Frame recent AI work (Agentic AI at Scania) more strongly as "developer platform" tooling rather than ops support.
+- Target Senior/Staff-level roles rather than Director unless previous platform team ownership can be demonstrated.
+
+---
+
+## EQT Group
+
+- Role: Senior Platform Engineer
+- JD file: processed_jds/EQT.txt
+- Outcome: Rejected
+- Response: Standard rejection. "We have decided to move ahead with another candidate who we feel is a better match for this particular position."
+
+### Audit Scores
+
+- Overall: 91%
+- Keyword: 89%
+- Required terms: 100%
+- Role alignment: 75%
+- Impact: 94%
+
+### Analysis
+
+- **SRE identity gap (75% role alignment)**: JD explicitly requires "Experience as a senior Platform, SRE, or Infrastructure Engineer." The audit flagged missing "site reliability engineering" and "sre" keywords. (This has since been fixed in resume_data.json skills section.)
+- **GCP-primary**: EQT's stack is heavily GCP/GKE-focused. Resume's strongest cloud narratives are AWS-first, with GCP as secondary. Candidates with deep GCP/GKE production experience likely had an edge.
+- **Go language**: Tech stack lists Go prominently. Resume doesn't mention Go at all — this could be a differentiator for a platform team that builds tooling in Go.
+- **Specific tooling gaps**: Cilium, Gatekeeper, CircleCI, Datadog, incident.io, Snowflake/DBT — none appear on the resume. While not all are required, candidates familiar with their exact stack would be preferred.
+- **On-call/incident response**: JD emphasises on-call rotations and incident response. Resume now mentions SRE but could more explicitly reference on-call experience and incident management ownership.
+
+### Best Next Improvements
+
+- For GCP-heavy roles, reframe cloud experience to lead with GCP/GKE where applicable.
+- Add Go to programming skills if any exposure exists.
+- Explicitly mention on-call rotation participation and incident management leadership in relevant bullets.
+- When a JD lists a specific tech stack, address as many as possible — even brief mentions show awareness.

@@ -1,0 +1,44 @@
+About the job
+Stillfront’s IT Hub is a multi-disciplinary department, paving the road for the rest of the group by providing technological solutions and engineering guidance. Now, we are looking for a Senior DevOps Engineer (all genders) with experience working with a heavily distributed and senior engineering group to join our IT Hub to support DevOps and engineering projects across the group.
+
+YOUR MISSION
+
+Lead the design and implementation of DevOps across IT Hub projects
+Lead by example best practices to team and game studios/franchises
+Contribute to player delight by reducing complexity and technical debt
+Identify and action opportunities to reduce cost
+Coordinate and collaborate with a talented network of engineers at each studio/franchise
+Be inquisitive about current DevOps strategies and eager to evaluate alternatives
+Using LLM/AI tooling to gain efficiency while improving quality
+
+YOUR BACKSTORY
+
+5+ years of professional experience in DevOps with high interest in gaming
+Comfortable being a first responder to infrastructure issues
+Bachelor degree in Computer Science or equivalent experience
+Experience with CI/CD pipelines and with common development tools and practices, including Python environments
+Hands-on experience building infrastructure from the ground up with Infrastructure-as-a-Service tools like Terraform or Pulumi
+Experience architecting and managing applications at scale using Kubernetes
+Experience with Git, with bonus points for experience converting codebases from competing version control systems into Git
+Well-acquainted with AWS, but also experienced with GCP, Azure, and even on-premise infrastructure
+Passion for monitoring and logging with tools like Grafana and Kibana
+Eye for security and data privacy both from a policy perspective and practical engineering tooling
+Fluent English, both verbal and written
+
+WHY JOIN US?
+
+Work from one of our modern offices around the world
+Opportunity to define and build the culture of a team
+Work with an international team and in close collaboration with 20+ game studios
+Participate in a broad range of projects from IT, to data science, finance, and analytics
+Build a team culture from the ground up folding best practices as needed
+Flexible work schedule that embraces the fact we all are in different parts of the world
+Unique opportunities to travel and connect in person with the entire team and group
+
+Stillfront is a global gaming company. We develop a wide range of digital games that attract millions of players each month. From well-established franchises like Supremacy, BIG, and Jawaker to niche games, we span multiple genres, including strategy, simulation, RPG, action, and casual and mash-up games.
+
+We believe gaming can be a force for good, and we want to create a gaming universe that is digital, affordable, equal, and sustainable. To achieve this, we focus on developing games that are all about having a rewarding hobby, a great social experience, or a strategic challenge.
+
+Stillfront was founded in 2010, and since then, we’ve grown rapidly. Our professionals thrive in an organization that embodies the spirit of entrepreneurship, and we’re proud to connect and empower game teams around the world.
+
+Our HQ is in Stockholm, Sweden, but our game development is done by teams and studios all over the world. Our main markets are the US, Japan, MENA, Germany, and the UK. We’re proud that our company shares are listed on the Nasdaq Stockholm Large Cap.

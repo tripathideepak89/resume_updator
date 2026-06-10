@@ -1,0 +1,73 @@
+About the job
+Title 
+DevOps & MLOps Developer (Developer Tools, Maintenance, and Data Governance) 
+ 
+Company Description 
+Co-Cart AB is a Swedish company that is working with Condé Nast, one of the world’s largest and most renowned media companies as a customer, with brands such as Vogue, GQ, Wired and The New Yorker.
+For Condé Nast Co-Cart is developing a creator-led commerce platform VETTE built to redefine how audiences discover and shop through voices they trust. VETTE will launch in early 2026 and we are searching for skilled and passionate senior developers that want to build something exceptional together with us.
+
+Why We’re Hiring 
+Our microservice platform is scaling fast, and with it the volume, velocity, and variety of data flowing through our systems. We are formalizing a dedicated DevOps & MLOps function to strengthen everything from CI/CD pipelines and functional testing framework to advanced data‑governance workflows. If you thrive at the intersection of cloud infrastructure, developer productivity, and machine learning operations, you’ll have a direct hand in shaping how we build, test, secure, and ship software and data products at scale. 
+ 
+Role Description 
+We are seeking an experienced DevOps & MLOps Developer consultant (Europe‑based, fully remote) to assist in the tooling and cloud infrastructure that power our development teams. Key focus areas include LambdaTest automation, secure SSO/2FA, audit‑log pipelines, high‑throughput messaging (RabbitMQ/Kafka), service mesh (Istio), and data governance across BigQuery, Dataflow, and Elasticsearch. 
+ 
+What You’ll Do
+• Platform Automation & CI/CD:
+o Evolve our Kubernetes clusters (GKE/EKS) and underlying IaC in Terraform/Helm.
+o Extend developer tooling with Bash, RoboTask, and custom scripts to cut cycle times.
+o Maintain multi‑browser test automation at scale using LambdaTest and integrate results into our pipelines.
+o Include and maintain static code analysis tools in our development and deployment pipelines
+
+• Security & Compliance:
+o Implement and enforce SSO & 2‑factor authentication across services.
+o Build end‑to‑end audit‑log collection, storage, and analytics pipelines.
+o Lead AI‑driven data‑sanitization workflows for sensitive integration payloads.
+
+• Observability & Incident Response:
+o Stand up a comprehensive monitoring and alerting framework (Prometheus/Loki/Grafana or similar).
+o Establish automated load‑ and stress‑testing suites and integrate them into release gates.
+o Drive on‑call best practices and post‑incident reviews.
+
+• Streaming & Service Mesh
+o Operate and tune RabbitMQ and Kafka clusters for low‑latency, high‑throughput data streams.
+o Design traffic‑management, resilience, and security policies in Istio.
+
+• Data & MLOps
+o Orchestrate data pipelines in BigQuery and Dataflow, ensuring lineage, quality, and cost control.
+o Lay the groundwork for future custom ML models (PyTorch or similar) with reproducible training and deployment workflows.
+o Partner with potential data scientists to productionize models via CI/CD, feature stores, and model‑monitoring dashboards.
+ 
+Qualifications (Must-have) 
+4 + years in DevOps/SRE or MLOps roles supporting production workloads. 
+Expert knowledge of Kubernetes (cluster ops, Helm charts, autoscaling, network/security). 
+Hands‑on experience with GCP BigQuery and Dataflow. 
+Proven scripting chops in Bash and at least one higher‑level language (Python, Go, or Node.js). 
+Deep understanding of LambdaTest or equivalent browser‑automation frameworks (e.g. Browserstack) at scale. 
+Solid grasp of authN/authZ patterns (SSO/OIDC, MFA, RBAC) and audit‑logging. 
+Track record implementing monitoring, alerting, and load/stress testing for microservices. 
+Production experience with RabbitMQ and/or Kafka, and managing large indexes in Elasticsearch. 
+Familiarity with GraphQL, Istio and API Gateways such as Apache APISIX (traffic routing, MTLS, policy). 
+Strong communication skills and a bias for documentation and knowledge‑sharing in English. 
+ 
+Preferred Qualification (Nice-to-Have Extras)
+Prior work on AI data‑sanitization or PII‑redaction pipelines. 
+Experience deploying ML models in PyTorch, TensorFlow, or similar, including feature‑store design. 
+Certifications in Kubernetes (CKA/CKS) or cloud platforms (GCP PCA, AWS SA). 
+Experience with Terraform Cloud, Crossplane, or GitOps frameworks (Argo CD, Flux).  
+ 
+What We Offer 
+100 % remote work within European time zones, with flexible hours outside of on‑call rotations. 
+A greenfield integration roadmap where your architectural decisions in collaboration with the rest of the team will have long‑term impact. 
+An engineering culture that values autonomy, pragmatic solutions, and continuous improvement. 
+The best team in the world, literally, where we support each other like a family. 
+ 
+Interview Process 
+Intro call (30 min) – meet the CTO and CEO, learn about us, share your story. 
+Up to 2x technical interviews (Each max 60 min): 
+o Walk through past projects and problem‑solve together  
+o Practical exercise (live coding challenge) – live scenario: design a secure, observable data pipeline on Kubernetes. 
+Final discussions: Culture & agreement on details of offer 
+ 
+Starting date 
+As soon as possible

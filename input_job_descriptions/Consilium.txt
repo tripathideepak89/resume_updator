@@ -1,0 +1,76 @@
+About the job
+About Consilium Safety Group
+
+At Consilium Safety Group, we don’t just build technology—we deliver solutions that protect people, assets, and the planet. As a global leader in fire and gas safety technology, we serve critical industries including marine, energy, rolling stock, and infrastructure.
+
+With 100+ years of experience, we combine deep industry knowledge with cutting-edge innovation to shape the future of Safety Tech. Headquartered in Gothenburg, Sweden, we operate from 55+ offices worldwide. Backed by Antin Infrastructure Partners, we are on an ambitious growth journey, investing heavily in innovation, operational excellence, and top talent.
+
+There has never been a more exciting time to join us.
+
+About Consilium Digital Core
+
+Our vision is to build a secure, cloud-driven, and globally unified IT landscape that supports Consilium’s growth toward 5 billion SEK in revenue and 2,000+ employees by 2027.
+
+The Digital Core is the foundation of this transformation—driving modern platform engineering, automation, Zero Trust security, and cloud-first operations.
+
+We are now looking for a Senior Platform Engineer to join our Platform Team. This is a highly technical, hands-on role ideal for an engineer who enjoys solving complex problems, owning deep technical domains, and driving improvements across identity, security, cloud, and datacenter services.
+
+If you thrive in autonomy, love technical depth, and enjoy making systems better every day—you’ll feel right at home.
+
+Your Role & Responsibilities
+
+Platform Engineering & Advanced Troubleshooting
+
+Serve as a senior technical specialist across identity, Azure infrastructure, hybrid environments, and core datacenter services.
+Lead troubleshooting for complex incidents and performance challenges.
+Own configurations, lifecycle management, and long-term solution quality.
+Conduct root cause analysis and implement robust technical improvements.
+
+Self-Driven Delivery & Technical Ownership
+
+Independently plan, prioritize, and execute your work aligned with platform roadmaps and operational needs.
+Drive technical coordination with engineers, architects, and project teams—without managerial overhead.
+Make informed technical decisions balancing performance, reliability, and security.
+
+Cloud & Identity Engineering
+
+Implement and optimize Microsoft Entra ID, hybrid identity, Conditional Access, MFA, and Privileged Access Management.
+Strengthen our Zero Trust architecture and modern authentication flows.
+Accelerate cloud-first modernization through secure, scalable platform improvements.
+
+Automation & Operational Excellence
+
+Automate provisioning, configuration, and identity operations using PowerShell, Terraform, or Bicep.
+Build tools, scripts, and pipelines to reduce manual effort and improve reliability.
+Collaborate with cloud, security, and network teams to engineer an efficient, resilient platform.
+
+Monitoring, Security & Compliance
+
+Use Azure Monitor, Defender, Sentinel, and Log Analytics to improve visibility and detection.
+Ensure alignment with frameworks like ISO 27001, NIST, and CIS benchmarks.
+Contribute to hardening across identity, endpoints, servers, and cloud infrastructure.
+
+Key Qualifications & Experience
+
+Required Technical Skills
+
+5+ years of hands-on platform engineering, identity services, or cloud/infrastructure operations.
+Deep expertise in Microsoft Entra ID, Conditional Access, MFA, RBAC, and hybrid identity.
+Strong troubleshooting ability for complex cloud or infrastructure issues.
+Practical experience with automation tooling: PowerShell, Terraform, or Bicep.
+Solid understanding of Zero Trust principles.
+Experience with Azure infrastructure, monitoring, and security tooling.
+Ability to independently deliver solutions end-to-end.
+
+Preferred Certifications (Not Required, But Beneficial)
+
+Microsoft Certified: Identity & Access Administrator Associate
+Microsoft Certified: Azure Administrator / Solutions Architect
+Microsoft Cybersecurity Architect
+Other relevant certifications (CISSP, CCNP, etc.)
+
+Apply Now
+
+If you are an experienced platform engineer ready to shape the digital foundation of a global safety-tech leader, we’d love to hear from you.
+
+Apply today and help us build the next generation of secure, modern, cloud-driven platforms.

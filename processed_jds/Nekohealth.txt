@@ -1,0 +1,57 @@
+About the job
+Mission
+
+Neko is redefining what prevention means, from treating illness when it arrives, to sustaining health before it's ever at risk. Our mission: make data-driven, preventative care accessible to more people, before symptoms appear.
+
+In a single, non-invasive visit under an hour, proprietary technology and direct clinical care combine to deliver personalised, actionable insights. It's a team that thinks in 10x, not 10%. Every role here plays a part in building a world where prevention is the norm, and where your work genuinely helps people live longer, healthier lives.
+
+The Role
+
+This is a 0→1 build. You'll own the architecture, build and rollout of Neko's internal AI developer platform, shaping how our engineers design, ship and operate software through agentic, AI-assisted workflows.
+
+It's a hands-on technical leadership role. You'll be the person setting long-term direction for AI agents, tooling and the systems underneath them, while also doing the work. The expectation is that what you build gets used across teams and meaningfully changes how engineering happens here.
+
+What You'll Deliver
+
+In the first 6 months
+
+A clear architectural direction for the platform
+Initial components shipped and adopted by early teams
+Measurable improvements to developer speed, reliability and autonomy
+Genuine organic adoption across engineering, driven by value not mandate
+
+By month 12
+
+A substantive shift toward agentic, engineer-led development workflows
+Platform scaled beyond pilot groups to multiple teams
+Clear ownership models for agents, tooling and supporting systems
+Long-term architecture defined and moving toward maturity
+
+What We're Looking For
+
+Must-haves
+
+Proven experience building and shipping an internal developer platform, hands-on, not advisory
+A strong track record leading agentic or AI-assisted development work that engineers actually use day-to-day
+Real backend engineering depth with production systems, recent Java or C# strongly preferred
+Experience rolling out platform tooling to 20-30+ developers with meaningful adoption
+Expertise with workflow engines such as AWS Step Functions, Azure Durable Functions, Temporal, Conductor or Dagster
+The ability to drive change through influence and credibility, not positional authority
+10-15+ years of engineering experience with substantial platform ownership
+
+Nice to have
+
+Full-stack exposure, though backend depth is the priority
+Background in product-led SaaS or organisations with strong internal developer tooling culture
+
+About Titles At Neko
+
+We use a simplified internal title framework that prioritises clarity over hierarchy, so internal titles may differ from market‑facing role titles. Scope, impact and level of the role are fully aligned and will be clearly discussed throughout the process.
+
+Hiring Process
+
+Candidates progress from application and structured screening through thoughtfully designed interviews culminating in a formal offer and final pre-employment checks before joining the team.
+
+Equal Opportunity & Inclusion Statement
+
+Neko Health is committed to inclusive hiring and member-first care. We welcome candidates from all backgrounds and encourage you to request reasonable adjustments to support your application.

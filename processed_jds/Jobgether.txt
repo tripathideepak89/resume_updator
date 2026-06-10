@@ -1,0 +1,48 @@
+About the job
+This position is posted by Jobgether on behalf of a partner company. We are currently looking for a Platform Engineer - Multicloud in Sweden.
+
+This is a senior infrastructure role focused on building and scaling cloud-agnostic platform systems that power large-scale developer-facing services. You will play a key role in designing and evolving infrastructure that can operate seamlessly across multiple cloud providers and potentially colocated environments. The work is highly technical and centered on Kubernetes, distributed systems, and infrastructure abstraction layers. You will collaborate closely with engineering and product teams to ensure that new systems are designed with portability and scalability in mind from the outset. This is a fast-moving, async-first environment where engineering rigor, autonomy, and systems thinking are essential. Your contributions will directly shape the foundation of a globally used developer platform serving millions of users.
+
+Accountabilities
+
+Audit existing infrastructure to identify cloud-specific dependencies and define a structured migration and portability roadmap
+Design and implement cloud-agnostic abstractions across compute, networking, and storage layers to enable multi-cloud execution
+Maintain and evolve Kubernetes-based orchestration systems to ensure reliable workload portability across environments
+Collaborate with product and platform engineers to embed multi-cloud design principles into new system development
+Contribute to architectural decisions regarding cloud strategy, infrastructure evolution, and colocated deployment options
+Support ongoing improvements to platform scalability, resilience, and operational efficiency across distributed systems
+
+Requirements
+
+8+ years of experience in platform engineering, infrastructure engineering, or distributed systems roles
+Strong hands-on experience operating Kubernetes in production across multiple cloud environments (AWS, GCP, Azure)
+Proven experience with multi-cloud, cloud abstraction, or infrastructure re-platforming initiatives
+Proficiency with infrastructure-as-code tools such as Pulumi or similar technologies
+Strong systems design skills with deep understanding of compute, networking, and storage layers
+Experience working in async, distributed, or globally remote engineering teams
+Ability to communicate complex technical concepts clearly across technical and non-technical stakeholders
+Strong ownership mindset with comfort operating in ambiguous, fast-paced environments
+Nice to have: experience contributing to or building developer platforms at scale
+
+Benefits
+
+Fully remote work with global flexibility and asynchronous collaboration
+Equity ownership (ESOP) allowing participation in company growth and success
+Annual tech allowance to set up your ideal work environment
+Comprehensive health coverage, including full employee coverage and partial dependent coverage
+Annual global off-site gathering for collaboration, alignment, and team connection
+Flexible working hours with high trust and autonomy over your schedule
+Annual professional development budget for courses, books, and conferences
+Co-working allowance or membership (e.g., WeWork access) for optional in-person work environments
+
+How Jobgether Works
+
+We use an AI-powered matching process to ensure your application is reviewed quickly, objectively, and fairly against the role's core requirements. Our system identifies the top-fitting candidates, and this shortlist is then shared directly with the hiring company. The final decision and next steps (interviews, assessments) are managed by their internal team.
+
+We appreciate your interest and wish you the best!
+
+ Why Apply Through Jobgether?
+
+Data Privacy Notice: By submitting your application, you acknowledge that Jobgether will process your personal data to evaluate your candidacy and share relevant information with the hiring employer. This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR). You may exercise your rights (access, rectification, erasure, objection) at any time.
+
+We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.

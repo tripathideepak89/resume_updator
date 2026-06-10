@@ -5,7 +5,7 @@
   "email": "<your_email>",
   "phone": "<your_phone>",
   "linkedin": "<your_linkedin_url>",
-  "summary": "Platform Engineering and DevOps Architect with 15+ years of experience designing, operating, and improving large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, infrastructure as code, observability, and security-focused operations, with growing expertise in AI/ML systems, MLOps, API-driven automation, and production AI platforms.\n\nExperienced in building production-grade platforms that improve developer velocity, reliability, scalability, and operational resilience for data-intensive and business-critical workloads.",
+  "summary": "Platform Engineering and DevOps Architect with 8+ years of experience designing, operating, and improving large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, infrastructure as code, observability, and security-focused operations, with growing expertise in AI/ML systems, MLOps, API-driven automation, and production AI platforms.\n\nExperienced in building production-grade platforms that improve developer velocity, reliability, scalability, and operational resilience for data-intensive and business-critical workloads.",
   "skills": {
     "AI / ML Systems & MLOps": "LLM inference workflows, model deployment pipelines, AI system automation, API integrations, agentic workflow foundations, data workflows, monitoring",
     "Cloud & Distributed Systems": "AWS, Azure, GCP, Kubernetes, OpenShift, Terraform, scalable distributed systems",
@@ -40,7 +40,7 @@
       "location": "Sweden",
       "bullets": [
         "Built security controls and monitoring infrastructure for the DevOps platform serving Volvo CE and IKEA, achieving zero critical security incidents over 18 months",
-        "Defined and enforced DevSecOps policies across 15+ development teams, reducing vulnerability remediation time by 60%",
+        "Defined and enforced DevSecOps policies across 8+ development teams, reducing vulnerability remediation time by 60%",
         "Designed CI/CD infrastructure using GitHub Actions and Kubernetes, supporting 100+ pipelines with 95% first-run success rate",
         "Aligned security, monitoring, and delivery practices across 3 enterprise stakeholders, reducing deployment rollback rate by 30%"
       ],

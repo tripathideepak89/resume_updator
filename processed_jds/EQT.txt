@@ -1,0 +1,54 @@
+About the job
+EQT is looking for a Senior Platform Engineer to join our engineering platform team in Stockholm. This is a hands-on role for an experienced engineer who enjoys building reliable platforms, working closely with teams, and driving long-term impact.
+
+About The Engineering Platform Team
+
+The engineering platform team builds and operates EQT’s core platform, enabling product teams to run secure, reliable, and scalable services, data-products and agentic ai. The team works closely with developers and security partners, with a strong focus on automation, standards, and operational excellence.
+
+About The Role
+
+In this role, you will work across EQT’s engineering platform and lead the design and delivery of key platform initiatives. You will collaborate with teams across the organization to drive adoption, improve reliability, and enhance the developer experience.
+
+Lead the design, architecture, and rollout of platform projects from start to finish.
+Collaborate with engineers across the organization to align on platform standards and best practices.
+Operate and continuously improve the engineering platform.
+Contribute to on-call rotations and support platform reliability.
+Improve platform reliability, security, and developer experience.
+Support incident response, troubleshooting, and root cause analysis.
+
+About You
+
+You enjoy working in a high-trust environment and take ownership of building strong technical foundations. You are collaborative, structured in your approach, and motivated by enabling others to succeed.
+
+Essential skills and experience:
+
+Experience as a senior Platform, SRE, or Infrastructure Engineer.
+Proven experience leading platform projects from concept through to production.
+Hands-on experience running Kubernetes production environments.
+Experience working with cloud platforms, preferably Google Cloud Platform (GCP).
+Experience with infrastructure as code, preferably Terraform.
+Familiarity with GitOps and CI/CD workflows.
+
+Tech Stack / Environment: GCP, GKE, ArgoCD, Gatekeeper, Cilium, Terraform, CircleCI, GitHub, Cloudflare, Datadog, incident.io, Snowflake, DBT, Hex, Go, Python, Next.js
+
+Nice to have:
+
+Experience with platform security.
+Knowledge of authentication and identity systems.
+Strong networking knowledge across cloud and Kubernetes environments.
+Interest in the Agentic AI ecosystem
+Experience improving platform and production environment resilience.
+
+What We Offer
+
+At EQT, you will work in a collaborative and high-trust environment where your ideas and contributions matter. You will have the opportunity to shape a modern engineering platform, work with experienced colleagues, and continue to grow your skills while delivering meaningful impact.
+
+Inclusion at EQT
+
+Our vision for EQT employees is to build high performing & engaged teams. Our competitive edge comes from fostering an environment where every individual feels valued, empowered, and motivated to drive business impact. Our commitment to inclusion is not just about fairness; We understand and believe that being a great place to work drives the best performance.At EQT, inclusion is a business imperative and it's embedded into our talent strategy, decision-making, and culture to ensure that every individual and team operates at their full potential. By doing so, we unlock better collaboration, stronger innovation, and superior investment outcomes.
+
+About EQT
+
+EQT is a purpose-driven global investment organization focused on active ownership strategies. With a Nordic heritage and a global mindset, EQT has a track record of over three decades of developing companies across multiple geographies, sectors and strategies. EQT has investment strategies covering all phases of a business’ development, from start-up to maturity. EQT has EUR ‌ 270 billion in total assets under management (EUR ‌ ‌141 billion in fee-generating assets under management), within two business segments – Private Capital and Real Assets.
+
+With its roots in the Wallenberg family’s entrepreneurial mindset and philosophy of long-term ownership, EQT is guided by a set of strong values and a distinct corporate culture. EQT manages and advises funds and vehicles that invest across the world with the mission to future-proof companies, generate attractive returns and make a positive impact with everything EQT does. EQT has offices in more than 25 countries across Europe, Asia and the Americas and has more than 1,900 employees.

@@ -116,6 +116,9 @@ def _wait_until_ready(path: Path) -> bool:
 
 def _archive_file(source: Path, archive_dir: Path) -> Path:
     archive_dir.mkdir(parents=True, exist_ok=True)
+    if not source.exists():
+        print(f"  Warning: source file already removed, skipping archive: {source.name}")
+        return archive_dir / source.name
     destination = archive_dir / source.name
 
     if destination.exists():

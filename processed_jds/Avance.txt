@@ -1,0 +1,27 @@
+About the job
+Mission description:
+We require a DevOps Engineer with deep expertise in MS Azure and Terraform to support our cloud infrastructure initiatives. As we expand our platform and increase automation, we need a specialist who can accelerate infrastructure delivery, strengthen operational stability, and mature our infrastructure-as-code strategy. Additional experience with broader HashiCorp tooling would be considered a strong merit. 
+
+Key Responsibilities 
+• Design, implement, and maintain scalable and secure cloud infrastructure using Terraform and other related tools 
+• Develop and optimize CI/CD pipelines using Azure DevOps or GitHub Actions 
+• Collaborate on cloud architecture decisions, focusing on reliability, scalability, and cost management 
+• Implement containerization and orchestration solutions (e.g., AKS, Docker) 
+• Automate environment provisioning, configuration, and operational workflows 
+• Troubleshoot deployment and infrastructure issues across multiple environments 
+• Improve monitoring and observability using Azure Monitor, Log Analytics, and related tooling 
+
+Required Skills & Experience 
+• Proven experience delivering and managing Azure infrastructure at scale 
+• Expert-level proficiency with Terraform, including modules, state management, and Terraform Cloud/Enterprise workflows 
+• Strong understanding of Azure services (Compute, Networking, Storage, App Services, Key Vault, etc.) 
+• Experience with CI/CD and automation pipelines 
+• Knowledge of containers, Kubernetes (AKS), and microservices architectures 
+• Familiarity with DevOps methodologies, Git workflows, IaC best practices, and cloud security standards 
+
+Meritous Skills (Nice to Have) 
+• Experience with other HashiCorp products, such as: o Vault (secrets management) o Consul (service discovery / mesh) o Packer (image creation) o Nomad (workload orchestration) 
+• Experience with Azure Landing Zones or enterprise-scale architecture frameworks 
+• Familiarity with FinOps practices or Azure cost governance 
+
+Language(s): English, Swedish
