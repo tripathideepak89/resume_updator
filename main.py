@@ -166,6 +166,61 @@ def tailor_resume(token: str, resume: dict, jd: str) -> dict:
         return _keyword_fallback(resume, jd)
 
 
+def refine_resume_with_audit(token: str, resume: dict, jd: str, audit: dict) -> dict:
+    system = textwrap.dedent("""\
+        You are a professional resume writer. Given a candidate resume data
+        (JSON), a Job Description, and an audit report, return ONLY a valid JSON
+        object with:
+
+        1. "summary" - A rewritten professional summary (3-4 sentences) tailored
+           to the JD.
+        2. "skills" - The same skill categories as an object, but reorder/emphasize
+           items that match the JD. Keep all original skills, JD-relevant ones first.
+        3. "experience" - Same experience list. For each job, rewrite the
+           "bullets" array to emphasize JD-relevant achievements. Keep all jobs.
+           Do NOT invent facts. Only reframe existing experience.
+
+        Use the audit to prioritize only missing terms and role language that are
+        already supported by the resume evidence. Return raw JSON only. No markdown
+        fences, no explanation.
+    """)
+    resume_compact = {
+        "summary": resume["summary"],
+        "skills": resume["skills"],
+        "experience": [
+            {"role": e["role"], "company": e["company"], "bullets": e["bullets"], "tools": e.get("tools", "")}
+            for e in resume["experience"]
+        ],
+    }
+    user_msg = (
+        f"RESUME:\n{json.dumps(resume_compact)}\n\n"
+        f"AUDIT:\n{json.dumps(audit)}\n\n"
+        f"JOB DESCRIPTION:\n{jd[:2000]}"
+    )
+    raw = call_hf(token, system, user_msg)
+
+    if not raw:
+        print("   Using keyword-match fallback.")
+        return _keyword_fallback(resume, jd)
+
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = raw.split("\n", 1)[1] if "\n" in raw else raw[3:]
+    if raw.endswith("```"):
+        raw = raw.rsplit("```", 1)[0]
+
+    start = raw.find("{")
+    end = raw.rfind("}") + 1
+    if start >= 0 and end > start:
+        raw = raw[start:end]
+
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        print("   Warning: LLM returned non-JSON. Using keyword-match fallback.")
+        return _keyword_fallback(resume, jd)
+
+
 def generate_cover_letter(token: str, resume: dict, jd: str) -> str:
     system = textwrap.dedent("""\
         You are a professional cover letter writer. Given a candidate resume
@@ -676,6 +731,24 @@ def _keyword_fallback(resume: dict, jd: str) -> dict:
     }
 
 
+def _merge_resume_with_tailored(resume: dict, tailored: dict) -> dict:
+    merged = json.loads(json.dumps(resume))
+    for key in ("summary", "skills"):
+        if key in tailored and tailored[key]:
+            merged[key] = tailored[key]
+    if tailored.get("experience") and merged.get("experience"):
+        merged_exp = []
+        for i, exp in enumerate(merged["experience"]):
+            tailored_exp = tailored["experience"][i] if i < len(tailored["experience"]) else {}
+            merged_exp.append({
+                **exp,
+                "bullets": tailored_exp.get("bullets", exp.get("bullets", [])),
+                **({"tools": tailored_exp["tools"]} if tailored_exp.get("tools") else {}),
+            })
+        merged["experience"] = merged_exp
+    return merged
+
+
 def _cover_letter_fallback(resume: dict, jd: str) -> str:
     jd_kw = _extract_keywords(jd)
 
@@ -1019,33 +1092,47 @@ def main():
     tailored = tailor_resume(token, resume, jd_text)
     print("Resume tailored.")
 
-    # Step 2: Generate cover letter
-    print("Generating cover letter ...")
-    cover_letter_text = generate_cover_letter(token, resume, jd_text)
-    print("Cover letter generated.")
+    final_resume = _merge_resume_with_tailored(resume, tailored)
+    final_tailored = tailored
 
-    # Step 3: Analyze resume match
+    # Step 2: Analyze resume match
     resume_pdf = out / f"Resume_{safe_name}_{safe_company}.pdf"
     cover_pdf = out / f"CoverLetter_{safe_name}_{safe_company}.pdf"
     cover_txt = out / f"CoverLetter_{safe_name}_{safe_company}.txt"
     audit_report = out / f"ResumeAudit_{safe_name}_{safe_company}.md"
 
     print("Analyzing resume match ...")
-    audit = analyze_resume_match(resume, jd_text)
-    write_audit_report(audit_report, company_name, resume, audit)
+    audit = analyze_resume_match(final_resume, jd_text)
+
+    if audit["overall_score"] < 90:
+        print(f"Overall score {audit['overall_score']}% is below 90%; running one refinement pass ...")
+        refined = refine_resume_with_audit(token, final_resume, jd_text, audit)
+        final_resume = _merge_resume_with_tailored(resume, refined)
+        final_tailored = refined
+        audit = analyze_resume_match(final_resume, jd_text)
+        print(f"Refinement complete. Final overall score: {audit['overall_score']}%")
+    else:
+        print(f"Overall score {audit['overall_score']}% meets threshold; no refinement needed.")
+
+    write_audit_report(audit_report, company_name, final_resume, audit)
     print(f"Done: {audit_report}")
+
+    # Step 3: Generate cover letter
+    print("Generating cover letter ...")
+    cover_letter_text = generate_cover_letter(token, final_resume, jd_text)
+    print("Cover letter generated.")
 
     # Step 4: Build PDFs
 
     print("Building PDF: Resume ...")
-    resume_story = build_resume_story(resume, tailored)
+    resume_story = build_resume_story(resume, final_tailored)
     write_pdf(resume_story, resume_pdf, f"Resume - {resume['name']}")
     print(f"Done: {resume_pdf}")
 
     print("Building PDF: Cover Letter ...")
     cover_txt.write_text(cover_letter_text.strip() + "\n", encoding="utf-8")
-    cl_story = build_cover_letter_story(resume, cover_letter_text)
-    write_pdf(cl_story, cover_pdf, f"Cover Letter - {resume['name']}")
+    cl_story = build_cover_letter_story(final_resume, cover_letter_text)
+    write_pdf(cl_story, cover_pdf, f"Cover Letter - {final_resume['name']}")
     print(f"Done: {cover_pdf}")
 
     print()

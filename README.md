@@ -13,6 +13,7 @@ Built with Python, Hugging Face LLMs, and headless browser automation.
 | **Resume Tailoring** | Rewrites summary, reorders skills, reframes experience bullets to match a JD |
 | **Cover Letter Generation** | Produces a tailored cover letter referencing specific resume achievements |
 | **ATS Audit Report** | Scores keyword match, required terms, role alignment, and bullet impact |
+| **Adaptive Refinement** | Re-runs the audit-driven tailoring pass once if the overall score is below 90%, then regenerates outputs |
 | **Application Form Filling** | Automates Teamtailor and Ashby form filling with resume upload |
 | **File Watcher** | Drop a `.txt` JD file in a folder → auto-generates all outputs |
 | **Dual-Mode Engine** | AI-powered (Hugging Face LLM) with automatic keyword-match fallback |
@@ -138,7 +139,10 @@ flowchart TD
     COVER_KW --> BUILD
 
     BUILD["Build PDFs\nReportLab · A4 · Compressed"] --> AUDIT["ATS Audit Report\nKeyword · Terms · Role · Impact"]
-    AUDIT --> OUTPUT["📄 Resume PDF\n📄 Cover Letter PDF\n📊 Audit Report"]
+    AUDIT --> SCORE{"Overall score\n< 90%?"}
+    SCORE -->|Yes| RETRY["Run one audit-driven\nrefinement pass"]
+    RETRY --> BUILD
+    SCORE -->|No| OUTPUT["📄 Resume PDF\n📄 Cover Letter PDF\n📊 Audit Report"]
 
     OUTPUT --> FILL{"Fill application\nform?"}
     FILL -->|Yes| BROWSER["Open Chrome\nFill form · Upload CV\nPause before submit"]
@@ -220,6 +224,8 @@ Works out of the box. Parses JD for keywords, reorders skills and bullets by rel
 ```bash
 python3 main.py input_job_descriptions/job_posting.txt
 ```
+
+If the generated audit score is below 90%, the workflow performs one additional refinement pass, then regenerates the audit and output files from the final tailored resume.
 
 ### Generate from a job URL (fetch JD, generate, fill form)
 
