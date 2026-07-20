@@ -14,6 +14,10 @@ Built with Python, Hugging Face LLMs, and headless browser automation.
 | **Cover Letter Generation** | Produces a tailored cover letter referencing specific resume achievements |
 | **ATS Audit Report** | Scores keyword match, required terms, role alignment, and bullet impact |
 | **Adaptive Refinement** | Re-runs the audit-driven tailoring pass once if the overall score is below 90%, then regenerates outputs |
+| **Reusable Resume Profile** | Converts uploaded resume files into structured profile data and reuses them across repeated JD runs |
+| **Web UI** | Minimal Flask UI for resume upload, JD paste/upload, result downloads, and profile-based regeneration |
+| **Profile Recommendations** | Surfaces ATS recommendations as structured actions that can be applied back to the saved profile |
+| **Guest + Auth Access** | Allows guest usage with a 3-download limit and unlimited logged-in usage with persisted profiles |
 | **Application Form Filling** | Automates Teamtailor and Ashby form filling with resume upload |
 | **File Watcher** | Drop a `.txt` JD file in a folder → auto-generates all outputs |
 | **Dual-Mode Engine** | AI-powered (Hugging Face LLM) with automatic keyword-match fallback |
@@ -27,7 +31,15 @@ graph LR
     subgraph "Input Sources"
         URL["🔗 Job URL"]
         TXT["📄 JD Text File"]
-        RD["📋 resume_data.json"]
+        JDUI["📝 JD Paste / Upload"]
+        RESUME["📄 Resume File\nPDF · DOCX · TXT · JSON"]
+    end
+
+    subgraph "Web App (app.py)"
+        UI["Flask UI"]
+        PARSER["resume_parser.py\nResume -> structured profile"]
+        CACHE["Profile Cache\nSession or User Record"]
+        RECS["Recommendation Actions\nApply selected deltas"]
     end
 
     subgraph "Application Agent (apply_agent.py)"
@@ -46,6 +58,7 @@ graph LR
         TAILOR["Resume Tailor"]
         COVER["Cover Letter\nGenerator"]
         AUDIT["ATS Audit\nAnalyzer"]
+        MERGE["Stable Merge\nPreserve metadata fields"]
     end
 
     subgraph "PDF Renderer (ReportLab)"
@@ -64,20 +77,29 @@ graph LR
         A_OUT["📊 Audit Report"]
     end
 
+    RESUME --> PARSER
+    PARSER --> CACHE
+    CACHE --> UI
+    JDUI --> UI
+    UI --> PARSE
+    UI --> RECS
+    RECS --> CACHE
+
     URL --> FETCH
     FETCH --> PARSE
     FETCH --> DETECT_PLATFORM
     TXT --> PARSE
-    RD --> TAILOR
-    RD --> COVER
     PARSE --> HF
     PARSE --> KW
+    CACHE --> TAILOR
+    CACHE --> COVER
     HF --> TAILOR
     HF --> COVER
     KW --> TAILOR
     KW --> COVER
-    PARSE --> AUDIT
-    TAILOR --> RPDF
+    TAILOR --> MERGE
+    MERGE --> AUDIT
+    MERGE --> RPDF
     COVER --> CPDF
     RPDF --> R_OUT
     CPDF --> C_OUT
@@ -89,7 +111,11 @@ graph LR
 
     style URL fill:#E3F2FD,stroke:#1565C0,color:#000
     style TXT fill:#E3F2FD,stroke:#1565C0,color:#000
-    style RD fill:#E3F2FD,stroke:#1565C0,color:#000
+    style JDUI fill:#E3F2FD,stroke:#1565C0,color:#000
+    style RESUME fill:#E3F2FD,stroke:#1565C0,color:#000
+    style UI fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style CACHE fill:#E8F5E9,stroke:#2E7D32,color:#000
+    style RECS fill:#E8F5E9,stroke:#2E7D32,color:#000
     style HF fill:#FFF3E0,stroke:#E65100,color:#000
     style KW fill:#FFF3E0,stroke:#E65100,color:#000
     style R_OUT fill:#E8F5E9,stroke:#2E7D32,color:#000
@@ -110,11 +136,17 @@ flowchart TD
     MODE -->|URL| AGENT["apply_agent.py\nFetch job posting HTML\nExtract JD text"]
     MODE -->|Text file| DIRECT["main.py\nRead .txt file"]
     MODE -->|Drop folder| WATCH["watch.py\nDetect new file\nTrigger main.py"]
+    MODE -->|Web UI| WEB["app.py\nLoad cached profile\nor upload resume once"]
 
     AGENT --> SAVE["Save JD to\ninput_job_descriptions/"]
     SAVE --> GENERATE
     DIRECT --> GENERATE
     WATCH --> GENERATE
+    WEB --> PROFILE{"Profile exists?"}
+    PROFILE -->|No| UPLOAD["Parse resume file\ninto structured profile"]
+    PROFILE -->|Yes| JDSTEP["Paste or upload JD"]
+    UPLOAD --> JDSTEP
+    JDSTEP --> GENERATE
 
     GENERATE["Generate Outputs"] --> DETECT["Detect Company Name\n6-pattern extraction chain"]
     DETECT --> CHECK{"HF_TOKEN\navailable?"}
@@ -143,8 +175,12 @@ flowchart TD
     SCORE -->|Yes| RETRY["Run one audit-driven\nrefinement pass"]
     RETRY --> BUILD
     SCORE -->|No| OUTPUT["📄 Resume PDF\n📄 Cover Letter PDF\n📊 Audit Report"]
+    OUTPUT --> RECOMMEND{"Web profile\nactions selected?"}
+    RECOMMEND -->|Yes| APPLY["Apply selected\nprofile deltas only"]
+    APPLY --> GENERATE
+    RECOMMEND -->|No| FILL
 
-    OUTPUT --> FILL{"Fill application\nform?"}
+    FILL{"Fill application\nform?"}
     FILL -->|Yes| BROWSER["Open Chrome\nFill form · Upload CV\nPause before submit"]
     FILL -->|No| DONE(["✅ Done"])
     BROWSER --> CONFIRM{"User confirms\nSUBMIT?"}
@@ -166,10 +202,22 @@ flowchart TD
 
 ```
 resume_updator/
+├── app.py                         # Flask web UI: auth, profile cache, generation, downloads
 ├── main.py                        # Core engine: tailor, generate, audit, render PDFs
+├── resume_parser.py               # Resume file parser: PDF / DOCX / TXT / JSON -> structured profile
 ├── apply_agent.py                 # URL-based application agent with browser automation
 ├── watch.py                       # File watcher: auto-process new JD files
 ├── resume_data.json               # Candidate profile data (skills, experience, education)
+├── templates/
+│   └── index.html                 # Single-page UI shell
+├── static/
+│   ├── css/
+│   │   └── style.css              # Web UI styles
+│   └── js/
+│       └── app.js                 # Frontend flow, profile state, recommendations
+├── instance/
+│   ├── users.db                   # SQLite auth + persisted profile data for logged-in users
+│   └── uploads/                   # Per-session cached profile + JD working files
 ├── application_agent_config.json  # Default form answers and browser settings
 ├── browser_fill_teamtailor.js     # Playwright worker: Teamtailor form automation
 ├── browser_fill_ashby.js          # Playwright worker: Ashby form automation
@@ -226,6 +274,22 @@ python3 main.py input_job_descriptions/job_posting.txt
 ```
 
 If the generated audit score is below 90%, the workflow performs one additional refinement pass, then regenerates the audit and output files from the final tailored resume.
+
+### Run the web app
+
+```bash
+python3 app.py
+```
+
+Then open `http://localhost:5000`.
+
+Web flow:
+
+1. Upload a resume once and convert it into a structured profile.
+2. Reuse that profile across repeated JD tests.
+3. Paste or upload a JD.
+4. Generate resume, cover letter, and ATS audit.
+5. Optionally apply structured ATS recommendations back to the saved profile and regenerate.
 
 ### Generate from a job URL (fetch JD, generate, fill form)
 

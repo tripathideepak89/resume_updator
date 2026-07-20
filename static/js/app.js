@@ -6,37 +6,36 @@
 
 "use strict";
 
-/* ── State ─────────────────────────────────────────────────────── */
 const state = {
-  resumeReady:    false,
-  jdReady:        false,
-  loggedIn:       false,
+  resumeReady: false,
+  jdReady: false,
+  jdUploaded: false,
+  profileLoaded: false,
+  loggedIn: false,
   guestDownloads: 0,
-  guestLimit:     3,
-  userEmail:      null,
-  currentJobId:   null,
+  guestLimit: 3,
+  userEmail: null,
+  currentJobId: null,
+  recommendations: [],
+  selectedRecs: new Set(),
 };
 
-/* ── DOM helpers ────────────────────────────────────────────────── */
-const $  = (id) => document.getElementById(id);
-const el = (sel) => document.querySelector(sel);
+const $ = (id) => document.getElementById(id);
 
-/* ── Boot ───────────────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", async () => {
-  await refreshAuth();
+  await Promise.all([refreshAuth(), checkProfile()]);
   bindEvents();
   updateHint();
 });
 
-/* ── Auth ───────────────────────────────────────────────────────── */
 async function refreshAuth() {
   try {
     const r = await fetch("/api/auth/me");
     const d = await r.json();
-    state.loggedIn      = d.logged_in;
-    state.userEmail     = d.email    || null;
+    state.loggedIn = d.logged_in;
+    state.userEmail = d.email || null;
     state.guestDownloads = d.guest_downloads ?? 0;
-    state.guestLimit    = d.guest_limit ?? 3;
+    state.guestLimit = d.guest_limit ?? 3;
   } catch (_) {}
   renderAuth();
 }
@@ -55,19 +54,159 @@ function renderAuth() {
   }
 }
 
-/* ── Events ─────────────────────────────────────────────────────── */
+async function checkProfile() {
+  try {
+    const r = await fetch("/api/profile");
+    const d = await r.json();
+    if (d.exists) showProfileCard(d);
+  } catch (_) {}
+}
+
+function showProfileCard(profile) {
+  $("profile-name").textContent = profile.name || "Your Resume";
+  $("profile-title-text").textContent = profile.title || "";
+  $("profile-format").textContent = profile.source_format || "JSON";
+  $("profile-exp").textContent = profile.experience_count > 0
+    ? `${profile.experience_count} role${profile.experience_count > 1 ? "s" : ""}`
+    : "";
+  $("profile-skl").textContent = profile.skills_count > 0
+    ? `${profile.skills_count} skill categories`
+    : "";
+  $("profile-updated").textContent = profile.updated ? `Updated ${profile.updated}` : "";
+
+  $("profile-card").classList.remove("hidden");
+  $("resume-drop").classList.add("hidden");
+  $("resume-status").classList.add("hidden");
+
+  state.resumeReady = true;
+  state.profileLoaded = true;
+  markStep(1, true);
+  checkGenEnabled();
+  updateHint();
+}
+
+function resetProfileView() {
+  $("profile-card").classList.add("hidden");
+  $("profile-preview").classList.add("hidden");
+  $("resume-drop").classList.remove("hidden");
+  $("resume-drop").classList.remove("success");
+  $("resume-drop").querySelector(".dz-text").innerHTML =
+    'Drop your resume here, or <span class="link">browse</span>';
+  $("resume-input").value = "";
+  state.resumeReady = false;
+  state.profileLoaded = false;
+  markStep(1, false);
+  checkGenEnabled();
+  updateHint();
+}
+
+function renderRecommendations(recs) {
+  state.recommendations = recs || [];
+  state.selectedRecs = new Set();
+
+  if (!state.recommendations.length) {
+    $("recs-area").classList.add("hidden");
+    updateRecsBtn();
+    return;
+  }
+
+  $("recs-list").innerHTML = state.recommendations.map((rec) => `
+    <label class="rec-card" id="rec-${escHtml(rec.id)}">
+      <input
+        type="checkbox"
+        class="rec-checkbox sr-only"
+        value="${escHtml(rec.id)}"
+        onchange="toggleRec(this)"
+      >
+      <span class="rec-check-box" aria-hidden="true"></span>
+      <div class="rec-body">
+        <div class="rec-header-row">
+          <div class="rec-title">${escHtml(rec.title)}</div>
+          <span class="impact-badge impact-${escHtml(rec.impact)}">${escHtml(rec.impact)}</span>
+        </div>
+        <div class="rec-reason">${escHtml(rec.reason)}</div>
+        <div class="rec-actions-row">
+          <span class="rec-action-pill">Apply to profile</span>
+          <span class="rec-action-pill muted">Preview diff later</span>
+        </div>
+      </div>
+    </label>
+  `).join("");
+
+  $("recs-area").classList.remove("hidden");
+  updateRecsBtn();
+}
+
+function toggleRec(checkbox) {
+  if (checkbox.checked) state.selectedRecs.add(checkbox.value);
+  else state.selectedRecs.delete(checkbox.value);
+
+  const card = document.getElementById(`rec-${checkbox.value}`);
+  if (card) card.classList.toggle("rec-selected", checkbox.checked);
+  updateRecsBtn();
+}
+
+function updateRecsBtn() {
+  const count = state.selectedRecs.size;
+  const btn = $("btn-apply-recs");
+  btn.disabled = count === 0;
+  $("recs-hint").textContent = count === 0 ? "Select recommendations above" : `${count} selected`;
+}
+
+async function applyAndRegenerate() {
+  const selected = Array.from(state.selectedRecs);
+  if (!selected.length) return;
+
+  const btn = $("btn-apply-recs");
+  btn.disabled = true;
+  btn.textContent = "Applying…";
+
+  try {
+    const r = await fetch("/api/recommendations/apply", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        selected_ids: selected,
+        recommendations: state.recommendations,
+      }),
+    });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || "Failed to apply recommendations.");
+
+    const profile = await fetch("/api/profile").then((res) => res.json());
+    if (profile.exists) showProfileCard(profile);
+
+    state.selectedRecs.clear();
+    btn.textContent = "Apply selected & Re-generate →";
+    await runGenerate();
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = "Apply selected & Re-generate →";
+    showStatus("resume-status", "err", `Could not apply changes: ${err.message}`);
+  }
+}
+
 function bindEvents() {
+  const dz = $("resume-drop");
+  const resumeInput = $("resume-input");
 
-  // ── Resume drop-zone ──────────────────────────────────────────
-  const dz  = $("resume-drop");
-  const inp = $("resume-input");
-
-  dz.addEventListener("click",  () => inp.click());
+  dz.addEventListener("click", () => resumeInput.click());
   dz.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); inp.click(); }
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      resumeInput.click();
+    }
   });
-  dz.addEventListener("dragover",  (e) => { e.preventDefault(); e.stopPropagation(); dz.classList.add("drag-over"); });
-  dz.addEventListener("dragleave", (e) => { e.stopPropagation(); dz.classList.remove("drag-over"); });
+  dz.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dz.classList.add("drag-over");
+  });
+  dz.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dz.classList.remove("drag-over");
+  });
   dz.addEventListener("drop", (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -75,9 +214,16 @@ function bindEvents() {
     const file = e.dataTransfer.files[0];
     if (file) handleResumeFile(file);
   });
-  inp.addEventListener("change", () => { if (inp.files[0]) handleResumeFile(inp.files[0]); });
+  resumeInput.addEventListener("change", () => {
+    if (resumeInput.files[0]) handleResumeFile(resumeInput.files[0]);
+  });
 
-  // ── JD text ────────────────────────────────────────────────────
+  $("btn-replace-resume").addEventListener("click", resetProfileView);
+  $("btn-view-profile").addEventListener("click", showProfilePreview);
+  $("btn-close-profile-preview").addEventListener("click", () => {
+    $("profile-preview").classList.add("hidden");
+  });
+
   $("jd-text").addEventListener("input", () => {
     const ready = $("jd-text").value.trim().length > 20;
     if (ready !== state.jdReady) {
@@ -85,52 +231,42 @@ function bindEvents() {
       markStep(2, ready);
       updateHint();
     }
+    state.jdUploaded = false;
     checkGenEnabled();
   });
 
-  // ── JD file ────────────────────────────────────────────────────
   $("jd-file-input").addEventListener("change", () => {
-    const f = $("jd-file-input").files[0];
-    if (f) handleJdFile(f);
+    const file = $("jd-file-input").files[0];
+    if (file) handleJdFile(file);
   });
 
-  // ── Generate ───────────────────────────────────────────────────
   $("btn-generate").addEventListener("click", runGenerate);
-
-  // ── Restart ────────────────────────────────────────────────────
   $("btn-restart").addEventListener("click", restart);
+  $("btn-apply-recs").addEventListener("click", applyAndRegenerate);
 
-  // ── Auth header buttons ────────────────────────────────────────
-  $("btn-login" ).addEventListener("click", () => openModal("login"));
+  $("btn-login").addEventListener("click", () => openModal("login"));
   $("btn-signup").addEventListener("click", () => openModal("signup"));
   $("btn-logout").addEventListener("click", doLogout);
-
-  // ── Modal controls ─────────────────────────────────────────────
-  $("modal-close"    ).addEventListener("click",  closeModal);
-  $("modal-backdrop" ).addEventListener("click",  closeModal);
+  $("modal-close").addEventListener("click", closeModal);
+  $("modal-backdrop").addEventListener("click", closeModal);
   $("switch-to-signup").addEventListener("click", () => switchModal("signup"));
-  $("switch-to-login" ).addEventListener("click", () => switchModal("login"));
-  $("btn-do-login"   ).addEventListener("click",  doLogin);
-  $("btn-do-signup"  ).addEventListener("click",  doSignup);
-  $("btn-login-quota").addEventListener("click",  () => openModal("login"));
-
-  // ── Enter keys in modal inputs ─────────────────────────────────
-  $("login-password" ).addEventListener("keydown", (e) => { if (e.key === "Enter") doLogin();  });
+  $("switch-to-login").addEventListener("click", () => switchModal("login"));
+  $("btn-do-login").addEventListener("click", doLogin);
+  $("btn-do-signup").addEventListener("click", doSignup);
+  $("btn-login-quota").addEventListener("click", () => openModal("login"));
+  $("login-password").addEventListener("keydown", (e) => { if (e.key === "Enter") doLogin(); });
   $("signup-password").addEventListener("keydown", (e) => { if (e.key === "Enter") doSignup(); });
 }
 
-/* ── Resume upload ──────────────────────────────────────────────── */
 async function handleResumeFile(file) {
   const allowed = new Set([".pdf", ".docx", ".doc", ".txt", ".json"]);
   const ext = "." + file.name.split(".").pop().toLowerCase();
   if (!allowed.has(ext)) {
-    showStatus("resume-status", "err",
-      `Unsupported format '${ext}'. Please use PDF, DOCX, TXT, or JSON.`);
+    showStatus("resume-status", "err", `Unsupported format '${ext}'. Use PDF, DOCX, TXT, or JSON.`);
     return;
   }
 
   showStatus("resume-status", "loading", `Parsing ${file.name}…`);
-  $("resume-drop").classList.remove("success");
   state.resumeReady = false;
   markStep(1, false);
   checkGenEnabled();
@@ -143,31 +279,34 @@ async function handleResumeFile(file) {
     const d = await r.json();
     if (!r.ok) throw new Error(d.error || "Upload failed.");
 
-    state.resumeReady = true;
-    $("resume-drop").classList.add("success");
-    $("resume-drop").querySelector(".dz-text").innerHTML =
-      `<strong>✓ ${escHtml(file.name)}</strong>`;
-    markStep(1, true);
-
-    const detail = [
-      d.name && `<strong>${escHtml(d.name)}</strong>`,
-      d.experience_count > 0 && `${d.experience_count} job${d.experience_count > 1 ? "s" : ""}`,
-      d.skills_count     > 0 && `${d.skills_count} skill categories`,
-      `Format: ${ext.toUpperCase().replace(".", "")}`,
-    ].filter(Boolean).join(" · ");
-
-    showStatus("resume-status", "ok", detail, true);
+    const profile = await fetch("/api/profile").then((res) => res.json());
+    if (profile.exists) {
+      showProfileCard(profile);
+    } else {
+      state.resumeReady = true;
+      markStep(1, true);
+      showStatus(
+        "resume-status",
+        "ok",
+        [
+          d.name && `<strong>${escHtml(d.name)}</strong>`,
+          d.experience_count > 0 && `${d.experience_count} roles`,
+          d.skills_count > 0 && `${d.skills_count} skill categories`,
+          `Format: ${ext.toUpperCase().replace(".", "")}`,
+        ].filter(Boolean).join(" · "),
+        true,
+      );
+    }
   } catch (err) {
     state.resumeReady = false;
-    showStatus("resume-status", "err", err.message);
     markStep(1, false);
+    showStatus("resume-status", "err", err.message);
   }
 
   updateHint();
   checkGenEnabled();
 }
 
-/* ── JD file upload ──────────────────────────────────────────────── */
 async function handleJdFile(file) {
   showStatus("jd-status", "loading", `Reading ${file.name}…`);
 
@@ -180,24 +319,27 @@ async function handleJdFile(file) {
     if (!r.ok) throw new Error(d.error || "Upload failed.");
 
     state.jdReady = true;
+    state.jdUploaded = true;
     markStep(2, true);
-    // Populate the textarea with the JD text
     $("jd-text").value = d.text || "";
-    showStatus("jd-status", "ok",
+    $("jd-text").placeholder = "JD loaded from file. Optionally edit above.";
+    showStatus(
+      "jd-status",
+      "ok",
       `Loaded JD for <strong>${escHtml(d.company)}</strong> · ${d.length.toLocaleString()} chars`,
-      true);
-    $("jd-text").placeholder = "JD loaded from file. Optionally paste additional text above.";
+      true,
+    );
   } catch (err) {
     state.jdReady = false;
-    showStatus("jd-status", "err", err.message);
+    state.jdUploaded = false;
     markStep(2, false);
+    showStatus("jd-status", "err", err.message);
   }
 
   updateHint();
   checkGenEnabled();
 }
 
-/* ── JD text → server ────────────────────────────────────────────── */
 async function uploadJdText(text) {
   const r = await fetch("/api/jd/upload", {
     method: "POST",
@@ -208,32 +350,29 @@ async function uploadJdText(text) {
     const d = await r.json();
     throw new Error(d.error || "Could not save job description.");
   }
-  const d = await r.json();
-  return d;
+  return r.json();
 }
 
-/* ── Generate ────────────────────────────────────────────────────── */
 async function runGenerate() {
-  // If JD was typed (not file-uploaded), push it to the server first
   const jdText = $("jd-text").value.trim();
-  if (jdText && !state.jdReady) {
+  if (jdText && !state.jdUploaded) {
     try {
       showStatus("jd-status", "loading", "Saving job description…");
       const d = await uploadJdText(jdText);
+      state.jdUploaded = true;
       state.jdReady = true;
       markStep(2, true);
-      showStatus("jd-status", "ok",
-        `Company: <strong>${escHtml(d.company)}</strong>`, true);
+      showStatus("jd-status", "ok", `Company: <strong>${escHtml(d.company)}</strong>`, true);
     } catch (err) {
       showStatus("jd-status", "err", err.message);
       return;
     }
   }
 
-  // Switch to progress view
-  $("flow-card"    ).classList.add("hidden");
-  $("results-area" ).classList.add("hidden");
-  $("quota-banner" ).classList.add("hidden");
+  $("flow-card").classList.add("hidden");
+  $("results-area").classList.add("hidden");
+  $("recs-area").classList.add("hidden");
+  $("quota-banner").classList.add("hidden");
   $("progress-area").classList.remove("hidden");
   setStep("p-tailor", "active");
 
@@ -246,32 +385,25 @@ async function runGenerate() {
     const d = await r.json();
     if (!r.ok) throw new Error(d.error || "Generation failed.");
 
-    // Mark all steps done
     ["p-tailor", "p-cover", "p-audit", "p-pdf"].forEach((id) => setStep(id, "done"));
-
     state.currentJobId = d.job_id;
 
-    // Small pause so user sees the "all done" state
-    await delay(500);
-
+    await delay(400);
     $("progress-area").classList.add("hidden");
     renderResults(d);
-
+    renderRecommendations(d.recommendations || []);
   } catch (err) {
     $("progress-area").classList.add("hidden");
     $("flow-card").classList.remove("hidden");
     showStatus("resume-status", "err", `Generation failed: ${err.message}`);
-    $("resume-status").classList.remove("hidden");
   }
 }
 
-/* ── Render results ──────────────────────────────────────────────── */
 function renderResults(data) {
   $("results-area").classList.remove("hidden");
 
-  // ATS summary
   const score = data.audit.overall_score;
-  const cls   = score >= 85 ? "score-high" : score >= 65 ? "score-mid" : "score-low";
+  const cls = score >= 85 ? "score-high" : score >= 65 ? "score-mid" : "score-low";
   const missing = (data.audit.missing_keywords || []).slice(0, 6);
 
   $("ats-summary").innerHTML = `
@@ -280,72 +412,39 @@ function renderResults(data) {
       <span class="score-badge ${cls}">${score}%</span>
     </div>
     ${missing.length
-      ? `<div class="missing-kw">
-           Missing:&nbsp;${missing.map((k) => `<em>${escHtml(k)}</em>`).join(" ")}
-         </div>`
+      ? `<div class="missing-kw">Missing:&nbsp;${missing.map((k) => `<em>${escHtml(k)}</em>`).join(" ")}</div>`
       : ""}
   `;
 
-  // File cards
   const cards = [
-    {
-      key: "resume",
-      icon: "📄",
-      title: "Tailored Resume",
-      meta: `PDF · ${escHtml(data.company)}`,
-      file: data.files.resume,
-    },
-    {
-      key: "cover_letter",
-      icon: "✉️",
-      title: "Cover Letter",
-      meta: `PDF · Personalised`,
-      file: data.files.cover_letter,
-    },
-    {
-      key: "audit",
-      icon: "📊",
-      title: "ATS Audit Report",
-      meta: `Markdown · Score ${score}%`,
-      file: data.files.audit,
-    },
+    { icon: "📄", title: "Tailored Resume", meta: `PDF · ${escHtml(data.company)}`, file: data.files.resume },
+    { icon: "✉️", title: "Cover Letter", meta: "PDF · Personalised", file: data.files.cover_letter },
+    { icon: "📊", title: "ATS Audit Report", meta: `Markdown · Score ${score}%`, file: data.files.audit },
   ];
 
-  $("result-cards").innerHTML = cards
-    .map(
-      (c) => `
+  $("result-cards").innerHTML = cards.map((c) => `
     <div class="result-card">
       <div class="card-icon">${c.icon}</div>
       <div class="card-title">${c.title}</div>
       <div class="card-meta">${c.meta}</div>
-      <button class="btn-dl" onclick="downloadFile(${JSON.stringify(c.file)})">
-        ↓ Download
-      </button>
-    </div>`
-    )
-    .join("");
+      <button class="btn-dl" onclick='downloadFile(${JSON.stringify(c.file)})'>↓ Download</button>
+    </div>
+  `).join("");
 
   checkQuotaBanner();
 }
 
-/* ── Download ────────────────────────────────────────────────────── */
 async function downloadFile(filename) {
-  console.log("downloadFile called:", filename, "loggedIn:", state.loggedIn, "downloads:", state.guestDownloads);
-  
   if (!state.loggedIn && state.guestDownloads >= state.guestLimit) {
-    console.log("Quota exceeded");
     $("quota-banner").classList.remove("hidden");
     $("quota-banner").scrollIntoView({ behavior: "smooth", block: "center" });
     return;
   }
 
   const url = `/api/download/${state.currentJobId}/${encodeURIComponent(filename)}`;
-  console.log("Download URL:", url);
 
   try {
     const r = await fetch(url);
-    console.log("Download response status:", r.status);
-    
     if (r.status === 403) {
       const d = await r.json();
       if (d.error === "quota_exceeded") {
@@ -361,17 +460,17 @@ async function downloadFile(filename) {
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = filename;
+    document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
 
     if (!state.loggedIn) {
-      state.guestDownloads++;
-      console.log("Incremented downloads to:", state.guestDownloads);
+      state.guestDownloads += 1;
       $("dl-count").textContent = state.guestDownloads;
       checkQuotaBanner();
     }
   } catch (err) {
-    console.error("Download error:", err);
     showGlobalError(err.message);
   }
 }
@@ -381,62 +480,53 @@ function checkQuotaBanner() {
   $("quota-banner").classList.toggle("hidden", !show);
 }
 
-/* ── Restart ─────────────────────────────────────────────────────── */
 function restart() {
-  state.resumeReady = false;
-  state.jdReady     = false;
+  state.jdReady = false;
+  state.jdUploaded = false;
   state.currentJobId = null;
+  state.recommendations = [];
+  state.selectedRecs = new Set();
 
-  $("flow-card"    ).classList.remove("hidden");
-  $("results-area" ).classList.add("hidden");
+  $("flow-card").classList.remove("hidden");
+  $("results-area").classList.add("hidden");
   $("progress-area").classList.add("hidden");
+  $("recs-area").classList.add("hidden");
+  $("profile-preview").classList.add("hidden");
 
-  // Reset dropzone
-  const dz = $("resume-drop");
-  dz.classList.remove("success");
-  dz.querySelector(".dz-text").innerHTML =
-    'Drop your resume here, or <span class="link">browse</span>';
-
-  // Reset inputs
-  $("resume-input"  ).value = "";
-  $("jd-text"       ).value = "";
-  $("jd-file-input" ).value = "";
-
-  // Hide status bars
-  ["resume-status", "jd-status"].forEach((id) => {
-    $(id).classList.add("hidden");
-    $(id).className = "status-bar hidden";
-    $(id).textContent = "";
-  });
-
-  // Reset step indicators
-  markStep(1, false);
+  $("jd-text").value = "";
+  $("jd-file-input").value = "";
+  $("jd-text").placeholder = "Paste the job description here…";
+  $("jd-status").classList.add("hidden");
+  $("jd-status").className = "status-bar hidden";
+  $("recs-list").innerHTML = "";
   markStep(2, false);
-  ["p-tailor", "p-cover", "p-audit", "p-pdf"].forEach((id) => { $(id).className = ""; });
 
+  ["p-tailor", "p-cover", "p-audit", "p-pdf"].forEach((id) => { $(id).className = ""; });
   checkGenEnabled();
   updateHint();
 }
 
-/* ── Modal ───────────────────────────────────────────────────────── */
 function openModal(view = "login") {
   $("auth-modal").classList.remove("hidden");
   switchModal(view);
-  // Clear previous errors
-  $("login-error" ).classList.add("hidden");
+  $("login-error").classList.add("hidden");
   $("signup-error").classList.add("hidden");
   setTimeout(() => {
     $(view === "login" ? "login-email" : "signup-email").focus();
   }, 60);
 }
-function closeModal() { $("auth-modal").classList.add("hidden"); }
+
+function closeModal() {
+  $("auth-modal").classList.add("hidden");
+}
+
 function switchModal(view) {
-  $("modal-login-view" ).classList.toggle("hidden", view !== "login");
+  $("modal-login-view").classList.toggle("hidden", view !== "login");
   $("modal-signup-view").classList.toggle("hidden", view !== "signup");
 }
 
 async function doLogin() {
-  const email    = $("login-email"   ).value.trim();
+  const email = $("login-email").value.trim();
   const password = $("login-password").value;
   $("login-error").classList.add("hidden");
   try {
@@ -447,10 +537,11 @@ async function doLogin() {
     });
     const d = await r.json();
     if (!r.ok) throw new Error(d.error);
-    state.loggedIn  = true;
+    state.loggedIn = true;
     state.userEmail = email;
     closeModal();
     renderAuth();
+    await checkProfile();
     checkQuotaBanner();
   } catch (err) {
     showFieldError("login-error", err.message);
@@ -458,7 +549,7 @@ async function doLogin() {
 }
 
 async function doSignup() {
-  const email    = $("signup-email"   ).value.trim();
+  const email = $("signup-email").value.trim();
   const password = $("signup-password").value;
   $("signup-error").classList.add("hidden");
   try {
@@ -469,10 +560,11 @@ async function doSignup() {
     });
     const d = await r.json();
     if (!r.ok) throw new Error(d.error);
-    state.loggedIn  = true;
+    state.loggedIn = true;
     state.userEmail = email;
     closeModal();
     renderAuth();
+    await checkProfile();
     checkQuotaBanner();
   } catch (err) {
     showFieldError("signup-error", err.message);
@@ -481,18 +573,17 @@ async function doSignup() {
 
 async function doLogout() {
   await fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
-  state.loggedIn      = false;
-  state.userEmail     = null;
+  state.loggedIn = false;
+  state.userEmail = null;
   state.guestDownloads = 0;
   renderAuth();
   checkQuotaBanner();
 }
 
-/* ── UI helpers ──────────────────────────────────────────────────── */
 function checkGenEnabled() {
   const hasJd = state.jdReady || $("jd-text").value.trim().length > 20;
-  const ok    = state.resumeReady && hasJd;
-  const btn   = $("btn-generate");
+  const ok = state.resumeReady && hasJd;
+  const btn = $("btn-generate");
   btn.disabled = !ok;
   btn.setAttribute("aria-disabled", String(!ok));
 }
@@ -509,7 +600,7 @@ function updateHint() {
 }
 
 function markStep(num, done) {
-  const numEl   = $(`snum-${num}`);
+  const numEl = $(`snum-${num}`);
   const badgeEl = $(`badge-${num === 1 ? "resume" : "jd"}`);
   if (done) {
     numEl.classList.add("done");
@@ -524,13 +615,6 @@ function setStep(id, cls) {
   $(id).className = cls;
 }
 
-/**
- * Show a status message inside a status bar element.
- * @param {string} id     - element id
- * @param {string} type   - "ok" | "err" | "loading"
- * @param {string} msg    - message (may contain safe HTML)
- * @param {boolean} html  - if true, use innerHTML
- */
 function showStatus(id, type, msg, html = false) {
   const el = $(id);
   el.className = `status-bar ${type}`;
@@ -546,9 +630,19 @@ function showFieldError(id, msg) {
 }
 
 function showGlobalError(msg) {
-  // Fallback: surface errors in resume status bar
   showStatus("resume-status", "err", msg);
-  $("resume-status").classList.remove("hidden");
+}
+
+async function showProfilePreview() {
+  try {
+    const r = await fetch("/api/profile/raw");
+    const d = await r.json();
+    if (!r.ok || !d.exists) throw new Error("No parsed profile available.");
+    $("profile-preview-text").textContent = JSON.stringify(d.profile, null, 2);
+    $("profile-preview").classList.remove("hidden");
+  } catch (err) {
+    showStatus("resume-status", "err", err.message);
+  }
 }
 
 function escHtml(str) {
@@ -562,3 +656,6 @@ function escHtml(str) {
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+window.toggleRec = toggleRec;
+window.downloadFile = downloadFile;

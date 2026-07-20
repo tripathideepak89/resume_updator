@@ -13,6 +13,7 @@ Run:
 
 from __future__ import annotations
 
+import datetime
 import hashlib
 import json
 import os
@@ -85,9 +86,19 @@ def _init_db():
                 id            INTEGER PRIMARY KEY AUTOINCREMENT,
                 email         TEXT    UNIQUE NOT NULL,
                 password_hash TEXT    NOT NULL,
+                profile_json  TEXT,
+                profile_source_format TEXT,
+                profile_updated_at TEXT,
                 created_at    TEXT    DEFAULT (datetime('now'))
             )
         """)
+        columns = {row[1] for row in db.execute("PRAGMA table_info(users)").fetchall()}
+        if "profile_json" not in columns:
+            db.execute("ALTER TABLE users ADD COLUMN profile_json TEXT")
+        if "profile_source_format" not in columns:
+            db.execute("ALTER TABLE users ADD COLUMN profile_source_format TEXT")
+        if "profile_updated_at" not in columns:
+            db.execute("ALTER TABLE users ADD COLUMN profile_updated_at TEXT")
         db.commit()
 
 
@@ -123,6 +134,76 @@ def _session_dir() -> Path:
     return d
 
 
+def _save_profile(parsed: dict, source_format: str) -> None:
+    uid = _current_user_id()
+    profile_text = json.dumps(parsed, ensure_ascii=False, indent=2)
+    updated_at = datetime.datetime.utcnow().isoformat(timespec="seconds")
+
+    if uid:
+        with _get_db() as db:
+            db.execute(
+                "UPDATE users SET profile_json=?, profile_source_format=?, profile_updated_at=? WHERE id=?",
+                (profile_text, source_format, updated_at, uid),
+            )
+            db.commit()
+
+    sd = _session_dir()
+    (sd / "resume_data.json").write_text(profile_text, encoding="utf-8")
+    session["resume_source_format"] = source_format
+
+
+def _load_profile() -> tuple[Optional[dict], Optional[str], Optional[str]]:
+    uid = _current_user_id()
+    if uid:
+        with _get_db() as db:
+            row = db.execute(
+                "SELECT profile_json, profile_source_format, profile_updated_at FROM users WHERE id=?",
+                (uid,),
+            ).fetchone()
+        if row and row["profile_json"]:
+            try:
+                return (
+                    json.loads(row["profile_json"]),
+                    row["profile_source_format"] or "json",
+                    row["profile_updated_at"],
+                )
+            except Exception:
+                pass
+
+    sd = _session_dir()
+    resume_json = sd / "resume_data.json"
+    if resume_json.exists():
+        try:
+            updated = datetime.datetime.fromtimestamp(resume_json.stat().st_mtime).isoformat(timespec="seconds")
+            return (
+                json.loads(resume_json.read_text(encoding="utf-8")),
+                session.get("resume_source_format", "json"),
+                updated,
+            )
+        except Exception:
+            return None, None, None
+
+    return None, None, None
+
+
+def _migrate_session_profile_to_user(user_id: int) -> None:
+    sd = _session_dir()
+    resume_json = sd / "resume_data.json"
+    if not resume_json.exists():
+        return
+    try:
+        profile_text = resume_json.read_text(encoding="utf-8")
+        updated_at = datetime.datetime.utcnow().isoformat(timespec="seconds")
+        with _get_db() as db:
+            db.execute(
+                "UPDATE users SET profile_json=?, profile_source_format=?, profile_updated_at=? WHERE id=? AND (profile_json IS NULL OR profile_json='')",
+                (profile_text, session.get("resume_source_format", "json"), updated_at, user_id),
+            )
+            db.commit()
+    except Exception:
+        return
+
+
 # ── Auth routes ───────────────────────────────────────────────────────────────
 
 @app.post("/api/auth/signup")
@@ -141,6 +222,7 @@ def auth_signup():
             db.commit()
             user = db.execute("SELECT id FROM users WHERE email=?", (email,)).fetchone()
         session["user_id"] = user["id"]
+        _migrate_session_profile_to_user(user["id"])
         session.pop("guest_downloads", None)
         return jsonify({"ok": True, "email": email})
     except sqlite3.IntegrityError:
@@ -157,6 +239,7 @@ def auth_login():
     if not user or not _verify_password(user["password_hash"], password):
         return jsonify({"error": "Incorrect email or password."}), 401
     session["user_id"] = user["id"]
+    _migrate_session_profile_to_user(user["id"])
     session.pop("guest_downloads", None)
     return jsonify({"ok": True, "email": email})
 
@@ -210,9 +293,7 @@ def resume_upload():
     except Exception as e:
         return jsonify({"error": f"Could not parse resume: {e}"}), 422
 
-    # Persist to session directory (avoids cookie-size limits)
-    resume_json = sd / "resume_data.json"
-    resume_json.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
+    _save_profile(parsed, ext.lstrip("."))
 
     return jsonify({
         "ok": True,
@@ -264,16 +345,14 @@ def jd_upload():
 @app.post("/api/generate")
 def generate():
     sd = _session_dir()
-    resume_json = sd / "resume_data.json"
     jd_txt = sd / "jd.txt"
 
-    if not resume_json.exists():
+    resume_data, _, _ = _load_profile()
+    if not resume_data:
         return jsonify({"error": "No resume uploaded yet."}), 400
     if not jd_txt.exists():
         return jsonify({"error": "No job description provided yet."}), 400
 
-    with open(resume_json, encoding="utf-8") as f:
-        resume_data = json.load(f)
     jd_text = jd_txt.read_text(encoding="utf-8")
 
     token = os.environ.get("HF_TOKEN", "")
@@ -339,6 +418,7 @@ def generate():
             "cover_letter": cover_pdf.name,
             "audit":        audit_path.name,
         },
+        "recommendations": _generate_recommendations(final_resume, jd_text, audit),
     })
 
 
@@ -370,6 +450,147 @@ def download(job_id: str, filename: str):
 @app.get("/")
 def index():
     return render_template("index.html")
+
+
+# ── Profile ───────────────────────────────────────────────────────────────────
+
+@app.get("/api/profile")
+def get_profile():
+    data, source_format, updated_at = _load_profile()
+    if not data:
+        return jsonify({"exists": False})
+    try:
+        updated = ""
+        if updated_at:
+            try:
+                updated = datetime.datetime.fromisoformat(updated_at).strftime("%b %d, %Y")
+            except Exception:
+                updated = updated_at
+        return jsonify({
+            "exists":           True,
+            "name":             data.get("name", ""),
+            "title":            data.get("title", ""),
+            "email":            data.get("email", ""),
+            "experience_count": len(data.get("experience", [])),
+            "skills_count":     len(data.get("skills", {})),
+            "updated":          updated,
+            "source_format":    (source_format or "json").upper(),
+        })
+    except Exception:
+        return jsonify({"exists": False})
+
+
+@app.get("/api/profile/raw")
+def get_profile_raw():
+    data, source_format, updated_at = _load_profile()
+    if not data:
+        return jsonify({"exists": False}), 404
+    return jsonify({
+        "exists": True,
+        "source_format": (source_format or "json").upper(),
+        "updated_at": updated_at,
+        "profile": data,
+    })
+
+
+# ── Recommendations ───────────────────────────────────────────────────────────
+
+def _generate_recommendations(resume: dict, jd_text: str, audit: dict) -> list:
+    recs = []
+    missing_kws = audit.get("missing_keywords", [])
+    missing_terms = audit.get("missing_required_terms", [])
+
+    for kw in missing_kws[:5]:
+        safe_id = re.sub(r"[^\w]", "_", kw)
+        recs.append({
+            "id": f"kw_{safe_id}",
+            "type": "add_keyword",
+            "title": f"Add \"{kw}\" to your profile",
+            "reason": f"This keyword appears in the job description but is absent from your resume.",
+            "impact": "medium",
+            "action": {"type": "add_to_summary", "keyword": kw},
+        })
+
+    for term in missing_terms[:3]:
+        safe_id = re.sub(r"[^\w]", "_", term)
+        recs.append({
+            "id": f"term_{safe_id}",
+            "type": "add_skill",
+            "title": f"Highlight \"{term}\" in your skills",
+            "reason": f"\"{term}\" is listed as a required technology for this role.",
+            "impact": "high",
+            "action": {"type": "add_to_skills", "term": term},
+        })
+
+    impact_score = audit.get("impact_score", 100)
+    if impact_score < 75:
+        recs.append({
+            "id": "improve_impact",
+            "type": "improve_bullets",
+            "title": "Add measurable impact to experience bullets",
+            "reason": f"Your impact score is {impact_score}%. Adding metrics like percentages, time saved, or scale improves ATS ranking.",
+            "impact": "high",
+            "action": {"type": "flag_only"},
+        })
+
+    kw_score = audit.get("keyword_score", 100)
+    if kw_score < 70:
+        recs.append({
+            "id": "enrich_summary",
+            "type": "enrich_summary",
+            "title": "Enrich your professional summary",
+            "reason": f"Keyword match is {kw_score}%. A stronger summary aligned to this role increases visibility.",
+            "impact": "medium",
+            "action": {"type": "flag_only"},
+        })
+
+    return recs
+
+
+@app.post("/api/recommendations/apply")
+def apply_recommendations():
+    data, source_format, _ = _load_profile()
+    if not data:
+        return jsonify({"error": "No profile found."}), 400
+
+    body = request.get_json(silent=True) or {}
+    selected_ids = set(body.get("selected_ids", []))
+    recommendations = body.get("recommendations", [])
+
+    if not selected_ids:
+        return jsonify({"error": "No recommendations selected."}), 400
+
+    applied = []
+
+    for rec in recommendations:
+        if rec["id"] not in selected_ids:
+            continue
+        action = rec.get("action", {})
+        atype  = action.get("type")
+
+        if atype == "add_to_summary":
+            kw = action.get("keyword", "")
+            summary = data.get("summary") or data.get("profile_summary") or ""
+            if kw.lower() not in summary.lower():
+                suffix = f" Strong experience with {kw}."
+                data["summary"] = summary.rstrip(". ") + suffix
+                data["profile_summary"] = data["summary"]
+            applied.append(rec["id"])
+
+        elif atype == "add_to_skills":
+            term = action.get("term", "")
+            skills = data.get("skills", {})
+            for cat, vals in skills.items():
+                if isinstance(vals, str) and term.lower() not in vals.lower():
+                    skills[cat] = vals.rstrip(", ") + f", {term}"
+                    applied.append(rec["id"])
+                    break
+            else:
+                # No matching cat found or it already contains term — still mark applied
+                applied.append(rec["id"])
+
+    _save_profile(data, source_format or "json")
+    return jsonify({"ok": True, "applied": len(applied), "applied_ids": applied})
 
 
 if __name__ == "__main__":

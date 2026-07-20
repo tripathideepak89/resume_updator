@@ -41,14 +41,44 @@
 
     <div class="flow-card" id="flow-card">
 
-      <!-- Step 1 · Resume upload -->
+      <!-- Step 1 · Resume Profile -->
       <div class="step" id="step-resume">
         <div class="step-header">
           <span class="step-num" id="snum-1">1</span>
-          <span class="step-title">Upload Resume</span>
+          <span class="step-title">Resume Profile</span>
           <span class="step-badge hidden" id="badge-resume">✓ Ready</span>
         </div>
 
+        <!-- Profile card (shown once a profile exists) -->
+        <div id="profile-card" class="profile-card hidden">
+          <div class="profile-avatar" aria-hidden="true">👤</div>
+          <div class="profile-info">
+            <div class="profile-name" id="profile-name">Your Resume</div>
+            <div class="profile-title-text" id="profile-title-text"></div>
+            <div class="profile-meta-row">
+              <span class="profile-badge" id="profile-format">JSON</span>
+              <span id="profile-exp" class="profile-meta-item"></span>
+              <span id="profile-skl" class="profile-meta-item"></span>
+              <span id="profile-updated" class="profile-updated"></span>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button id="btn-view-profile" class="btn btn-ghost-sm"
+                    title="View parsed profile">View parsed profile</button>
+            <button id="btn-replace-resume" class="btn btn-ghost-sm"
+                    title="Upload a different resume">Replace</button>
+          </div>
+        </div>
+
+        <div id="profile-preview" class="profile-preview hidden">
+          <div class="profile-preview-header">
+            <strong>Parsed resume_data.json</strong>
+            <button id="btn-close-profile-preview" class="btn btn-ghost-sm">Close</button>
+          </div>
+          <pre id="profile-preview-text"></pre>
+        </div>
+
+        <!-- Upload dropzone (shown when no profile) -->
         <div id="resume-drop" class="dropzone" role="button" tabindex="0"
              aria-label="Click or drag to upload resume">
           <div class="dz-icon" aria-hidden="true">📄</div>
@@ -131,7 +161,24 @@
       <div id="result-cards" class="result-cards"></div>
 
       <div class="results-footer">
-        <button id="btn-restart" class="btn btn-ghost">↩ Start over</button>
+        <button id="btn-restart" class="btn btn-ghost">↩ New job description</button>
+      </div>
+    </div>
+
+    <!-- ── Recommendations ────────────────────────────────────────────────── -->
+    <div id="recs-area" class="hidden">
+      <div class="recs-panel">
+        <div class="recs-header">
+          <h3>Improve Your Profile</h3>
+          <p class="recs-subtitle">Apply changes to strengthen your profile for this role, then re-generate.</p>
+        </div>
+        <div id="recs-list" class="recs-list"></div>
+        <div class="recs-footer">
+          <button id="btn-apply-recs" class="btn btn-primary" disabled>
+            Apply selected &amp; Re-generate →
+          </button>
+          <span id="recs-hint" class="recs-count">Select recommendations above</span>
+        </div>
       </div>
     </div>
 
