@@ -1,0 +1,62 @@
+About the job
+About the Assignment
+
+We are looking for a highly skilled Senior Platform Engineer with deep experience in Kubernetes operations, Linux environments, backend automation, and hybrid cloud infrastructure.
+
+You will join a Software Operations organization responsible for building scalable tooling, infrastructure automation, and operational platforms that support global, large‑scale systems.
+
+This role combines software engineering, DevOps, infrastructure engineering, and platform ownership. A central part of the assignment is to operate and further develop large‑scale Kubernetes environments, primarily running on self‑managed and on‑premise infrastructure.
+
+
+
+
+Your Responsibilitie
+
+sOperate and maintain large‑scale Kubernetes platforms in self‑managed or on‑prem environment
+sDevelop automation, backend services, APIs, and tooling using Pytho
+nBuild and maintain CI/CD pipelines in Linux‑based environment
+sWork with GitOps methodologies and tools such as ArgoC
+DContribute to infrastructure automation and distributed systems desig
+nDevelop scalable operational tooling and automation workflow
+sWork across both development and operational/infrastructure domain
+sCollaborate with cross‑functional teams and contribute to architectural discussion
+sSupport hybrid cloud environments, including AW
+SApply automated testing and test strategies in platform developmen
+
+
+t
+Must‑Have Skil
+
+lsExtensive experience operating large‑scale Kubernetes cluste
+rsStrong expertise in Linux, both development and operatio
+nsAdvanced Python development skills (automation, backend services, API
+s)Experience with GitOps and Argo
+CDExperience with AWS and hybrid cloud environmen
+tsStrong understanding of infrastructure automation and container platfor
+msExperience with Docker and containerized workloa
+dsExperience with Flask, FastAPI, or Djan
+goExperience building CI/CD pipelines in Linux environmen
+tsStrong communication and collaboration skil
+lsStructured, methodical, and proactive way of worki
+ngAbility to contribute to architecture, scalability, and long‑term platform strate
+
+
+gy
+Nice to H
+
+aveExperience with blue/green deployment strateg
+iesBackground in large‑scale operational or platform environme
+ntsExperience mentoring or coaching engine
+ersScrum Master or agile coordination experie
+nceExperience provisioning physical infrastructure and network‑connected environme
+
+
+nts
+Personal Attrib
+
+utesHands‑on and technically dr
+ivenComfortable working close to infrastructure and operat
+ionsCollaborative and communica
+tiveStructured, proactive, and solution‑orie
+ntedInterested in both software engineering and platform architec
+tureAble to work independently in cross‑functional environm

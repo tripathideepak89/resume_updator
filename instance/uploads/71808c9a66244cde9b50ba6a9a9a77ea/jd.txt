@@ -1,0 +1,55 @@
+About the job
+Tech
+
+Permanent
+
+Job Description
+
+Be part of something bigger. Decode the future.
+
+At the Electrolux Group, a leading global appliance company, we strive every day to shape living for the better for our consumers, our people and our planet. We share ideas and collaborate so that together, we can develop solutions that deliver enjoyable and sustainable living.
+
+Come join us as you are. We believe diverse perspectives make us stronger and more innovative. In our global community of people from 100+ countries, we listen to each other, actively contribute and grow together.
+
+Join us in our exciting quest to build the future home!
+
+All about the role:
+
+We are looking for a Senior Platform Engineer to join our Platform Services team. Platform Services is responsible for constructing and maintaining the foundational infrastructure and services that power Electrolux’s entire engineering organization. Our Developer Platform empowers engineers to efficiently ship products, ensuring scalability, reliability, and optimal performance.
+
+Our team enables product teams to concentrate on delivering core business features. Our technical challenges span a wide range, including infrastructure provisioning, API development, service deployment, observability, FinOps, and new AI product development.
+
+This role will play a crucial part in shaping the future of Electrolux’s smart appliance development. By contributing to the underlying platform, you will directly impact the innovation and user experience of our connected devices.
+
+What you’ll do:
+
+Design and implement user-friendly and efficient frontend interfaces.
+Build robust and scalable backend services that power our platform.
+Work closely with cross-functional teams, including product managers, designers, and other engineers, to deliver high-quality solutions.
+
+Qualifications:
+
+5+ years experience with large-scale backend development.
+Strong programming skills and a desire to automate everything.
+Familiarity with frontend technologies such as React, Angular, or Vue.js.
+Familiarity with cloud platforms (AWS, GCP, Azure) and infrastructure as code tools.
+Strong communication skills in English.
+Passion for building developer tools and improving developer experience.
+
+Where you’ll be:
+
+This is a full-time position, based at our Global Headquarters in Stockholm/Stadshagen (Sweden).
+
+At our Global Headquarters in Stockholm/Stadshagen (Sweden) we are 60+ nationalities under the same roof and we enjoy the look and feel of the office!
+
+You will be part of a dynamic international team where English is the natural language.
+
+Benefits highlights: 
+
+Flexible work hours/hybrid work environment.
+Discounts on our award-winning Electrolux products and services.
+Family-friendly benefits.
+Insurance policy plan.
+Extensive learning opportunities and flexible career path.
+
+As part of Electrolux, we will continuously invest in you and your development. There are no barriers to where your career could take you.

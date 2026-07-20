@@ -1,0 +1,78 @@
+About the job
+Senior Azure DevOps Engineer
+
+Malmö  | Hybrid
+
+
+
+A growing international SaaS business is looking for a Senior Azure DevOps Engineer to join its expanding engineering team in Malmö.
+
+
+
+The company has built a successful cloud-based product used by organisations across multiple markets and is entering an exciting phase of technical growth. As the platform continues to scale, the engineering team is investing heavily in cloud infrastructure, automation, platform reliability, and Kubernetes adoption.
+
+
+
+This is a hands-on role for an experienced engineer who enjoys taking ownership, solving complex operational challenges, and working closely with software development teams to deliver reliable, scalable cloud solutions.
+
+
+
+The Opportunity
+
+You'll play a key role in the evolution of the company's Azure platform, helping to improve infrastructure, deployment processes, observability, automation, and operational excellence.
+
+The environment is collaborative and fast-moving, offering the opportunity to influence technical decisions and contribute across multiple areas rather than being confined to a narrowly defined DevOps function.
+
+
+
+This position would suit someone who enjoys balancing day-to-day operational responsibilities with longer-term platform and automation initiatives.
+
+
+
+What You'll Be Doing
+
+Designing, building, and maintaining CI/CD pipelines
+Managing and improving Azure cloud infrastructure
+Developing and maintaining Infrastructure as Code using Terraform
+Supporting and expanding Kubernetes workloads within AKS
+Enhancing monitoring, reliability, and incident response processes
+Collaborating closely with software engineers to improve deployment and operational practices
+Driving automation initiatives across infrastructure and platform operations
+Troubleshooting and resolving infrastructure and production issues
+Contributing to cloud governance, security, and platform best practices
+Taking ownership of projects from design through implementation and ongoing support
+
+
+What We're Looking For
+
+5+ years of experience within DevOps, Platform Engineering, Cloud Operations, or similar environments
+Strong hands-on Microsoft Azure experience
+Proven experience building and maintaining CI/CD pipelines
+Experience with GitHub and GitHub Actions
+Strong Infrastructure as Code expertise using Terraform
+Experience working with Kubernetes and containerised environments
+Hands-on experience with AKS
+Strong operational mindset with experience supporting production environments
+Excellent troubleshooting and problem-solving skills
+Ability to work independently and take ownership of technical initiatives
+Strong communication skills and fluent English
+
+
+Why Join?
+
+Join a growing product-focused technology business with ambitious plans
+Work in a highly collaborative engineering culture
+Take ownership of meaningful infrastructure and platform initiatives
+Influence the direction of cloud and DevOps practices
+Gain exposure to modern cloud-native technologies and automation projects
+Hybrid working environment in Kraków
+
+
+If you're looking for a role where you can make a genuine impact, work across a broad technical landscape, and help shape the future of a growing cloud platform, we'd love to hear from you.
+
+
+Requirements added by the job poster
+
+• 5+ years of work experience with Microsoft Azure
+
+• 5+ years of work experience with DevOps

@@ -1,0 +1,41 @@
+jobbet
+About Us
+
+Legora is on a mission: to redefine how legal work gets done. From the very start we have been very clear about the fact that we are not building a solution for lawyers, we are building it with them, because it is the only way to make sure it gets done the right way; working side-by-side every step of the way.
+
+Our AI-native workspace empowers legal professionals not just to work faster - but to ask better questions, unlock new insights. Every day, we push the boundaries of legal tech to make complex processes smarter, faster, and more human. From thousands of documents analysed in minutes to intelligent workflows designed in collaboration with leading practices, we’re turning possibility into reality.
+
+Today we are trusted by global firms like Cleary Gottlieb, Goodwin, Bird & Bird and Linklaters in over 40 countries, but we have no plans on stopping here. We ship fast, we iterate effectively, and we scale rapidly - not by accident, but by design.
+
+When you join Legora, you become part of a team that believes "good enough" isn’t good enough and that the way to win is together, by empowering lawyers to do their best work with technology that truly understands them. If you’re excited by building from first principles, working with exceptional people, and accelerating change in a high-stakes, high-impact domain—then this is the moment and the place.
+
+We’re not just shaping the future of legal tech — we’re defining it. Ready to join us in building the intelligent future of law?
+
+
+
+The role
+
+As a Software Engineer at Legora, you’ll play a key role in building the technical foundation that powers our products, designing, developing, and improving the core systems used by legal professionals around the world. You’ll work across the stack, contributing to the architecture and features that define our platform.
+
+*This is a Stockholm-based, 5-day in-office role, we believe building together in person drives better outcomes.
+
+What you will be doing:
+
+Lead the design, development, and deployment of end-to-end features for our web platform, ensuring high performance, security, and reliability.
+Take full ownership of critical parts of the codebase, balancing quality, scalability, and speed of development.
+Work with technologies such as React, Node.js, AWS, Azure, and Kubernetes, leveraging the right tools to solve complex challenges.
+Collaborate closely with product and design teams to translate requirements into elegant, robust technical solutions.
+Review code and mentor colleagues, raising the overall technical bar and fostering a culture of excellence.
+Drive continuous improvement by challenging assumptions, exploring new technologies, and pushing both yourself and the team to innovate.
+Contribute to infrastructure, integrations, and architecture discussions to ensure the platform evolves sustainably.
+Who you are
+
+An engineer with experience building and shipping modern software products.
+Comfortable working across the stack, with solid skills in backend development.
+Passionate about writing maintainable, secure code—and take pride in building things that last.
+A problem solver who enjoys thinking about architecture, data flows, and long-term sustainability.
+Familiar with cloud infrastructure, distributed systems, and integrations (experience with enterprise-scale systems is a plus, but not required).
+Proactive, curious, and motivated by working in a fast-paced, collaborative startup environment.
+Legora is an Equal Opportunity Employer
+
+At Legora, we believe great teams are built on diversity of thought and experience. We’re proud to be an equal opportunity employer and committed to creating an inclusive, high-performance culture where everyone can do their best work. We welcome people of all backgrounds and don’t discriminate based on race, color, religion, national origin, gender, gender identity or expression, sexual orientation, age, disability, veteran status, or any other characteristic protected by law.

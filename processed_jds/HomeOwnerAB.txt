@@ -1,0 +1,25 @@
+About Us﻿
+
+Homer is an app designed to help home owners manage any and all information about their home: everything from floorplans to receipts to model numbers and user manuals. Helping home owners keep track of this information digitally represents a lot of actual value: both in time and money.
+
+Homer's mission is to maximise the benefit of owning a home, and minimise the friction of being a home owner.
+
+Join our team in and work in our central office in Stockholm. Our vackgrounds are in internet consumer tech , we speak English and have fun together at work. We have a distributed team with dedicated developers in the Ukraine. We look forward to meeting you and see how you will fit in the team!
+
+
+
+Field﻿
+
+Engineering
+
+
+
+Internship Description
+
+Help develop we based tools for internal and customer facing use using modern development frameworks and languages. You should be comfortable using Cursor an other AI assisting tools.
+
+
+
+Required Skills
+
+React / javascript, html, webflow, Lovable, Cursor

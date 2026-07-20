@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResumeAI — Tailor your resume in seconds</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">ResumeAI</div>
+      <div class="header-right">
+        <div id="guest-counter" class="pill hidden">
+          <span id="dl-count">0</span>&thinsp;/&thinsp;3 free downloads
+        </div>
+        <div id="auth-area">
+          <button id="btn-login"  class="btn btn-ghost-sm">Login</button>
+          <button id="btn-signup" class="btn btn-primary-sm">Sign up</button>
+        </div>
+        <div id="user-area" class="hidden user-row">
+          <span id="user-email" class="user-email"></span>
+          <button id="btn-logout" class="btn btn-ghost-sm">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <h1>Tailor your resume <span class="accent">in seconds</span></h1>
+      <p>Upload your resume and job description — get a tailored PDF,<br>personalised cover letter, and ATS audit report instantly.</p>
+    </div>
+  </section>
+
+  <!-- ── Main flow ──────────────────────────────────────────────────────── -->
+  <main class="container" id="main-flow">
+
+    <div class="flow-card" id="flow-card">
+
+      <!-- Step 1 · Resume upload -->
+      <div class="step" id="step-resume">
+        <div class="step-header">
+          <span class="step-num" id="snum-1">1</span>
+          <span class="step-title">Upload Resume</span>
+          <span class="step-badge hidden" id="badge-resume">✓ Ready</span>
+        </div>
+
+        <div id="resume-drop" class="dropzone" role="button" tabindex="0"
+             aria-label="Click or drag to upload resume">
+          <div class="dz-icon" aria-hidden="true">📄</div>
+          <div class="dz-text">
+            Drop your resume here, or <span class="link">browse</span>
+          </div>
+          <div class="dz-hint">Word &middot; PDF &middot; JSON &middot; TXT</div>
+          <input type="file" id="resume-input"
+                 accept=".pdf,.docx,.doc,.txt,.json" class="sr-only"
+                 aria-label="Resume file input">
+        </div>
+
+        <div id="resume-status" class="status-bar hidden" role="status"></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Step 2 · Job Description -->
+      <div class="step" id="step-jd">
+        <div class="step-header">
+          <span class="step-num" id="snum-2">2</span>
+          <span class="step-title">Job Description</span>
+          <span class="step-badge hidden" id="badge-jd">✓ Ready</span>
+        </div>
+
+        <textarea id="jd-text"
+                  placeholder="Paste the job description here…"
+                  rows="8"
+                  aria-label="Job description text"></textarea>
+
+        <div class="jd-or"><span>or upload a file</span></div>
+        <label class="upload-label" for="jd-file-input">
+          Upload JD file (.txt, .pdf, .docx)
+        </label>
+        <input type="file" id="jd-file-input"
+               accept=".txt,.pdf,.docx,.doc" class="sr-only"
+               aria-label="Job description file input">
+
+        <div id="jd-status" class="status-bar hidden" role="status"></div>
+      </div>
+
+      <!-- Generate button -->
+      <div class="action-row">
+        <button id="btn-generate" class="btn btn-generate" disabled
+                aria-disabled="true">
+          Convert &amp; Generate
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="action-hint" id="action-hint">
+          Upload a resume to get started.
+        </p>
+      </div>
+
+    </div><!-- /flow-card -->
+
+    <!-- ── Processing ───────────────────────────────────────────────────── -->
+    <div id="progress-area" class="hidden" role="status" aria-live="polite">
+      <div class="progress-card">
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="progress-msg" class="progress-msg">Analysing resume…</p>
+        <div class="progress-steps">
+          <span id="p-tailor">Tailoring resume</span>
+          <span id="p-cover" >Cover letter</span>
+          <span id="p-audit" >ATS audit</span>
+          <span id="p-pdf"   >Building PDFs</span>
+        </div>
+        <p class="progress-sub">
+          This usually takes 30–90 seconds. Please keep this tab open.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Results ──────────────────────────────────────────────────────── -->
+    <div id="results-area" class="hidden">
+      <div class="results-header">
+        <h2>Your files are ready</h2>
+        <div id="ats-summary" class="ats-summary"></div>
+      </div>
+
+      <div id="result-cards" class="result-cards"></div>
+
+      <div class="results-footer">
+        <button id="btn-restart" class="btn btn-ghost">↩ Start over</button>
+      </div>
+    </div>
+
+    <!-- ── Quota banner ─────────────────────────────────────────────────── -->
+    <div id="quota-banner" class="quota-banner hidden" role="alert">
+      <span>You've used all <strong>3 free downloads</strong>.</span>
+      <button id="btn-login-quota" class="btn btn-primary-sm">
+        Login to continue
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ── Auth modal ─────────────────────────────────────────────────────── -->
+  <div id="auth-modal" class="modal hidden" role="dialog"
+       aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close"
+              aria-label="Close dialog">&times;</button>
+
+      <!-- Login view -->
+      <div id="modal-login-view">
+        <h3 id="modal-heading">Welcome back</h3>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email"
+                 placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password"
+                 placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <div id="login-error" class="error-msg hidden"></div>
+        <button id="btn-do-login" class="btn btn-primary w-full">Login</button>
+        <p class="modal-switch">
+          No account? <a id="switch-to-signup" tabindex="0">Sign up free</a>
+        </p>
+      </div>
+
+      <!-- Signup view -->
+      <div id="modal-signup-view" class="hidden">
+        <h3 id="modal-heading-s">Create account</h3>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email"
+                 placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password"
+                 placeholder="Min. 6 characters" autocomplete="new-password">
+        </div>
+        <div id="signup-error" class="error-msg hidden"></div>
+        <button id="btn-do-signup" class="btn btn-primary w-full">
+          Create account
+        </button>
+        <p class="modal-switch">
+          Have an account? <a id="switch-to-login" tabindex="0">Login</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+obbet
+Nordnet redefined the financial world as the first digital bank in Europe. Now we are about to do it again and the aim is to create the next generation of bank, in the cloud. We know that this requires great people, great teams, and great technology. Do you want to join us and build the new Nordnet?
+
+In brief At Nordnet we want to democratize savings and investments by giving our customers access to the best tools and information whether you are a professional investor or a small saver. With modern technologies and speed of delivery, we are building the next generation investment platform.
+
+This is part of the role Nordnet is a company with tech as the primary focus. In our agile and autonomous teams, you will be working with engaged colleagues that love to share their knowledge. As a developer at Nordnet, you will have the possibility to make an impact and create value for our customers with continuous releases several times a day.
+
+This is you To succeed in this role, we believe that you take great pride in your work, are curious and continuously want to learn and grow. Collaboration and discussing ideas and concepts with your colleagues are things you enjoy and believe are important in order to build great products.
+
+Who are you? 
+
+We are looking for both Backend and Fullstack Software Engineers. You are a team player who automates everything – especially testing – and thrives in a DevOps-culture.
+
+Key requirements:
+
+Core Tech: Modern Java (17+), Spring Boot, and Cloud development.
+
+Fullstack-track: Experience in React, TypeScript, and Node.js.
+
+DevOps: Interest in Infrastructure as Code and CI/CD.
+
+Mindset: You enjoy designing, deploying, and running your own services.
+
+Bonus: Experience with high-performing/low-latency systems or a personal interest in investments.
+
+Nordnetters
+
+Are proud of the friendly and humble environment
+
+Believe that the best code is written together and therefore appreciate pair/mob programming
+
+Continuously improve to ensure quality, making the code better with every release
+
+Commit to goals as a team, sharing the responsibility, success and failure
+
+What we offer
+
+Backend agile team which owns and maintains their product
+
+Your expertise and contribution will be appreciated from day one
+
+Plenty of opportunities to grow as an engineer
+
+Competitive salary and compensation
+
+We offer you the opportunity to work in a Nordic environment with a strong focus on delivery, product development and technology. Our ambitions are high and you will embark on a fast and challenging journey together with a skillful team of sharp and committed colleagues. Our teams are autonomous and embrace the agile way of working.
+
+Culture is built and cared for, each day by everyone. We’re proud of ours. Having a flat organization where anyone can talk to anyone creates a warm and friendly atmosphere worth protecting. We believe in a culture where every effort counts and where everyone is being recognized. A culture embracing our core values – passion, simplicity and transparency on all levels, no matter who you are or what you do.
+
+We are over 1000 employees in Stockholm, Oslo, Helsinki, Copenhagen and Frankfurt.
+
+ Visit us on: www.nordnetab.com and https://career.nordnetab.com/pages/engineering
+
+Questions & applications
+
+Apply today – Please note that we do only accept applications through our recruitment system, hence no email applications will be considered. 
+
+We want to inform you that Nordnet conducts mandatory credit and background checks, as well as drug testing as part of our recruitment process.
+
+We look forward to receiving your application!

@@ -1,0 +1,51 @@
+About the job
+What We Do At Qliro
+
+At Qliro we deliver safe and simple payments. We are a dedicated partner to our merchants who serve their customers every day. We believe that if our merchants grow, we grow. We are a company of dedicated, friendly and highly competent people that together have redefined what Qliro and payments can be. We are now on a journey of scaling our business both here in Sweden and the Nordics.
+
+What we are looking for
+
+We are opening a Software Engineer position in our Checkout team, responsible for building and evolving checkout solutions for our merchants, while ensuring a safe and simple payment experience for their customers.
+
+You will join a full‑stack team that values innovation, collaboration, and having fun at work.
+
+Our tech stack includes:
+
+✅ React, Redux, C# (.NET 8/10)
+
+✅ AWS, SQL, DynamoDB, Terraform
+
+✅ Observability with Grafana and Kibana
+
+✅ AI development with Claude
+
+You can expect to:
+
+Work on a variety of exciting payment‑related projects, processing millions in SEK every day for thousands of customers, with a strong focus on usability, scalability, and security.
+Use technologies such as .NET, React, Redux, AWS, GitLab, Terraform, and more.
+Work with modern, AI‑assisted development tools such as Claude to improve productivity, code quality, and collaboration.
+Contribute throughout the entire product lifecycle: design, implementation, testing, release, and maintenance.
+Take part in architectural discussions and drive technical improvements.
+Collaborate continuously: we strongly believe in teamwork, thoughtful code reviews and shared ownership.
+Learn continuously, both on the job and through our learning platform, and share knowledge with your colleagues.
+Have fun while working in a fast‑growing area and organisation.
+
+What we are looking for:
+
+You are an experienced software engineer who takes ownership, drives initiatives, collaborates closely with stakeholders, and actively contributes to architectural discussions and technical decision‑making.
+You have experience with our tech stack or similar technologies and are confident working across both frontend and backend.
+You are curious and pragmatic about AI, and enjoy exploring how tools like Claude can be used to support better engineering practices and decision‑making.
+You value knowledge sharing and see learning and helping each other grow as a natural part of teamwork.
+You are willing to participate in the team’s on‑call rotation (with extra compensation).
+Experience from financial institutions, payments, or e‑commerce, whether technical or non‑technical, is a strong advantage.
+You communicate fluently and confidently in English, both verbally and in writing. Swedish is not a prerequisite.
+
+WOW in everything we do
+
+Qliro is the place for those who are curious, passionate, and love collaboration. Together, we create wow in everything we do. We want you to feel comfortable being yourself and bringing your unique perspectives. At Qliro, there is a place for you, whoever you are. We believe differences make us stronger.
+
+We value flexibility and remote work, while also believing in the power of meeting in real life. With a mix of remote work and office collaboration, we aim to create a flexible workplace that works for both you and Qliro.
+
+Does this sound like your next role? What are you waiting for - apply now!
+
+Qliro is an equal opportunity employer. All qualified applicants will be considered for employment without regard to gender, gender identity or expression, national origin, religion or other beliefs, disability, sexual orientation or age.

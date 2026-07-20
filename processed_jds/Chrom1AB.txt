@@ -1,0 +1,30 @@
+About Us﻿
+
+newGenia is on a mission to bring intuitive precision medicine to clinicians. newGenia's vision is to make precision medicine accessible to everyone, especially the people of developing world. Would you like to be a part of an organisation where your effort will help give millions a chance for lifesaving treatment?
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+We are looking for a talented Web Developer to create amazing user experiences for human health data navigation. The ideal candidate should have an eye for technical and convenient web design. They should also have superior user interface design skills, including dashboard with charts experience.
+
+The successful candidate will be able to translate figmad based designs to web application. They will be able to transform them into beautiful, intuitive, and functional code.
+
+Responsibilities
+- Development using Angular OR React.JS for frontent and Go for backend
+
+
+
+Required Skills
+
+- Ability to represent multidimensional data in an intuitive way, working with hierarchical data structures
+- Experience of development in Angular Or React Js
+- Programming in Go Lang
+- Ability to use Google Gemini for help with coding
+- Up-to-date with the latest Web trends, techniques and technologies

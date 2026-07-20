@@ -1,0 +1,28 @@
+About the job
+About Sana
+
+Sana is an AI lab building superintelligence for work. We believe organizations can accomplish their missions faster when teams can effortlessly access knowledge, automate repetitive work, and learn anything with the help of agentic AI. As part of Workday, we are committed to building AI that augments people - not replaces them.
+
+We bring this mission to life through two products. Sana Agents provide a seamless way to access all your company’s apps, knowledge, and data, enabling AI agents to do real work so teams can process and act on information at unprecedented scale. Sana Learn is an AI-powered learning hub that combines the simplicity of a modern learning platform with intelligent features like an AI tutor, automated content generation, and interactive apps, making knowledge not just accessible but actionable.
+
+We’re a talent-dense, product-obsessed team of engineers and designers from companies like Google, Spotify, Apple, and Databricks, united by deep technical excellence and rapid iteration. Our tools already help over a million people learn and work better across hundreds of leading enterprises - and we’re just getting started.
+
+About The Role
+
+Join our engineering team to help build the future of knowledge sharing and AI-powered learning. We're looking for talented engineers who can contribute across our technology stack. Whether you're a generalist or have deeper expertise in specific areas, we value strong engineering fundamentals and the ability to learn and grow with our team.
+
+Our tech stack 
+
+We build on a simple modern stack optimized for both humans and AI.
+
+Backend: TypeScript, Kotlin, Node.js
+Frontend: TypeScript, React, Tailwind
+Databases: Postgres, Redis
+Cloud infra: GCP/Kubernetes/Terraform
+
+What we offer
+
+Help shape AI's future alongside brilliant minds from Google, Apple, Spotify, Notion, Slack, Databricks, and BCG. 
+Competitive salary complemented with a competitive RSU program. 
+Swift professional growth in an evolving environment, supported by a culture of continuous feedback and mentorship from senior leaders. 
+Work with talented teammates across 5+ countries, and global customers, from our beautiful office in Stockholm.

@@ -1,0 +1,26 @@
+About Us﻿
+
+Lumisonix Medical is a Swedish medical-technology startup on a mission to change how diabetic foot ulcers (DFUs) are treated. DFUs are common, costly and dangerous - 80% of lower-limb amputations are preceded by a foot ulcer. We're developing Lumipulse, an automated point-of-care device that brings two clinically proven therapies — focused shockwave (ESWT) and light therapy (PBM) - into a single, standardized 20-minute clinic treatment. We're a small, founder-led team working across hardware, software and clinical science. Our working language is English.
+
+
+
+Field﻿
+
+Engineering
+
+
+
+Internship Description
+
+As our ML intern you'll prototype the computer-vision system at the heart of Lumipulse: taking wound images and identifying the treatment zone so therapy is delivered consistently, visit to visit. Over four months you'll build and evaluate image-segmentation models, set up a clean data/annotation pipeline, and package a working targeting demo for our prototype. You'll learn how ML is applied inside a regulated medical device, where algorithms must be reliable, explainable and kept under clinician control. Programs/tools: Python, PyTorch or TensorFlow, OpenCV, scikit-learn, NumPy/pandas, Jupyter, Git.
+
+
+
+Required Skills
+
+Academic degree (BSc/MSc or higher) in machine learning, computer science, data science, AI or a related field
+Solid Python and hands-on experience with PyTorch or TensorFlow
+Familiarity with computer vision (image classification or segmentation)
+Comfortable with data handling (NumPy, pandas) and version control (Git)
+Professional working English
+Merit: medical/scientific imaging, small-dataset techniques

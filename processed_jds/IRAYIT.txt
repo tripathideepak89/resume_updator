@@ -1,0 +1,44 @@
+About Us﻿
+
+I-RAY IT Solutions AB is a technology-driven startup dedicated to empowering businesses in regulated and high-integrity industries—such as healthcare, manufacturing, and finance—with robust, scalable, and efficient quality assurance solutions. We specialize in intelligent automation frameworks, embedded system testing, and API performance validation to ensure our clients’ digital products are secure, reliable, and market-ready.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+Are you a Playwright Automation Tester passionate about delivering high-quality software? We're looking for a motivated professional to join our team at I-Ray IT Solutions AB. In this role, you'll be responsible for developing and maintaining automated tests while working closely with cross-functional teams to ensure reliable software delivery.
+At I-Ray IT Solutions AB, you will have the opportunity to:
+• Develop and maintain automated test scripts using Playwright.
+• Execute functional, regression, and end-to-end testing.
+• Perform API testing and validate application functionality.
+• Work closely with developers and business teams in an Agile environment.
+• Identify, track, and verify software defects.
+• Contribute to improving test automation processes and quality standards
+With us, you can experience:
+• Personal and professional growth through continuous learning.
+• Opportunities to work on modern technologies and automation projects.
+• A collaborative and supportive work environment.
+• Flexible working arrangements where suitable.
+
+
+
+Required Skills
+
+What is needed in this role:
+• Bachelor's degree in Computer Science, Information Technology, or a related field.
+• Experience in test automation using Playwright.
+• Knowledge of TypeScript or JavaScript.
+• Experience with API testing and defect tracking tools.
+• Understanding of software testing principles and Agile methodologies.
+• Good analytical, problem-solving, and communication skills.
+• Ability to work independently and as part of a team.
+Preferred qualifications:
+• Experience with Selenium or other automation tools.
+• Basic knowledge of CI/CD and version control tools.
+• Experience with SQL or API testing is an advantage.

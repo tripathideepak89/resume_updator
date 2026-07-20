@@ -1,0 +1,21 @@
+About Us﻿
+
+Favvos is a fast-growing company situated in Stockholm. Our platform provides sport event organizers an innovative end-to-end platform to easily manage planning och staffing of volunteers. We are the leading Swedish platform within our segment. We are currently a team of four persons, CEO and CTO (both co-founders), Sales team and Tech Lead/developer.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+As a Fullstack/Backend Developer Intern, you will gain hands-on experience by working directly on our core product together with our CTO and Tech Lead. Your focus will be on backend efficiency, developing new features, and optimizing data architecture to support our rapidly expanding user base across Europe. Development will involve working with a diverse technology stack, including Java 8 with the Spring framework for backend logic, MySQL managed through Hibernate for data persistence, and a frontend built with HTML (generated via Thymeleaf), Bootstrap for styling, and jQuery for dynamic interactions. The application is deployed on AWS using EC2 within Docker containers, with MySQL hosted on AWS RDS and file storage handled through S3.
+
+
+
+Required Skills
+
+Java, HTML/CSS, Spring, Thymeleaf, Hibernate, jQuery and AWS. We are looking for someone that is a problem solver and someone who is focused, data-informed, and result-focused.

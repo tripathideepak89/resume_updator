@@ -1,0 +1,21 @@
+About Us﻿
+
+Favvos is a fast-growing company situated in Stockholm. Our platform provides sport event organizers an innovative end-to-end platform to easily manage planning och staffing of volunteers. We are the leading Swedish platform within our segment. We are currently a team of four persons, CEO and CTO (both co-founders), Sales and Tech Lead/developer.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+As a Mobile app developer intern, you will gain hands-on experience by working directly on our existing mobile application and web platform together with our CTO and Tech Lead. Your focus will be on building and expanding new features across both our iOS/Android app and our web application, while supporting our rapidly growing user base across Sweden. You will work within our established codebase, a cross-platform mobile app built with Expo and React Native, alongside a web platform powered by Java 8 with Spring, MySQL managed through Hibernate, and a frontend built with HTML (via Thymeleaf), Bootstrap, and jQuery.
+
+
+
+Required Skills
+
+Expo, React Native, TypeScript, Expo Router. Familiarity with Java, Spring, Thymeleaf, Hibernate, or jQuery is a plus but not required. Experience with the web stack is beneficial but not a requirement.

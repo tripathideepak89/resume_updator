@@ -1,0 +1,34 @@
+About Us﻿
+
+Blinksbuy is a fast-growing startup revolutionizing food ordering and customer engagement through voice, AI, and automation. We help restaurants deliver seamless, human-like customer experiences by enabling natural, conversational ordering and intelligent workflows.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+We’re seeking a motivated Automation & API Integration Intern to join our tech team for a 3–6-month internship. You’ll work on real-world project building automation workflows, integrating conversational AI tools, and connecting APIs to power our voice-driven food ordering platform. This is an exciting opportunity to gain hands-on experience with cutting-edge technologies in a fast-paced startup, and contribute to shaping the future of customer engagement
+Responsibilities:
+Map user journeys and translate them into intelligent, automated workflows.
+Integrate RESTful APIs and webhooks with internal systems and third-party services.
+Test and debug automation workflows and API integrations to ensure reliability and performance.
+Collaborate with product team to enhance platform functionality.
+Document technical processes, API configurations, and automation workflows for team reference.
+
+
+
+Required Skills
+
+Familiarity with APIs, webhooks, and basic web technologies.
+Experience with any AI automation platform.
+Knowledge of JSON, HTTP requests, and REST APIs.
+Programming experience in languages such as Java, JavaScript, or Python.
+Problem-solving mindset and eagerness to learn.
+Nice-to-Have:
+Understanding of conversational design and user experience.
+Exposure to voice technology, AI platforms, or cloud-based integrations.

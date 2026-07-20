@@ -1,0 +1,39 @@
+About the job
+About Acast
+
+Since 2014, Acast has been building the world’s most valuable podcast marketplace, creating the technology that connects podcast creators, advertisers, and listeners. Its marketplace spans more than 140,000 podcasts, 3,300 advertisers, and one billion quarterly listens. Crucially, those listens are monetized wherever they happen—across any podcast app or listening platform.
+
+About The Role
+
+We’re seeking a Software Engineer with full-stack capabilities, someone who’s passionate about building intuitive, high-quality user experiences on the frontend, and who can also architect and support the backend infrastructure required to deliver those experiences reliably at global scale.
+
+The Analytics Hub is a critical initiative designed to be Acast’s single, unified platform for consumption and revenue data. This data will be from a number of sources and be in different formats and represent different concepts, so building a user interface to compare and contrast that data involves a lot of complex decisions. We then also want to take it further, offering pro-active recommendations on how these insights can be used to improve Creator’s content by helping them understand what chimes with their audience.
+
+You will work in an autonomous, purpose driven team and take an important role in shipping new features while continuously increasing efficiency, stability and scalability of the systems. You are expected to contribute to software development within your team but we also expect everyone to understand and contribute to other areas of the product development. You will be working in a multi-disciplinary environment with agile principles.
+
+We run our infrastructure and systems on AWS. The systems are written in Node.js and Typescript and you are expected to work with and be interested in that. We support our own systems and infrastructure in production.
+
+Who You Are
+
+You have experience with Node.js, Typescript and React
+You have experience working with AI and are proficient in utilising it where appropriate
+You have experience building delightful end user facing applications and the backend infrastructure to support them
+You have experience in working with AWS or similar
+You have a pragmatic mindset and can make trade-offs on what to optimise for and when to ship
+You are keen to mentor others in the technical aspects you are already an expert in and you value working in a diverse team with developers of all experience and backgrounds. You value other people’s input no matter their experience level.
+
+Location
+
+Most of our teams are hybrids with some members co-located in offices and some working fully remote. With a remote first way of working we want you to feel productive regardless of work location.
+
+For this role, you can be based in the UK or Sweden. We have offices in London and Stockholm but it is optional if you want to work remote or at the office.
+
+Culture 
+
+Acast is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment regardless of race, gender, sexual orientation, religion, ethnicity, national origin or any of the other wonderful characteristics that make us different.
+
+Culture is our number one priority as a business. We believe people come first, and we work every day to enable autonomy, continuous improvement and bring out the best in people. We’re global and have remote teams, so it’s even more important that we strive for an open, inclusive and caring environment where everyone feels visible and welcome.
+
+We consider ourselves a modern organization driven by strong values to create the best, most fulfilling and nurturing culture.
+
+We very much look forward to finding the next great person to join our cause!

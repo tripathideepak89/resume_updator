@@ -1,0 +1,160 @@
+{
+  "name": "Deepak Tripathi",
+  "title": "Platform Engineering & DevOps Architect | AI Systems | Reliability | Multi-Cloud",
+  "location": "Sweden",
+  "email": "tripathideepak2489@gmail.com",
+  "phone": "+46 765 311 608",
+  "linkedin": "https://www.linkedin.com/in/deepak-tripathi-2256b558",
+  "summary": "Platform Engineering and DevOps Architect with 8+ years of experience designing, operating, and improving large-scale distributed systems across cloud and enterprise environments.\n\nStrong background in Kubernetes, multi-cloud platforms, CI/CD, infrastructure as code, observability, and security-focused operations, with growing expertise in AI/ML systems, MLOps, API-driven automation, and production AI platforms.\n\nExperienced in building production-grade platforms that improve developer velocity, reliability, scalability, and operational resilience for data-intensive and business-critical workloads.",
+  "skills": {
+    "AI / ML Systems & MLOps": "LLM inference workflows, model deployment pipelines, AI system automation, API integrations, agentic workflow foundations, data workflows, monitoring",
+    "Cloud & Distributed Systems": "AWS, Azure, GCP, Kubernetes, OpenShift, Terraform, Infrastructure as Code (IaC), scalable distributed systems",
+    "Containers & Cluster Management": "Docker, Kubernetes (production), Helm, GitOps, container platforms",
+    "Platform Engineering & Developer Experience": "Platform engineering, internal platforms, developer enablement, release workflows, environment automation",
+    "DevOps & CI/CD": "GitHub Actions, Jenkins, GitLab CI, ArgoCD, CI/CD automation, deployment reliability",
+    "Programming & Scripting": "Python, Bash, Java, JavaScript/Node.js",
+    "Observability, Reliability & Security": "Site Reliability Engineering (SRE), Prometheus, Grafana, ELK, Loki, monitoring, alerting, incident response, SLIs/SLOs, DevSecOps",
+    "Infrastructure & Networking": "Cloud networking, scalable systems design, distributed architectures, infrastructure as code"
+  },
+  "experience": [
+    {
+      "period": "Aug 2024 – Present",
+      "role": "DevOps Engineer",
+      "company": "Scania CV AB / Traton AB",
+      "location": "Sodertalje, Sweden",
+      "bullets": [
+        "Designed Grafana-based CI/SRE observability across AWS and GCP, enabling proactive monitoring of build latency, queue wait times, agent utilisation, and network bottlenecks — shifting CI operations from reactive firefighting to data-driven optimisation",
+        "Built an Agentic AI-driven L1 support system to analyse CI alerts and build logs, auto-classify recurring failures, and recommend resolutions — significantly reducing manual triage and improving MTTR across cloud-hosted pipelines",
+        "Led CI performance optimisation across 5 repositories x 5 plans (25 executions), saving ~42.5 minutes per repo per cycle and reclaiming ~212 minutes (~3.5 hours) of CI agent capacity per full end-to-end execution",
+        "Driving large-scale migration from Bamboo to Jenkins across AWS and GCP, covering 2,744 plans, 169K+ branches, 248K+ builds, 1.18M+ jobs, and 69K+ metrics — designing phased migration, parallel-run strategy, and pipeline-as-code architecture",
+        "Architected Kubernetes-based platform serving 20+ enterprise applications across AWS and GCP, supporting 200+ developers with 99.9% uptime",
+        "Designed cloud-native CI/CD pipelines with GitLab CI, reducing deployment cycle time by 40% and enabling 50+ production deployments per week",
+        "Built self-service platform tooling that cut environment provisioning time from hours to under 10 minutes, improving developer velocity across 8 product teams"
+      ],
+      "tools": "AWS, GCP, Terraform, Ansible, YAML, Docker, Kubernetes, GitLab, Git, Bash, Python"
+    },
+    {
+      "period": "Jan 2023 – Aug 2024",
+      "role": "DevOps Expert",
+      "company": "Alten (Volvo CE, IKEA)",
+      "location": "Sweden",
+      "bullets": [
+        "Built SRE practices, security controls, and monitoring infrastructure for the DevOps platform serving Volvo CE and IKEA, achieving zero critical security incidents over 18 months",
+        "Defined and enforced DevSecOps policies across 8+ development teams, reducing vulnerability remediation time by 60%",
+        "Designed CI/CD infrastructure using GitHub Actions and Kubernetes, supporting 100+ pipelines with 95% first-run success rate",
+        "Aligned security, monitoring, and delivery practices across 3 enterprise stakeholders, reducing deployment rollback rate by 30%"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
+    },
+    {
+      "period": "Aug 2022 – Dec 2022",
+      "role": "Lead Engineer",
+      "company": "SiriAB (Ecarx Volvo Cars)",
+      "location": "Gothenburg, Sweden",
+      "bullets": [
+        "Led DevOps platform development across 3 concurrent automotive software projects in an agile environment",
+        "Designed and implemented CI/CD pipelines using GitLab and Docker, reducing build times by 50% and enabling daily releases",
+        "Deployed Grafana and Loki observability stack on Kubernetes, improving incident response time by 40%"
+      ],
+      "tools": "Ubuntu OS, Azure DevOps, Kubernetes, Docker, GitLab, Git, Bash, Python, Grafana, Loki, Jira"
+    },
+    {
+      "period": "Feb 2022 – Aug 2022",
+      "role": "Lead Engineer",
+      "company": "DealerSocket",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Led a team of 8 engineers to deliver a digital marketing platform MVP 3 weeks ahead of schedule",
+        "Architected microservices application using Spring Boot and Kafka, processing 500K+ daily marketing events with sub-second latency",
+        "Deployed application on Kubernetes with automated CI/CD pipelines, achieving 99.5% uptime in production"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, Java, Spring Boot, Kafka"
+    },
+    {
+      "period": "Apr 2020 – Feb 2022",
+      "role": "Senior Software Engineer",
+      "company": "Epsilon",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Built and scaled a digital marketing platform serving 10M+ customer profiles using Java, Spring Boot, and AWS",
+        "Led technical decisions as Tech Lead and Architect for a team of 8, delivering 4 quarterly releases on schedule",
+        "Containerized legacy monolith into microservices on Kubernetes, reducing deployment time from days to under 2 hours"
+      ],
+      "tools": "Java, Spring Boot, Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS"
+    },
+    {
+      "period": "Jun 2018 – Apr 2020",
+      "role": "Senior Analyst",
+      "company": "Bank of America Continuum India Pvt. Ltd.",
+      "location": "Hyderabad, India",
+      "bullets": [
+        "Migrated legacy banking system to DevOps architecture using Jenkins and Bamboo CI/CD pipelines, reducing release cycle from monthly to weekly",
+        "Automated build and deployment workflows for 5+ applications on Azure, cutting manual deployment effort by 70%",
+        "Implemented Kafka-based event streaming for inter-service communication, handling 1M+ daily transactions with 99.9% delivery guarantee"
+      ],
+      "tools": "Git, Bamboo, Jira, JFrog, Azure, Kubernetes, Docker, Java, Spring Boot, Kafka, React"
+    },
+    {
+      "period": "Apr 2016 – Jun 2018",
+      "role": "Build and Release Engineer",
+      "company": "Capgemini (PSA Automotive)",
+      "location": "Bengaluru, India",
+      "bullets": [
+        "Led cross-region migration of PSA Automotive platform from Europe to India, completing transition in 6 months with zero service disruption",
+        "Designed application architecture and coordinated with stakeholders across 3 countries for seamless knowledge transfer",
+        "Managed a distributed support team of ~50 engineers across France, Spain, and India, maintaining 99.5% SLA compliance",
+        "Established CI/CD and release management practices that reduced production deployment failures by 40%"
+      ],
+      "tools": "Azure, Kubernetes, Docker, GitHub, Git, Bash, Python, Terraform, YAML, AWS, COBOL, Oracle"
+    },
+    {
+      "period": "Dec 2013 – Apr 2016",
+      "role": "Senior Software Engineer",
+      "company": "Hexaware",
+      "location": "Mumbai, India",
+      "bullets": [
+        "Built Java-based UI application for Belfius Insurance serving 500K+ policyholders with under 2-second page load times",
+        "Designed application architecture and DB2 database schema supporting 50+ business workflows",
+        "Led database optimization initiative that improved query performance by 60%, reducing report generation time from 30 minutes to 12 minutes"
+      ],
+      "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
+    },
+    {
+      "period": "Sep 2010 – Dec 2013",
+      "role": "System Engineer",
+      "company": "Tata Consultancy Services",
+      "location": "Mumbai, India",
+      "bullets": [
+        "Developed Java-based UI application for Belfius Insurance handling 200K+ daily transactions across claims and policy modules",
+        "Designed application architecture and database schema for insurance claims processing with 99.8% data accuracy",
+        "Optimized DB2 database queries, reducing batch processing time by 45% for month-end reporting cycles"
+      ],
+      "tools": "COBOL, Java, Jira, REST, HTML, XML, DB2"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Resume Updater & Cover Letter Generator",
+      "url": "https://github.com/tripathideepak89/resume_updator",
+      "description": "Built an AI-powered CLI tool that takes a Job Description as input, tailors a resume, and generates a cover letter as compressed PDFs. Uses the Hugging Face Inference API with the Qwen2.5-72B LLM, plus automatic keyword-matching fallback. Features company name auto-detection, ATS audit reporting, professional PDF rendering via ReportLab, and dual-mode operation (AI + offline).",
+      "tools": "Python, Hugging Face Inference API, Qwen LLM, ReportLab, NLP, PDF Generation"
+    }
+  ],
+  "education": [
+    {
+      "period": "2023 – 2025",
+      "institution": "Indian Institute of Technology, Patna, India",
+      "degree": "Master of Technology in Cloud Computing, Artificial Intelligence"
+    },
+    {
+      "period": "2006 – 2010",
+      "institution": "Rajiv Gandhi Technical University, Bhopal, India",
+      "degree": "Bachelor of Computer Science and Engineering"
+    }
+  ],
+  "personal": {
+    "nationality": "Indian",
+    "languages": "English, Hindi",
+    "year_of_birth": "1989"
+  }
+}

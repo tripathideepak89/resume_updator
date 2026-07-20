@@ -1,0 +1,44 @@
+About Us﻿
+
+Swirly your wines is made and daily operated from Stockholm, Sweden 🇸🇪 by three founders Jade, Emil & Marcus who are passionate about wines, food, design & technology.
+
+Our headquarters are in Stockholm, Sweden, where we combine our love for wine with our professional skills. Jade is a talented home cook with over 10 years of experience in mobile app development and growth, while Emil, a sommelier with a background in hospitality, electrical engineer with a master’s in robotics, and Marcus, Sommelier with world class experience, brings a unique expertise to Swirl. Together, we created Swirl to help you find wines that truly match your taste. From our personalised recommendation system to our carefully crafted features, Swirl is designed to make wine discovery easy and enjoyable.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+We are looking for a Flutter Mobile App Developer to join our growing team at Swirl. You will help build and expand our innovative wine app. We are launching soon and need someone who can help us improve features we already have and build new ones from scratch using Flutter.
+
+Key responsibilities:
+- Develop and maintain mobile applications using Flutter.
+- Collaborate with the team of developers, designer and product manager
+- Implement new features into the app.
+- Take ownership and act as quality assurance and test the app before every release
+
+Why join us?
+- Be part of an exciting tech project.
+- Work with cutting-edge technology
+- Join a real early-stage startup
+- Flexible remote work environment
+
+
+
+Required Skills
+
+Required skills
+- Experience in mobile app development (Flutter experience preferred, but not required).
+- Understanding of backend and data management.
+- High-drive and willingness to participate and learn
+- Experience with AI integration is a plus.
+- Adaptable to learning new languages and frameworks quickly, particularly with generative AI tools.
+- Strong problem-solving skills and the ability to work in a fast-paced environment.
+
+If you have experience in mobile app development and are excited about working in a dynamic tech environment, we encourage you to apply! Even if you haven't coded in Flutter before, your experience in other languages and willingness to learn will be valued. The internship is remote but we will meet in Stockholm once/week.
+

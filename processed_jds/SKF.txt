@@ -1,0 +1,65 @@
+About Us﻿
+
+In a world shaped by population growth, urbanization, digitalization and environmental concerns, industrial reality is the true challenge. And that’s exactly where we at SKF want to be. Right at the centre, providing reliable rotation for the real world.
+Our expertise is built on the development, design and manufacture of bearings, seals and lubrication systems. And we also provide machine health assessment, engineering and re-manufacturing services. But what we’re really offering is an arena for innovation – an opportunity for our customers to use the tools we provide to explore, improve or rethink the performance of their rotating equipment. A place where even the smallest adjustment can make a big difference.
+As an important contributor to the SKF's intelligent and clean growth, SKF RecondOil, an acquired subsidiary of SKF Group in Sweden, focusing on enabling oil reconditioning and circular use of lubricants with its patented Double Separation Technology (DST), including oil cleaning devices and services as well as in-house developed lubricants. The business model is designed for service-oriented offering via SKF local sales forces and distribution network globally, with a strong manufacturing setup in Europe, aiming to reduce environmental impact while improving operational efficiency for industrial customers. As part of SKF’s innovation journey, RecondOil is exploring advanced digital and AI-driven solutions to strengthen its market intelligence (competitor products, industry news, technology trends, business analysis, financial reporting etc.) and strategic decision-making capabilities.
+
+The Business Controlling & Strategic Pricing function plays a key role in supporting global sales, driving data-driven decision-making, and improving commercial performance across regions. We work closely with regional sales teams, global business line stakeholders, and digital systems to enhance transparency, performance monitoring, and business growth.
+
+
+
+Field﻿
+
+Accountancy & Finance
+
+
+
+Internship Description
+
+About the internship
+This is a four-month internship within the Jobbsprånget program, offering hands-on experience in business controlling, sales analytics, and digital reporting. You will contribute to building a more structured and data-driven way of managing sales performance and order backlog.
+________________________________________
+Key responsibilities
+
+During the internship, you will:
+• Sales Reporting & Performance Tracking
+o Support monthly and ad-hoc sales reporting for regions and global business line
+o Analyze trends, deviations, and key drivers in sales performance
+
+• CRM Data & Business Opportunities
+o Extract and structure sales opportunities from CRM systems (e.g., C4C or Salesforce)
+o Support pipeline transparency and opportunity tracking
+
+• Quotation & Lost Order Analysis
+o Analyze quotations, won/lost opportunities, and conversion rates
+o Identify key reasons for lost business and improvement areas
+
+• Order Book & Forecast Structuring
+o Organize and improve visibility of order book and forecast data
+o Support standardization of definitions and reporting structure
+
+• Power BI Dashboard Development
+o Contribute to building a unified Power BI dashboard for: Sales performance monitoring, Order book tracking, Opportunity pipeline
+o Ensure data consistency, clarity, and usability across stakeholders
+
+
+
+Required Skills
+
+We are looking for someone who is analytical, structured, and eager to learn in a dynamic international environment.
+
+Required qualifications:
+• Bachelor’s or Master’s degree in Business, Finance, Engineering, or similar
+• Strong analytical and problem-solving skills
+• Experience with data handling and monitoring
+
+Preferred skills:
+• Experience with Power BI, Power Automate, Snowflake or other data handling and visualization tools
+• Familiarity with CRM systems (Salesforce, C4C, etc.)
+• Basic understanding of sales processes and financial reporting
+
+Personal qualities:
+• Structured and detail-oriented
+• Curious and proactive
+• Strong communication and teamwork skills
+• Comfortable working across cultures and functions

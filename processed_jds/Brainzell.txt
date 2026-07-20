@@ -1,0 +1,33 @@
+About Us﻿
+
+BrainZell – accelerating data-driven neuroscience
+
+Who We Are
+BrainZell develops human brain organoid technology to improve the predictive power of pre-clinical testing. We generate multimodal datasets at scale and build AI-driven tools to accelerate the development of therapies for brain disorders.
+
+
+
+Field﻿
+
+Science
+
+
+
+Internship Description
+
+Role Description & What You’ll Do
+
+We seek a Bioinformatics Intern with experience in AI-based data analysis to help standardize and prepare large biological datasets for downstream AI pipelines. You will work with multimodal data generated from live brain organoids, including omics, high-content imaging, calcium activity traces, and other assay outputs.
+You will collect, clean, pre-process, and organize all available datasets into a unified, standardized structure suitable for automated ingestion. Tasks include data wrangling, QC, feature extraction, metadata harmonization, and preparing modality-specific pipelines aligned with our AI models.
+
+
+
+Required Skills
+
+What You Bring
+
+Background in bioinformatics, computational biology, data science, or related field.
+Experience handling large biological datasets (omics, imaging, time-series).
+Proficiency in MATLAB, Python and common bioinformatics/data-processing libraries.
+Familiarity with machine/deep learning workflows and data-standardization best practices.
+Ability to work independently, structure complex datasets, and collaborate with interdisciplinary teams.

@@ -1,0 +1,50 @@
+jobbet
+We're building one of the most ambitious tech teams in Sweden, defined by customer obsession, high shipping pace, and visible product impact.
+
+We’re a 125-person EdTech scale-up powering learning in 120+ countries. Our intelligent platform replaces traditional textbooks and combines rich, interactive pedagogy with smart AI and data to help students and teachers thrive, from international schools to US high schools.
+
+Why join Kognity?
+
+Work on problems that matter – Your work directly influences the lives of teachers and students in over 100 countries. The scale is global, and the outcomes are tangible.
+
+High ownership, high expectations – You will be trusted to take initiative, make decisions and drive outcomes. Responsibility comes early, accountability is real, and results matter.
+
+A fast-moving, high-performing team – You will work with smart, driven colleagues across the globe on complex problems. Standards and expectations are high, feedback is direct, and the pace is fast.
+
+Continuous growth is the baseline – Everyone is expected and supported to learn quickly, improve constantly and raise their own bar. If you enjoy responsibility, momentum and meaningful challenge, you will thrive here.
+What you’ll do:
+
+Design, build and ship full-stack features in Python and TypeScript, using AI-assisted workflows to accelerate execution while maintaining high quality and ownership from concept through iteration
+
+Design and evolve systems with a strong focus on architecture, boundaries and long-term maintainability, making sound technical decisions across APIs, data models, caching and testing
+
+Own problem spaces end-to-end, including shaping ambiguous requirements, defining the right approach and guiding execution toward robust, scalable solutions
+
+Continuously improve the codebase by simplifying solutions, reducing technical complexity and driving changes that have an impact across the team and system
+
+Guide and review implementation, including work produced through AI-assisted workflows, ensuring quality, consistency and alignment with system design
+What we’re looking for:
+
+Strong coding ability in JavaScript or TypeScript and at least one backend language, combined with the ability to evaluate, guide and refine implementation to reach production-ready outcomes efficiently
+
+Proven experience building and shipping features in a fast-moving product environment, with a track record of delivering high-quality solutions with real impact
+
+Experience owning features end-to-end, including shaping requirements, making technical decisions and iterating based on feedback and outcomes
+
+Strong understanding of system design, with attention to architecture, abstraction and long-term maintainability
+
+Experience using AI-assisted development tools, or a strong interest in adopting them as a core part of how you design, build and iterate on software
+How we hire
+
+Discovery call with a Recruiter
+
+Hiring manager discussion
+
+Live coding session
+
+Values discussion
+
+Systems design session
+
+Leadership talk
+Every qualified person will be evaluated regardless of age, gender, identity, nationality, ethnicity, sexual orientation, disability status or religion. We’re committed to building a diverse, inclusive team and welcome people of all backgrounds, experiences, perspectives, and abilities.

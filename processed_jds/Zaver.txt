@@ -1,0 +1,41 @@
+About the job
+The work
+
+You won’t be gluing COBOL together. Our core platform is a Java/Spring Boot monolith - deliberately so - that handles checkout flows, real-time credit decisions, bank clearing, AML compliance, multi-currency accounting, and direct integrations with European banks and payment providers.
+
+
+
+Every line of code you write has consequences. It moves money. It approves or denies credit. It talks to regulators. This is engineering where the edge cases aren’t theoretical - they’re someone’s car purchase failing at 2pm on a Sunday.
+
+
+
+The tech
+
+Java with Spring Boot
+PostgreSQL with 1500+ Flyway migrations - the schema tells the story of the company
+REST APIs with OpenAPI specs
+AWS, the good parts - EC2, S3, Bedrock etc
+Kubernetes to tie it all together
+
+
+What we’re really looking for
+
+Here’s the thing. AI can generate code now. That’s not a secret. What it can’t do - what it won’t do for a long time - is think about systems. Anticipate the failure mode nobody asked about. See the race condition hiding behind a perfectly reasonable-looking feature request. We need people who look at a spec and immediately start asking “what happens when...” We don’t care about your years of experience. We care about how you think. If that sounds like you, let’s talk.
+
+
+
+Bonus:
+
+Deep Java experience
+Strong SQL and PostgreSQL instincts
+An obsession with edge cases, failure modes, and the question “what could go wrong here?”
+The ability to hold a large, complex system in your head and reason about it
+
+
+Why Zaver
+
+World’s most efficient guerilla group - tight team, real problems. No middle management. The best ideas win. You’ll work directly on infrastructure that handles real money in different countries, and you’ll see your decisions play out in production.
+
+
+
+We’re building something that matters, with people who care about getting it right. Let’s challenge legacy solutions together and make some waves within payments 

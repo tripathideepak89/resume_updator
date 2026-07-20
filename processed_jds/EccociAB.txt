@@ -1,0 +1,38 @@
+About Us﻿
+
+Eccoci is an established consultancy services company based in Skåne, southern Sweden, offering a comprehensive suite of Employer-of-Record (EOR) and payroll solutions. We handle complex administrative, legal, and operational needs for consultants arriving in the Swedish job market; covering everything from tailored tax planning and regulatory compliance to migration processes and technical onboarding. Our fast-growing team is bound together by shared values of honesty, transparency, and dedicated, solution-oriented effort.
+We are currently expanding and optimizing of our internal digital infrastructure to better support our staff and our consultants. To help support this transformation, we are looking for a driven, practical IT & Automation Intern to join our team.
+At Eccoci, we prioritize a collaborative environment that respects autonomy and clear communication, offering you a hands-on opportunity to work with modern corporate software systems and directly contribute to our technical operations.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+We are seeking an IT & Automation generalist Intern to help manage, optimize, and future-proof our internal technical ecosystem. You will work directly with our operational IT structure, ensuring our staff has access to core tools while supporting the development of the integrations that keep our business moving efficiently.
+This is a hands-on opportunity to bridge the gap between daily user support, cloud infrastructure management, and backend development. You will gain experience in modern corporate software ecosystems, API automation, and system architecture.
+
+
+Key Responsibilities
+• Assist staff with our core Microsoft Exchange and cloud services, troubleshooting access and optimizing daily digital workflows.
+• Learn the architecture of our HR, payroll, and reimbursement platforms. You will work directly with the API services and automation tools that enable these distinct systems to communicate seamlessly.
+• Maintain and develop the backend of our website.
+• Identify technical bottlenecks in our administrative flows and propose practical, direct solutions to eliminate manual overhead.
+
+
+
+Required Skills
+
+Required Skills
+• Basic knowledge of backend web development and experience working with REST APIs or data integration logic.
+• Familiarity with Microsoft 365/Exchange environments and an interest in corporate HR and payroll software architecture.
+• A practical, solution-oriented approach to technical troubleshooting and system design.
+• Straightforward and clear communication skills, with the ability to support colleagues and document workflows.
+
+Internship will be
+95% remote with 1 day each month – currently the 3rd Thursday of each month where we meet in person in Lund.

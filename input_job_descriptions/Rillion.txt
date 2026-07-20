@@ -1,0 +1,38 @@
+About the job
+We’re looking for a Senior DevOps Engineer to join our Platform team at Rillion.
+
+Over more than two decades, Rillion has built a robust AP Automation solution that helps our B2B customers streamline invoice processing, reduce manual work, and gain stronger control over their financial operations.
+
+Our Product & Engineering department is about 60 people across multiple teams, working on the core products, standalone services, and the underlying infrastructure.
+
+As a member of our Platform infrastructure team, you’ll join engineers who build and operate our Azure and Kubernetes-based platform that powers our SaaS product.
+
+The team develops shared platform foundations covering automation, security, reliability, and scalability, while balancing legacy setups with modern cloud-native solutions.
+
+We work closely with product teams, offering hands-on support and practical expertise so teams can ship with confidence.
+
+Who we're looking for 
+7+ years of infrastructure experience, ideally in SaaS environments leveraging modern cloud platforms.
+Deep, multi-year experience building and running Kubernetes in production, e.g. cluster operations, multi-tenant namespaces, networking/ingress, RBAC, workload security, certificate management, secrets, policy, etc.
+Cloud proficiency on Azure, AWS or GCP, including hands-on work with managed Kubernetes (AKS/EKS/GKE), networking, and security. Azure experience is a strong plus.
+DevOps practices and tooling, with experience building CI/CD pipelines (GitHub and Azure DevOps), working with containerized workloads and using Terraform for Infrastructure as Code. Experience in platform engineering tools like Argo CD, Crossplane, and Kargo is a plus.
+Web application stack knowledge, with a solid understanding of how applications fit together in a SaaS architecture. Much of our platform is Microsoft and .NET based, alongside services built on Java and Python, including data and AI systems.
+Security-first thinking, with experience in identity management, RBAC, and network security in Azure.
+
+What we offer 
+A chance to join a mature company with a proven business model and a product that is critical to our customers’ daily work.
+A supportive, collaborative product development environment.
+A competitive benefits package, including generous pension and insurance plans.
+A beautiful office in central Stockholm on the 14th floor, with amazing views.
+A hybrid setup with two days per week in the office.
+
+Note: a background check will be conducted for final candidates.
+
+About Rillion 
+We are a global company founded in Sweden with 30 years’ experience in the AP Automation industry. We help finance professionals transform how they manage invoices by digitalizing and automating the entire process.
+
+By removing the manual steps of invoice handling, we enable finance teams to save time and effort, reducing the possibility of human error. Because we’re AP professionals ourselves, we understand how to give our customers everything they need, and nothing they don’t.
+
+Together with our owners at Altor, we’re on a journey to expand in our home markets, while entering new territories. To complete our mission, we need more talented people!
+
+Rillion is an equal opportunity employer. We believe that diversity is integral to our success, and do not discriminate based on race, color, religion, age, or any other basis protected by law.

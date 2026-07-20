@@ -1,0 +1,51 @@
+We love elegant code, and we hope you do too. We look forward to seeing your craft grow and make a difference to our rapidly expanding platform.
+
+Sellpy's vision is to empower everyone to live circularly. We believe that every item deserves a second life, and we see huge value in making sure this happens. We look for those who share this vision and have the grit to tackle the challenges of building a circular future.
+
+Junior Software Engineer at Sellpy
+
+Sellpy's catalogue holds 10 million one-of-a-kind items — and our systems must handle every single one in real-time. As a Junior Software Engineer, you'll step into a place where your code ships to production early, your ideas are heard from day one, and the problems you solve have genuine environmental impact.
+
+We're coding for a circular future in an environment where discussions are encouraged, every voice contributes to our architecture, and curiosity and craft are valued equally — from day one.
+
+In short, you will
+
+Build and ship features across the full stack, from frontend interfaces to backend services.
+Work with JavaScript, React/React Native and Node.js.
+Take end-to-end ownership of features — from design through deployment.
+Grow rapidly with the support of experienced teammates and direct feedback loops.
+Contribute to keeping Sellpy's architecture clean, maintainable and scalable.
+Bring fresh perspectives that push our engineering culture forward.
+Requirements
+
+Currently pursuing or recently completed a B.S. or M.S. in Computer Science or a related technical field.
+Graduating in summer 2026, or 2027.
+Solid understanding of JavaScript or another modern programming language.
+Genuine curiosity, drive to learn, and an action-oriented attitude.
+We’d be impressed if you have
+
+Familiarity with React, Node.js, or similar modern frameworks.
+Experience from side projects, internships, or open source contributions.
+Exposure to CI/CD pipelines and version control with Git.
+A passion for the circular economy or sustainable tech.
+You get to
+
+Be part of a tech-minded company driving the change towards a sustainable lifestyle. In return, you'll get direction, energy, and meaningful challenges from day one.
+Enjoy a vibrant office culture at Medborgarplatsen, balanced with hands-on experience at our production sites
+Work with highly skilled and motivated colleagues who invest in your growth.
+Gain new skills with unlimited access to a learning platform.
+Make use of prepaid vacation.
+Enjoy Sellpy credits and staff discounts at Sellpy and the H&M brands (Arket, COS, Other Stories, Weekday and more).
+Save up with a monthly pension plan.
+Engage in Sellpy’s social traditions with game nights, interactive planning days, guest speakers and other activities.
+Location
+
+On-site collaboration at our core, supported by a flexible hybrid setup on set days. This role is based at our Medborgarplatsen office.
+
+Hybrid work
+
+We value being together. After an on-site onboarding, we aim for a balanced office presence, with flexibility on set days.
+
+Form of employment: Full-time, permanent employment with a 6-month probationary period.
+
+Start: As agreed upon

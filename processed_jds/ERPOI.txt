@@ -1,0 +1,40 @@
+About Us﻿
+
+Team erpOI, with rich experience in ERP consulting, offers a comprehensive range of services including digital supply chain business processes and technology consulting. Our hands-on expertise guides and helps customers on their digital and business transformation journeys, leveraging the latest ERP products and solutions. We are pioneers in ERP digital supply chain solutions, providing end-to-end services from consulting to technology implementation and managed services.
+
+By utilizing our extensive portfolio of ERP solutions, we drive efficiency and innovation, ensuring streamlined processes for clients. Focused on delivering cutting-edge solutions tailored to unique needs, we are committed to unlocking new levels of potential and success for our clients.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+About the Role
+We are looking for a passionate and analytical Data & AI Consultant Intern to join our growing team.This internship provides hands-on experience in data analytics, artificial intelligence, enterprise dataplatforms, and digital transformation projects. You will work alongside experienced consultants on real-world client engagements across multiple industries.
+
+Key Responsibilities
+Support the design and implementation of Data and AI solutions.
+Assist in data analysis, visualization, and dashboard development.
+Work with structured and unstructured datasets to generate business insights.
+Support AI and Machine Learning proof-of-concepts and automation initiatives.
+Assist in preparing client presentations, reports, and solution documentation.
+Participate in workshops, requirement gathering, and solution design sessions.
+Conduct research on emerging AI technologies, GenAI, and industry best practices.
+Collaborate with cross-functional teams on enterprise transformation projects.
+
+
+
+Required Skills
+
+Currently pursuing or recently completed a Bachelor's or Master's degree in Computer Science,Data Science, Artificial Intelligence, Information Systems, Engineering, or a related field.
+Basic knowledge of Python, SQL, Power BI, or similar analytics tools.
+Familiarity with AI/ML concepts and cloud technologies is an advantage.
+Strong analytical, problem-solving, and communication skills.
+Eagerness to learn and work on innovative technologies.
+Knowledge of SAP, Azure, AWS, or Google Cloud is a plus.
+Knowledge of Swedish is an advantage but not mandatory.

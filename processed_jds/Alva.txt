@@ -1,0 +1,62 @@
+About the job
+TL;DR
+
+We're rebuilding how companies hire — replacing gut feeling with science, on top of LLMs and agents. We're hiring a senior platform engineer in Stockholm to own the systems behind it: GCP infra, CI/CD, observability, data pipelines, and the AI tooling our engineers use daily. Broad role, real ownership, small team.
+
+The role
+
+Alva runs as event-driven microservices on GCP. We ship product features on top of LLMs and agents, and our engineers use Claude Code daily. The scope is broad — nobody we hire will have done all of it. We're hiring for judgment and how fast you pick up the rest.
+
+What we're looking for
+
+You've operated production systems for several years and have opinions about how they should be built.
+You think in failure modes. You ask what happens at 3 am before you ask what happens on the happy path.
+You're effective with AI tools. You steer them, push back, and verify their output instead of trusting it.
+You explain decisions clearly and change your mind when someone has a better argument.
+
+If you've done most of the work below in some form, at any cloud, at any scale, we want to talk. A checklist match isn't required.
+
+What You'll Do
+
+Some shipped, some in flight, some still on the drawing board — a sample of what the team owns:
+
+Migrating our backend services from Kubernetes to Cloud Run, along with the Pub/Sub subscriptions.
+Introducing pgbouncer in front of Postgres to scale past our replica cap.
+Building a Backstage-style developer portal with an MCP layer — one source of truth for services, conventions, and architecture, for engineers and coding agents alike.
+Scaffolding agentic features so product squads ship them without reinventing prompts, evals, and guardrails each time.
+A protobuf schema registry and data contracts pipeline to fix the drift between services and BigQuery.
+Enabling the data team — shared patterns and pipelines (dlt, BigQuery) that let analytics work scale alongside engineering.
+
+How We Work
+
+We use Claude Code heavily. We ship product features on top of LLMs (Gemini API), agents, and tooling like Langfuse for evaluation. We want engineers who treat AI as a collaborator they steer, not a tool they trust blindly.
+
+The platform team's work touches every other team. What you ship is visible across the company in days.
+
+Logistics
+
+Location: Stockholm, hybrid.
+Team: Small platform team reporting to the platform lead.
+Stack: Python, GCP (Cloud Run, GKE, Postgres, Firestore, Pub/Sub, BigQuery), Terraform, GraphQL/Apollo, dlt, Sentry, Gemini API, Langfuse.
+
+Nice to have
+
+None of these are required, but any one of them would let you carve out a specialty fast:
+
+Postgres depth: query plans, indexing strategy, connection pooling.
+Agent scaffolding and AI tooling: reusable patterns for prompts, evals, guardrails, MCP servers. Spec-driven approaches a plus.
+Distributed systems patterns: rate limiting, backpressure, queue throttling, handling bursts in a Pub/Sub-heavy system.
+Observability depth: distributed tracing, OpenTelemetry, performance profiling across services.
+Data engineering: dlt, dbt, BigQuery modeling. Not our daily focus, but useful background.
+
+Probably not the right fit if
+
+You want a specialist role with one technology.
+You prefer long design cycles and heavy process over shipping and iterating.
+You'd rather not use AI tooling in your daily work.
+
+Why Alva
+
+At Alva Labs, we're rebuilding how companies hire — replacing gut feeling with science. We're building an AI-first hiring system that helps companies define roles, assess candidates, and make better decisions.
+
+We're a small, ambitious team building from Stockholm. We value ownership, velocity, and low-ego collaboration.

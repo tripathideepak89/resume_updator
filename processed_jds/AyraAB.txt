@@ -1,0 +1,41 @@
+About Us﻿
+
+Join Ayra, a fast-moving AI startup based at the Stockholm School of Economics Business Lab – the launchpad where companies like Voi and Klarna began.
+
+We automate organic social media content marketing and help organisations connect their content directly to sales. As an intern, you’ll work side-by-side with the two founders and two founding employees, getting a front-row seat to how a modern AI startup is built.
+
+
+
+Field﻿
+
+IT
+
+
+
+Internship Description
+
+In this role you will:
+• Work hands-on in our full-stack codebase and internal tools
+• Help build and improve our AI-powered content and sales automation platform
+• Ship features end-to-end: from idea, to prototype, to production
+• Collaborate on experiments with real customers and see your work in the wild
+• Influence product decisions and suggest new ideas and features
+
+This is a huge learning opportunity for someone who is proactive, curious, and genuinely excited about AI and product engineering. We’re a small team, so you’ll get real responsibility from day one – and we expect you to take ownership, drive your own tasks, and come with solutions, not just questions.
+
+For the right person, there is a long-term opportunity to grow into a key role and eventually take over running a significant part of our product offering.
+
+
+
+Required Skills
+
+Required Skills
+• Strong interest in AI, software engineering and product development
+• Solid programming skills in TypeScript
+• Basic understanding of web development / full-stack concepts (APIs, databases, front-end vs back-end)
+• Comfortable working in a startup environment: fast pace, ambiguity, and changing priorities
+• Highly proactive and independent – you can take a vague problem, break it down, and execute
+• Strong communication skills in English, both written and spoken, Swedish also Ok.
+• Bonus: experience with any of the following – React, Node.js, cloud platforms, LLMs, prompt engineering, or social media / growth experiments
+
+You don’t need to tick every box, but you do need to be hungry to learn, build, and ship.
