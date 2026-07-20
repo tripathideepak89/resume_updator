@@ -59,6 +59,15 @@ from storage_paths import (
     ensure_storage_dirs,
     write_text_if_changed,
 )
+try:
+    from hf_gate import get_status as _hf_gate_status, is_test_mode as _is_test_mode
+except ImportError:
+    def _hf_gate_status() -> dict:  # type: ignore[misc]
+        return {}
+
+    def _is_test_mode() -> bool:  # type: ignore[misc]
+        import os
+        return os.environ.get("TEST_MODE", "").lower() in ("1", "true", "yes")
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 ensure_storage_dirs()
@@ -382,11 +391,13 @@ def generate():
         final_tailored = tailored
 
         audit = analyze_resume_match(final_resume, jd_text)
-        if audit["overall_score"] < 90:
+        if audit["overall_score"] < 90 and not _is_test_mode():
             refined = refine_resume_with_audit(token, final_resume, jd_text, audit)
             final_resume = _merge_resume_with_tailored(resume_data, refined)
             final_tailored = refined
             audit = analyze_resume_match(final_resume, jd_text)
+        elif audit["overall_score"] < 90 and _is_test_mode():
+            print(f"   [test mode] score={audit['overall_score']}%: refinement pass skipped.")
 
         audit_path = audit_dir / f"ResumeAudit_{safe_name}_{safe_company}.md"
         write_audit_report(audit_path, company_name, final_resume, audit)
@@ -444,6 +455,7 @@ def generate():
             "audit":        audit_path.name,
         },
         "recommendations": _generate_recommendations(final_resume, jd_text, audit),
+        "hf_gate": _hf_gate_status(),
     })
 
 

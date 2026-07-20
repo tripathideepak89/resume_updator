@@ -60,6 +60,27 @@ HF_MODEL = "Qwen/Qwen2.5-72B-Instruct"
 MAX_RETRIES = 4
 RETRY_WAIT = 25
 
+# ── HF Gate import (graceful: falls back to no-op if module is missing) ────────
+try:
+    from hf_gate import (
+        HFDecision,
+        cache_key as _hf_cache_key,
+        get_status as _hf_get_status,
+        is_test_mode as _is_test_mode,
+        preflight as _hf_preflight,
+        read_cache as _hf_read_cache,
+        record_call as _hf_record_call,
+        write_cache as _hf_write_cache,
+    )
+    _HF_GATE_AVAILABLE = True
+except ImportError:
+    _HF_GATE_AVAILABLE = False
+
+    def _is_test_mode() -> bool:  # type: ignore[misc]
+        import os
+        return os.environ.get("TEST_MODE", "").lower() in ("1", "true", "yes") or \
+               os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
+
 
 def _load_env_file(path: Path = BASE_DIR / ".env"):
     """Load simple KEY=VALUE pairs from .env without overriding the shell."""
@@ -82,10 +103,38 @@ def _load_env_file(path: Path = BASE_DIR / ".env"):
 
 
 def call_hf(token: str, system: str, user: str, max_tokens: int = 2048) -> str:
+    """
+    Single gated entry point for all Hugging Face inference calls.
+
+    Runs a preflight check via hf_gate before consuming any token quota:
+      - Returns cached result if available.
+      - Returns "" (triggers local fallback) if test mode blocks the call.
+      - Returns "" if daily/session budget is exceeded.
+      - Otherwise makes one real call, caches the result, and records usage.
+
+    In test mode retries are disabled to avoid burning budget on transient errors.
+    """
     if not HF_AVAILABLE or not token:
         return ""
+
+    if _HF_GATE_AVAILABLE:
+        key = _hf_cache_key(system, user)
+        decision = _hf_preflight(token, key)
+
+        if decision == HFDecision.USE_CACHE:
+            return _hf_read_cache(key) or ""
+
+        if decision in (HFDecision.USE_KEYWORD_FALLBACK, HFDecision.BLOCK_AND_WARN):
+            return ""
+
+        # USE_HF_ONCE – fall through to the real call below
+
+    # In test mode use a single attempt; retries waste quota and slow tests.
+    retries = 1 if _is_test_mode() else MAX_RETRIES
+    wait = 0 if _is_test_mode() else RETRY_WAIT
+
     client = InferenceClient(token=token)
-    for attempt in range(1, MAX_RETRIES + 1):
+    for attempt in range(1, retries + 1):
         try:
             resp = client.chat.completions.create(
                 model=HF_MODEL,
@@ -96,16 +145,22 @@ def call_hf(token: str, system: str, user: str, max_tokens: int = 2048) -> str:
                 max_tokens=max_tokens,
                 temperature=0.4,
             )
-            return resp.choices[0].message.content.strip()
+            result = resp.choices[0].message.content.strip()
+            if _HF_GATE_AVAILABLE:
+                _hf_record_call(key)
+                _hf_write_cache(key, result)
+            return result
         except Exception as e:
             err = str(e)
             if "503" in err or "loading" in err.lower():
-                print(f"   Model loading (attempt {attempt}/{MAX_RETRIES}), waiting {RETRY_WAIT}s ...")
-                time.sleep(RETRY_WAIT)
+                print(f"   Model loading (attempt {attempt}/{retries}), waiting {wait}s ...")
+                if wait:
+                    time.sleep(wait)
                 continue
             if "429" in err or "rate" in err.lower():
-                print(f"   Rate limited (attempt {attempt}/{MAX_RETRIES}), waiting {RETRY_WAIT}s ...")
-                time.sleep(RETRY_WAIT)
+                print(f"   Rate limited (attempt {attempt}/{retries}), waiting {wait}s ...")
+                if wait:
+                    time.sleep(wait)
                 continue
             # Permission / other error — return empty to trigger fallback
             print(f"   HF API error: {err[:200]}")
@@ -1104,13 +1159,15 @@ def main():
     print("Analyzing resume match ...")
     audit = analyze_resume_match(final_resume, jd_text)
 
-    if audit["overall_score"] < 90:
+    if audit["overall_score"] < 90 and not _is_test_mode():
         print(f"Overall score {audit['overall_score']}% is below 90%; running one refinement pass ...")
         refined = refine_resume_with_audit(token, final_resume, jd_text, audit)
         final_resume = _merge_resume_with_tailored(resume, refined)
         final_tailored = refined
         audit = analyze_resume_match(final_resume, jd_text)
         print(f"Refinement complete. Final overall score: {audit['overall_score']}%")
+    elif audit["overall_score"] < 90 and _is_test_mode():
+        print(f"Overall score {audit['overall_score']}% is below 90%; refinement skipped in test mode.")
     else:
         print(f"Overall score {audit['overall_score']}% meets threshold; no refinement needed.")
 
