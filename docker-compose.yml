@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume-updator
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5001:5001"
+    env_file:
+      - .env
+    environment:
+      FLASK_HOST: 0.0.0.0
+      PORT: 5001
+      FLASK_DEBUG: "false"
+      DATA_DIR: /app/data
+      USERS_DIR: /app/data/users
+      PROFILE_DIR: /app/data/profiles
+      UPLOAD_DIR: /app/data/uploads
+      RUNS_DIR: /app/data/runs
+      OUTPUT_DIR: /app/data/generated
+      AUDIT_DIR: /app/data/audits
+      LOG_DIR: /app/data/logs
+    volumes:
+      - ./data:/app/data

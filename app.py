@@ -49,16 +49,19 @@ from main import (
     write_pdf,
 )
 from resume_parser import parse_resume_file, _extract_text_from_docx, _extract_text_from_pdf
+from storage_paths import (
+    AUDIT_DIR,
+    DB_PATH,
+    OUTPUT_DIR,
+    PROFILE_DIR,
+    RUNS_DIR,
+    UPLOAD_DIR,
+    ensure_storage_dirs,
+    write_text_if_changed,
+)
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-BASE_DIR = Path(__file__).resolve().parent
-INSTANCE_DIR = BASE_DIR / "instance"
-UPLOAD_DIR = INSTANCE_DIR / "uploads"
-WEB_OUT_DIR = BASE_DIR / "output" / "web"
-DB_PATH = INSTANCE_DIR / "users.db"
-
-for _d in (INSTANCE_DIR, UPLOAD_DIR, WEB_OUT_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
+ensure_storage_dirs()
 
 ALLOWED_RESUME_EXT = {".pdf", ".docx", ".doc", ".txt", ".json"}
 ALLOWED_JD_EXT = {".pdf", ".docx", ".doc", ".txt"}
@@ -134,6 +137,12 @@ def _session_dir() -> Path:
     return d
 
 
+def _session_profile_path() -> Path:
+    if "sid" not in session:
+        session["sid"] = uuid.uuid4().hex
+    return PROFILE_DIR / f"{session['sid']}.json"
+
+
 def _save_profile(parsed: dict, source_format: str) -> None:
     uid = _current_user_id()
     profile_text = json.dumps(parsed, ensure_ascii=False, indent=2)
@@ -146,9 +155,9 @@ def _save_profile(parsed: dict, source_format: str) -> None:
                 (profile_text, source_format, updated_at, uid),
             )
             db.commit()
+    else:
+        write_text_if_changed(_session_profile_path(), profile_text, encoding="utf-8")
 
-    sd = _session_dir()
-    (sd / "resume_data.json").write_text(profile_text, encoding="utf-8")
     session["resume_source_format"] = source_format
 
 
@@ -170,8 +179,7 @@ def _load_profile() -> tuple[Optional[dict], Optional[str], Optional[str]]:
             except Exception:
                 pass
 
-    sd = _session_dir()
-    resume_json = sd / "resume_data.json"
+    resume_json = _session_profile_path()
     if resume_json.exists():
         try:
             updated = datetime.datetime.fromtimestamp(resume_json.stat().st_mtime).isoformat(timespec="seconds")
@@ -187,8 +195,7 @@ def _load_profile() -> tuple[Optional[dict], Optional[str], Optional[str]]:
 
 
 def _migrate_session_profile_to_user(user_id: int) -> None:
-    sd = _session_dir()
-    resume_json = sd / "resume_data.json"
+    resume_json = _session_profile_path()
     if not resume_json.exists():
         return
     try:
@@ -334,7 +341,7 @@ def jd_upload():
         return jsonify({"error": "Could not extract text from the job description."}), 400
 
     sd = _session_dir()
-    (sd / "jd.txt").write_text(jd_text, encoding="utf-8")
+    write_text_if_changed(sd / "jd.txt", jd_text, encoding="utf-8")
 
     company = _extract_company_name(jd_text)
     return jsonify({"ok": True, "company": company, "length": len(jd_text), "text": jd_text})
@@ -361,8 +368,12 @@ def generate():
     safe_company = re.sub(r"[^\w\s-]", "", company_name).strip().replace(" ", "_")[:40] or "company"
 
     job_id = uuid.uuid4().hex[:10]
-    out_dir = WEB_OUT_DIR / job_id
-    out_dir.mkdir(parents=True, exist_ok=True)
+    run_dir = RUNS_DIR / job_id
+    generated_dir = OUTPUT_DIR / job_id
+    audit_dir = AUDIT_DIR / job_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+    generated_dir.mkdir(parents=True, exist_ok=True)
+    audit_dir.mkdir(parents=True, exist_ok=True)
 
     try:
         # ── Replicate main.py workflow exactly (no modification) ──────────────
@@ -377,14 +388,14 @@ def generate():
             final_tailored = refined
             audit = analyze_resume_match(final_resume, jd_text)
 
-        audit_path = out_dir / f"ResumeAudit_{safe_name}_{safe_company}.md"
+        audit_path = audit_dir / f"ResumeAudit_{safe_name}_{safe_company}.md"
         write_audit_report(audit_path, company_name, final_resume, audit)
 
         cover_letter_text = generate_cover_letter(token, final_resume, jd_text)
 
-        resume_pdf  = out_dir / f"Resume_{safe_name}_{safe_company}.pdf"
-        cover_pdf   = out_dir / f"CoverLetter_{safe_name}_{safe_company}.pdf"
-        cover_txt   = out_dir / f"CoverLetter_{safe_name}_{safe_company}.txt"
+        resume_pdf  = generated_dir / f"Resume_{safe_name}_{safe_company}.pdf"
+        cover_pdf   = generated_dir / f"CoverLetter_{safe_name}_{safe_company}.pdf"
+        cover_txt   = generated_dir / f"CoverLetter_{safe_name}_{safe_company}.txt"
 
         resume_story = build_resume_story(resume_data, final_tailored)
         write_pdf(resume_story, resume_pdf, f"Resume - {resume_data.get('name', '')}")
@@ -398,7 +409,21 @@ def generate():
         return jsonify({"error": str(e)}), 500
 
     # Store job_id in session dir for reference
-    (sd / "last_job_id.txt").write_text(job_id)
+    write_text_if_changed(sd / "last_job_id.txt", job_id)
+    write_text_if_changed(
+        run_dir / "manifest.json",
+        json.dumps(
+            {
+                "job_id": job_id,
+                "company": company_name,
+                "generated": [resume_pdf.name, cover_pdf.name, cover_txt.name],
+                "audit": audit_path.name,
+                "created_at": datetime.datetime.utcnow().isoformat(timespec="seconds"),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+    )
 
     return jsonify({
         "ok": True,
@@ -438,8 +463,13 @@ def download(job_id: str, filename: str):
         session["guest_downloads"] = count + 1
 
     safe = secure_filename(filename)
-    file_path = WEB_OUT_DIR / job_id / safe
-    if not file_path.exists():
+    candidate_paths = [
+        OUTPUT_DIR / job_id / safe,
+        AUDIT_DIR / job_id / safe,
+        RUNS_DIR / job_id / safe,
+    ]
+    file_path = next((p for p in candidate_paths if p.exists()), None)
+    if not file_path:
         return jsonify({"error": "File not found."}), 404
 
     return send_file(str(file_path), as_attachment=True, download_name=safe)
@@ -594,4 +624,7 @@ def apply_recommendations():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    host = os.environ.get("FLASK_HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", "5000"))
+    debug = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
+    app.run(host=host, port=port, debug=debug)

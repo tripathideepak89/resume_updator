@@ -215,9 +215,15 @@ resume_updator/
 │   │   └── style.css              # Web UI styles
 │   └── js/
 │       └── app.js                 # Frontend flow, profile state, recommendations
-├── instance/
-│   ├── users.db                   # SQLite auth + persisted profile data for logged-in users
-│   └── uploads/                   # Per-session cached profile + JD working files
+├── data/
+│   ├── users/                     # SQLite auth DB (users.db)
+│   ├── profiles/                  # Canonical guest/session profile JSON
+│   ├── uploads/                   # Per-session uploaded source files + jd.txt
+│   ├── runs/                      # Per-job manifests and run metadata
+│   ├── audits/                    # ResumeAudit_*.md outputs (web flow)
+│   ├── generated/                 # Resume/CoverLetter PDF outputs (web flow)
+│   ├── logs/                      # Runtime logs
+│   └── archive/                   # Archived runs created by retention script
 ├── application_agent_config.json  # Default form answers and browser settings
 ├── browser_fill_teamtailor.js     # Playwright worker: Teamtailor form automation
 ├── browser_fill_ashby.js          # Playwright worker: Ashby form automation
@@ -225,7 +231,13 @@ resume_updator/
 ├── requirements.txt               # Python dependencies
 ├── input_job_descriptions/        # Raw JD text files (input)
 ├── processed_jds/                 # Archived JDs after processing
-├── output/                        # Generated PDFs and audit reports (git-ignored)
+├── output/                        # CLI mode outputs from main.py
+├── scripts/
+│   ├── data_retention.py          # Archive/prune old run artifacts
+│   └── data_backup_restore.py     # Create/restore compressed data snapshots
+├── Dockerfile                     # Container image for Flask app
+├── docker-compose.yml             # Local deployment with persistent mount
+├── .dockerignore                  # Small build context for faster builds
 ├── AGENTS.md                      # AI agent instructions for automated workflows
 └── .env                           # API tokens (git-ignored)
 ```
@@ -259,6 +271,56 @@ export HF_TOKEN="hf_your_token_here"
 echo 'HF_TOKEN=hf_your_token_here' > .env
 ```
 
+## Docker Run + Persistent Data
+
+Run the app with one command:
+
+```bash
+docker compose up --build
+```
+
+The Compose setup binds the app to `http://localhost:5001`.
+
+Persistent storage is mounted to [data](data) and organized as:
+
+```text
+data/
+    users/       # SQLite users DB
+    profiles/    # Canonical guest/session profile JSON
+    uploads/     # Per-session uploaded source files + jd.txt
+    runs/        # Per-job manifests and run metadata
+    audits/      # ResumeAudit_*.md files
+    generated/   # Resume/CoverLetter PDFs and text
+    logs/        # Runtime logs
+    archive/     # Archived older runs
+```
+
+## Data Maintenance
+
+Archive old run artifacts while keeping recent results:
+
+```bash
+python scripts/data_retention.py --data-dir data --days 30 --keep-latest 20
+```
+
+Preview retention actions without changing files:
+
+```bash
+python scripts/data_retention.py --data-dir data --days 30 --keep-latest 20 --dry-run
+```
+
+Create compressed backup snapshot:
+
+```bash
+python scripts/data_backup_restore.py backup --data-dir data --out-dir backups
+```
+
+Restore from backup snapshot:
+
+```bash
+python scripts/data_backup_restore.py restore backups/<your-backup-file>.tar.gz --data-dir data
+```
+
 ### Keyword-Match Mode (no token needed)
 
 Works out of the box. Parses JD for keywords, reorders skills and bullets by relevance, and generates a template-based cover letter.
@@ -282,6 +344,8 @@ python3 app.py
 ```
 
 Then open `http://localhost:5000`.
+
+For Docker Compose, open `http://localhost:5001`.
 
 Web flow:
 
@@ -319,13 +383,15 @@ python3 main.py input_job_descriptions/job_posting.txt --output ./pdfs
 
 ## Output
 
-For each JD, three files are generated in `output/`:
+For CLI mode (`main.py`), three files are generated in `output/`:
 
 | File | Description |
 |---|---|
 | `Resume_<Name>_<Company>.pdf` | Tailored resume with reordered skills and reframed bullets |
 | `CoverLetter_<Name>_<Company>.pdf` | Personalized cover letter matching JD requirements |
 | `ResumeAudit_<Name>_<Company>.md` | ATS match report with scores and recommendations |
+
+For web mode (`app.py`), outputs are written under `data/generated/<job_id>/` and `data/audits/<job_id>/`, with run metadata in `data/runs/<job_id>/manifest.json`.
 
 ### Audit Report Scores
 
