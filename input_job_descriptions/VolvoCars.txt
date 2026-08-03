@@ -1,0 +1,59 @@
+About the job
+Company description:
+Who are we? Volvo Cars is a company on a mission; to bring traditional car manufacturing into a connected, sustainable and smart future. Since 1927, we have been a brand known for our commitment to safety, creating innovative cars that make life less complicated for our consumers. In 2010, we decided to transform our business, resulting in a totally new generation of cars and technologies, as well as steady growth and record sales. Today, we're expanding our global footprint in Europe, China and the US, and we're on the lookout for new talent. We are constantly pushing our own skills and abilities to drive change in the automobile industry like never before. We are looking for innovative, committed people to join us in this endeavor and create safe, sustainable and connected cars. We believe in the power of people and will challenge and support you to reach your full potential. Join us and be part of Volvo Cars' journey into the future.
+
+Job description:   Let's introduce ourselves   
+Software development that makes a differenceAt Volvo Cars, we are on a mission to provide freedom to move in a personal, sustainable, and safe way. As vehicles become increasingly software-defined, the infotainment platform plays a critical role in delivering seamless and secure user experiences. We are now looking for a Software Developer specializing in Android uplift to strengthen our platform teams and help drive the evolution of our infotainment systems.
+
+     What you'll do   
+As an Infotainment Software Developer, you will be part of an agile team working on the Android platform uplift and integration across our vehicle programs. You will:
+
+ 
+ 
+Drive Android version upgrades (uplift) for the infotainment platform
+ 
+Enable and maintain CI pipelines and build environments for platform stability
+ 
+Work closely with platform, integration, and hardware teams to ensure smooth bring-up on new hardware
+ 
+Debug and resolve system-level issues across Android, Linux, and embedded layers
+ 
+Collaborate with architects, UX, and cross-functional teams to deliver a coherent end-to-end solution
+ 
+Contribute to continuous improvement, automation, and platform quality
+ 
+ 
+Location: Lindholmen, Gothenburg
+
+   Profile description: What you'll bring   
+We are looking for a Senior Embedded Software Engineer with strong Android platform experience and a systems mindset. Required experience:
+
+ 
+ 
+Strong experience in C++ and Python in embedded environments
+ 
+Hands-on experience with Android platform development (AOSP / system level)
+ 
+Experience with Embedded Linux or OS-level development
+ 
+Solid understanding of system architecture and platform integration
+ 
+Experience working in a CI/CD environment (build systems, pipelines, automation)
+ 
+Experience with debugging complex system-level issues
+ 
+ 
+Preferred experience:
+
+ 
+ 
+Experience with Android uplift / version upgrades
+ 
+Automotive or infotainment domain experience
+ 
+Test automation experience (eg, Pytest)
+ 
+Experience working with new hardware bring-up and platform enablement
+ 
+ 
+Bachelor's or Master's degree in Electrical Engineering, Computer Science, or similar
